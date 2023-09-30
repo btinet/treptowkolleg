@@ -153,9 +153,29 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <section class="pf-v5-c-page__main-section pf-m-limit-width">
         <div class="pf-v5-c-page__main-body">
             <div class="pf-v5-l-grid pf-m-gutter">
-                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-lg">
+                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-2xl">
                     <div class="pf-v5-l-flex pf-m-column">
+                        <div class="pf-v5-c-content">
+                            <div class="pf-v5-c-card">
+                                <div class="pf-v5-c-card__header">
+                                    <h2 class="pf-v5-c-card__title-text">Inhaltsverzeichnis</h2>
+                                </div>
+                                <div class="pf-v5-c-card__body">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-2xl">
+                    <div class="pf-v5-l-flex pf-m-column">
+                        <div class="pf-v5-c-content">
+                        <div class="pf-v5-c-card">
+                            <div class="pf-v5-c-card__body">
                                 <?=$mdParser->text($md)?>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
