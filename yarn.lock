@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@patternfly/patternfly@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-5.0.4.tgz#d61dc3bcbd0513d46ca969a3d206036bcedaeca8"
+  integrity sha512-8akdWzFpG384Q6Es8lzkfuhAlzVGrNK7TJqXGecHDAg8u1JsYn3+Nw6gLRviI88z8Kjxmg5YKirILjpclGxkIA==
+
 highlight.js@^11.8.0:
   version "11.8.0"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.8.0.tgz#966518ea83257bae2e7c9a48596231856555bb65"

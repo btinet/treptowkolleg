@@ -63,49 +63,127 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./node_modules/@patternfly/patternfly/patternfly.css">
+    <link rel="stylesheet" href="./node_modules/@patternfly/patternfly/patternfly-addons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
     <title>Informatik AG</title>
 </head>
-<body data-spy="scroll" class="px-2" style="margin-top: 100px;">
+<body>
 
-<div class="bg-primary"></div>
-<nav class="navbar navbar-expand bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://it.treptowkolleg.de">Informatik</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://it.treptowkolleg.de/admin">phpMyAdmin</a>
-                </li>
-            </ul>
+<header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
+    <div class="pf-v5-c-masthead__content">
+        <div
+                class="pf-v5-c-toolbar pf-m-full-height pf-m-static"
+                id="card-view-basic-example-masthead-toolbar"
+        >
+            <div class="pf-v5-c-toolbar__content">
+                <div class="pf-v5-c-toolbar__content-section">
+                    <div
+                            class="pf-v5-c-toolbar__group pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"
+                    >
+                        <div
+                                class="pf-v5-c-toolbar__group pf-m-icon-button-group"
+                        >
+                            <div class="pf-v5-c-toolbar__item">
+                                <a
+                                        href=""
+                                        class="pf-v5-c-menu-toggle pf-m-plain"
+                                        aria-expanded="false"
+                                        aria-label="Application launcher"
+                                >
+                                    <i class="fas fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="pf-v5-c-toolbar__item">
+                                <a
+                                        href="https://it.treptowkolleg.de/admin"
+                                        class="pf-v5-c-menu-toggle pf-m-plain"
+                                        aria-expanded="false"
+                                        aria-label="Settings"
+                                >
+                                    <i class="fas fa-cog" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+</header>
 
-<div class="container">
-    <div class="row g-3">
-            <div class="col-12">
+<main
+        class="pf-v5-c-page__main"
+        tabindex="-1"
+        id="main-content-card-view-basic-example"
+>
+    <section class="pf-v5-c-page__main-breadcrumb pf-m-limit-width">
+        <div class="pf-v5-c-page__main-body">
+            <nav class="pf-v5-c-breadcrumb" aria-label="breadcrumb">
+                <ol class="pf-v5-c-breadcrumb__list" role="list">
+                    <li class="pf-v5-c-breadcrumb__item">
+                        <a href="https://www.treptowkolleg.de" class="pf-v5-c-breadcrumb__link">Informatik AG</a>
+                    </li>
+                    <li class="pf-v5-c-breadcrumb__item">
+              <span class="pf-v5-c-breadcrumb__item-divider">
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+              </span>
+
+                        <a
+                                href="#"
+                                class="pf-v5-c-breadcrumb__link pf-m-current"
+                                aria-current="page"
+                        >Dokumentation</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
+        <div class="pf-v5-c-page__main-body">
+            <div class="pf-v5-c-content">
+                <h1>Unterrichtsmaterial</h1>
+                <p>Wissenswertes und Ergänzungen</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-v5-c-page__main-section pf-m-fill">
+        <div class="pf-v5-l-gallery pf-m-gutter">
+            <div
+                    class="pf-v5-c-card pf-m-selectable-raised pf-m-compact"
+                    id="card-view-basic-example-gallery-card-empty-state"
+            >
+                <div class="pf-v5-l-bullseye">
+                    <div class="pf-v5-c-empty-state pf-m-xs">
+                        <div class="pf-v5-c-empty-state__content">
+                            <i class="fas fa-info pf-v5-c-empty-state__icon"></i>
+                            <div class="pf-v5-c-card__title">
+                                <h2
+                                        class="pf-v5-c-card__title-text pf-m-md"
+                                >Direkt zu PHP</h2>
+                            </div>
+                            <a href="https://it.treptowkolleg.de/docs/php/index.md" class="pf-v5-c-button pf-m-link">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
+        <div class="pf-v5-c-page__main-body">
+            <div class="pf-v5-c-content">
                 <?=$mdParser->text($md)?>
             </div>
         </div>
+    </section>
 
-    </div>
-</div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="/assets/dist/js/bootstrap.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 

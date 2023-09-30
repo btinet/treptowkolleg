@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@patternfly/patternfly": "^5.0.4",
     "highlight.js": "^11.8.0"
   }
 }
