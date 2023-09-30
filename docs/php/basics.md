@@ -89,11 +89,38 @@ geschrieben.
 
 #### Deklarieren
 
+Ein skalarer Wert kann mit dem Schlüsselwort ``const`` erfolgen:
+
 ````php
 <?php
 
 const MY_INT_CONST = 5;
 const MY_STRING_CONST = 'Nummer: ' . MY_INT_CONST;
 ````
+
+Für Zuweisung eines variablen Ausdrucks ist die Funktion ``define`` geeignet:
+
+`````php
+<?php
+
+$myVar = 'Wert';
+
+define('MY_CONST' , $myVar); // nicht mit 'const' erlaubt
+`````
+
+#### Überprüfen
+
+Jede Konstante darf nur einmal existieren. Daher sollten wir vor der Deklaration überprüfen,
+ob eine Konstante bereits existiert:
+
+`````php
+<?php
+
+$myVar = 'Wert';
+
+if ( !defined(MY_CONST) ) {
+    define('MY_CONST' , $myVar); // nicht mit 'const' erlaubt
+}
+`````
 
 
