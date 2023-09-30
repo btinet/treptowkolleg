@@ -63,6 +63,9 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/xt256.min.css" integrity="sha512-fhvZU0PRhieZyHjHD1sG4Zvo5EJjsnx90draikv9gBEFre1UXo4Neg3nT4xZ71TEdOLXif1C5llTy0Ughy+xSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
+        *{
+            line-height: 1.2;
+        }
         h1,h2,h3,h4 {
             margin-bottom: 1rem;
             text-transform: uppercase;
