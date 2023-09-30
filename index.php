@@ -63,7 +63,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" integrity="sha512-Jk4AqjWsdSzSWCSuQTfYRIF84Rq/eV0G2+tu07byYwHcbTGfdmLrHjUSwvzp5HvbiqK4ibmNwdcG49Y5RGYPTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        h1,h2,h3 {
+        h1,h2,h3,h4 {
             margin-bottom: 1.5rem;
         }
         h1{font-size: 1.6rem!important;}
