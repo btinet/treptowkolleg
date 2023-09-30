@@ -88,7 +88,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                         >
                             <div class="pf-v5-c-toolbar__item">
                                 <a
-                                        href=""
+                                        href="/"
                                         class="pf-v5-c-menu-toggle pf-m-plain"
                                         aria-expanded="false"
                                         aria-label="Application launcher"
@@ -99,6 +99,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                             <div class="pf-v5-c-toolbar__item">
                                 <a
                                         href="https://it.treptowkolleg.de/admin"
+                                        target="_blank"
                                         class="pf-v5-c-menu-toggle pf-m-plain"
                                         aria-expanded="false"
                                         aria-label="Settings"
