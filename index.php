@@ -63,7 +63,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 
 
 
-    <title>Hello, world!</title>
+    <title>Informatik AG</title>
 </head>
 <body data-spy="scroll" class="px-2" style="margin-top: 60px;">
 
