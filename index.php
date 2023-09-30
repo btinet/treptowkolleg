@@ -161,8 +161,18 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                                     <h2 class="pf-v5-c-card__title-text">Inhaltsverzeichnis</h2>
                                 </div>
                                 <div class="pf-v5-c-card__body">
-
+                                    <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
+                                        <li class=""><a class="pf-v5-c-simple-list__item-link"  href="/docs/index.md">Übersicht</a></li>
+                                        <li class="">
+                                            PHP
+                                            <ul role="list" class="pf-v5-c-list pf-m-plain">
+                                                <li class=""><a class="pf-v5-c-simple-list__item-link" href="/docs/php/basics.md">Grundlagen</a></li>
+                                                <li class=""><a class="pf-v5-c-simple-list__item-link" href="/docs/php/class.md">Klassen</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
+
                             </div>
                         </div>
                     </div>

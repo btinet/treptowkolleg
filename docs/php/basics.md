@@ -1,8 +1,6 @@
 # PHP Web Development
-
-[Zurück zur Übersicht](/docs/php/index.md)
-
 ## Grundlagen
+
 ### PHP-Tags
 PHP ist ein serverseitiger Text-Interpreter, der PHP-Code kompiliert und als Text,
 zum Beispiel in Form von HTML ausgibt. PHP-Code wird mit einem PHP-Tag gekennzeichnet:

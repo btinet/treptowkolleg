@@ -1,7 +1,4 @@
 # PHP Web Development
-
-[Zurück zur Übersicht](/docs/php/index.md)
-
 ## Definition
 
 Eine Klasse stellt den Bauplan von Objekten dar. Objekte werden daher auch als Klasseninstanz
