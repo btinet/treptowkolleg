@@ -5,6 +5,7 @@
 ## Inhaltsverzeichnis
 
 1. [Grundlagen](/docs/php/basics.md)
+2. [Klassen](/docs/php/class.md)
 
 
 
