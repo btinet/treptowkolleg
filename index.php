@@ -76,7 +76,10 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#services">Informatik | TK</a>
+                    <a class="nav-link active" aria-current="page" href="https://it.treptowkolleg.de">Informatik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.treptow-kolleg.de">Treptow-Kolleg</a>
                 </li>
             </ul>
         </div>
