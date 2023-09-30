@@ -47,7 +47,6 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 
 // Wie wir sehen, führen viele Wege nach Rom. Denn die Ausgaben aus Zeilen 25 und 38 sind von außen betrachtet identisch.
 ?>
-
 <!doctype html>
 <html lang="de">
 <head>
