@@ -1,13 +1,10 @@
 # PHP Web Development
 
-[Zurück zur Startseite](/docs/index.md)
-
-
+[Zurück zur Startseite](/index.md)
 
 ## Inhaltsverzeichnis
 
-2. [Grundlagen](/docs/php/basics.md)
-3. [Klassen](/docs/php/class.md)
+1. [Grundlagen](/docs/php/basics.md)
 
 
 
