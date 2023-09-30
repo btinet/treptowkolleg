@@ -63,8 +63,8 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./node_modules/@patternfly/patternfly/patternfly.css">
-    <link rel="stylesheet" href="./node_modules/@patternfly/patternfly/patternfly-addons.css">
+    <link rel="stylesheet" href="/node_modules/@patternfly/patternfly/patternfly.css">
+    <link rel="stylesheet" href="/node_modules/@patternfly/patternfly/patternfly-addons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
