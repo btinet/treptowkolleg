@@ -37,14 +37,12 @@ const INF_EOL = "\n";
 define('CPU_I7', $intelCPU->getName() );
 
 
-$md = file_get_contents("./docs/index.md");
-if (isset($_GET['file'])) {
-    if ($_GET['file'] == 'php-class') {
-        $md = file_get_contents("./docs/php/class.md");
+$md = file_get_contents("./README.md");
+if (isset($_GET['file']) and !empty($_GET['file']) ) {
+    if(file_exists($file = './'. $_GET['file'])) {
+        $md = file_get_contents($file );
     }
-    if ($_GET['file'] == 'php-index') {
-        $md = file_get_contents("./docs/php/index.md");
-    }
+
 }
 
 
@@ -60,8 +58,8 @@ if (isset($_GET['file'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" integrity="sha512-Jk4AqjWsdSzSWCSuQTfYRIF84Rq/eV0G2+tu07byYwHcbTGfdmLrHjUSwvzp5HvbiqK4ibmNwdcG49Y5RGYPTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -78,9 +76,7 @@ if (isset($_GET['file'])) {
 </head>
 <body data-spy="scroll" class="px-2" style="margin-top: 60px;">
 
-<div class="bg-primary">
-
-</div>
+<div class="bg-primary"></div>
 <nav class="navbar navbar-expand bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
