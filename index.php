@@ -59,7 +59,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/far.min.css" integrity="sha512-5+qzv2DU3AjZXzUIoBsphRYJ5wdtuLngUS6g52Bzcl3OVUxoBQz8fSvqlsFz8p00BRf8ouKi0wzwqbj0pCAvvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/tender.min.css" integrity="sha512-GrqGaeP5RLS3rm0F9SZZW7QDJMSZ08a0xT07LUzumZV3IwFbLQFVk2syJNrMcmDaouvG769iOEQaxIbHwhsnNA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
