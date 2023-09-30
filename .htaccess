@@ -1,4 +1,4 @@
 Options +FollowSymLinks
 RewriteEngine On
-RewriteCond %{REQUEST_URI} !^.*\.(jpg|css|js|gif|png)$ [NC]
+RewriteCond %{REQUEST_URI} !^.*\.(jpg|css|js|gif|png|otf|svg|woff|woff2)$ [NC]
 RewriteRule ^(.*)$ index.php?file=$1 [L,QSA]
