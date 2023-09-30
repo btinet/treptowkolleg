@@ -154,11 +154,13 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <section class="pf-v5-c-page__main-section pf-m-limit-width">
         <div class="pf-v5-c-page__main-body">
             <div class="pf-v5-l-grid pf-m-gutter">
-                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" style="--pf-v5-l-grid--item--Order-on-lg:3">
+                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-lg">
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-card">
-                            <div class="pf-v5-c-card__body">
-                                <?=$mdParser->text($md)?>
+                            <div class="pf-v5-c-card__header">
+                                    <div class="pf-v5-c-card__body">
+                                        <?=$mdParser->text($md)?>
+                                    </div>
                             </div>
                         </div>
                     </div>
