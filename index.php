@@ -67,7 +67,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
             line-height: 1.5;
         }
         code{
-            font-size: .8rem;
+            font-size: .8rem!important;
         }
         h1,h2,h3,h4 {
             margin-bottom: 1rem;
