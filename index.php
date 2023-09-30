@@ -85,7 +85,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                     <a class="nav-link active" aria-current="page" href="https://it.treptowkolleg.de">Informatik</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.treptow-kolleg.de">Treptow-Kolleg</a>
+                    <a class="nav-link" href="https://it.treptowkolleg.de/admin">phpMyAdmin</a>
                 </li>
             </ul>
         </div>
