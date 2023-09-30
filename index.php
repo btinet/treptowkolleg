@@ -49,7 +49,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -158,9 +158,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-card">
                             <div class="pf-v5-c-card__header">
-                                    <div class="pf-v5-c-card__body">
                                         <?=$mdParser->text($md)?>
-                                    </div>
                             </div>
                         </div>
                     </div>
