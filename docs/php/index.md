@@ -1,6 +1,6 @@
 # PHP Web Development
 
-[Zurück zur Startseite](/index.md)
+[Zurück zur Startseite](/README.md)
 
 ## Inhaltsverzeichnis
 
