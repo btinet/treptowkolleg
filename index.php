@@ -71,7 +71,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 
     <title>Informatik AG</title>
 </head>
-<body data-spy="scroll" class="px-2" style="margin-top: 60px;">
+<body data-spy="scroll" class="px-2" style="margin-top: 100px;">
 
 <div class="bg-primary"></div>
 <nav class="navbar navbar-expand bg-body-tertiary fixed-top">
