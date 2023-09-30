@@ -151,22 +151,15 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
         </div>
     </section>
 
-    <section class="pf-v5-c-page__main-section pf-m-fill">
-        <div class="pf-v5-l-gallery pf-m-gutter">
-            <div
-                    class="pf-v5-c-card pf-m-selectable-raised pf-m-compact"
-                    id="card-view-basic-example-gallery-card-empty-state"
-            >
-                <div class="pf-v5-l-bullseye">
-                    <div class="pf-v5-c-empty-state pf-m-xs">
-                        <div class="pf-v5-c-empty-state__content">
-                            <i class="fas fa-info pf-v5-c-empty-state__icon"></i>
-                            <div class="pf-v5-c-card__title">
-                                <h2
-                                        class="pf-v5-c-card__title-text pf-m-md"
-                                >Direkt zu PHP</h2>
+    <section class="pf-v5-c-page__main-section pf-m-limit-width">
+        <div class="pf-v5-c-page__main-body">
+            <div class="pf-v5-l-grid pf-m-gutter">
+                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" style="--pf-v5-l-grid--item--Order-on-lg:3">
+                    <div class="pf-v5-l-flex pf-m-column">
+                        <div class="pf-v5-c-card">
+                            <div class="pf-v5-c-card__body">
+                                <?=$mdParser->text($md)?>
                             </div>
-                            <a href="https://it.treptowkolleg.de/docs/php/index.md" class="pf-v5-c-button pf-m-link">Mehr erfahren</a>
                         </div>
                     </div>
                 </div>
@@ -177,7 +170,6 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
         <div class="pf-v5-c-page__main-body">
             <div class="pf-v5-c-content">
-                <?=$mdParser->text($md)?>
             </div>
         </div>
     </section>
