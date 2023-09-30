@@ -155,11 +155,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
             <div class="pf-v5-l-grid pf-m-gutter">
                 <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-lg">
                     <div class="pf-v5-l-flex pf-m-column">
-                        <div class="pf-v5-c-card">
-                            <div class="pf-v5-c-card__body">
                                 <?=$mdParser->text($md)?>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
