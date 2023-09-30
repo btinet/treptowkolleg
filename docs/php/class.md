@@ -1,8 +1,8 @@
 # Klassen
 
-[Hauptseite](?file=index)
+[Hauptseite](/docs/index.md)
 
-[PHP](?file=php-index)
+[PHP](/docs/php/index.md)
 
 ## Auf dieser Seite
 

@@ -1,12 +1,12 @@
 # PHP Web Development
 
-[Hauptseite](?file=index)
+[Hauptseite](/docs/index.md)
 
 
 
 ## Inhaltsverzeichnis
 
-1. [Klassen](?file=php-class)
+1. [Klassen](/docs/php/class.md)
 
 
 Im Folgenden ein Beispiel einer einfachen Klasse mit Attributen, Methoden und Konstruktor.
