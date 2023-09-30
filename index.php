@@ -125,7 +125,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
             <nav class="pf-v5-c-breadcrumb" aria-label="breadcrumb">
                 <ol class="pf-v5-c-breadcrumb__list" role="list">
                     <li class="pf-v5-c-breadcrumb__item">
-                        <a href="https://www.treptowkolleg.de" class="pf-v5-c-breadcrumb__link">Informatik AG</a>
+                        <a href="https://it.treptowkolleg.de" class="pf-v5-c-breadcrumb__link">Informatik AG</a>
                     </li>
                     <li class="pf-v5-c-breadcrumb__item">
               <span class="pf-v5-c-breadcrumb__item-divider">
