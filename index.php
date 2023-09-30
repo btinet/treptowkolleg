@@ -61,19 +61,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/xt256.min.css" integrity="sha512-fhvZU0PRhieZyHjHD1sG4Zvo5EJjsnx90draikv9gBEFre1UXo4Neg3nT4xZ71TEdOLXif1C5llTy0Ughy+xSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        *{
-            line-height: 1.5;
-        }
-        h1,h2,h3,h4 {
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-        h1{font-size: 1.6rem!important;}
-        h2{font-size: 1.3rem!important;}
-        h3{font-size: 1.15rem!important;}
-        h4{font-size: 1rem!important;}
-    </style>
+
 
     <title>Hello, world!</title>
 </head>
