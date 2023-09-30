@@ -113,7 +113,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="./assets/dist/js/bootstrap.min.js"></script>
+<script src="/assets/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 
