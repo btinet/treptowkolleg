@@ -65,7 +65,7 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
     <style>
         h1,h2,h3,h4 {
             margin-bottom: 1.2rem;
-            font-weight: bold;
+            text-transform: uppercase;
         }
         h1{font-size: 1.6rem!important;}
         h2{font-size: 1.3rem!important;}
