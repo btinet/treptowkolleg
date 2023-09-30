@@ -18,7 +18,7 @@ class MyClass
 
 ### Attribute
 
-Jeder Klasse könne beliebige Attribute hinzugefügt werden.
+Jeder Klasse können beliebige Attribute hinzugefügt werden.
 
 ````php
 <?php # MyClass.php
@@ -54,7 +54,7 @@ class MyClass
     
     public function setInteger(int $newInteger): void
     {
-        if($newInteger % 2) {
+        if($newInteger % 2 == 0) {
             $this->myInteger = $newInteger;
             } else {
                 $this->myInteger = -($newInteger + 1);
