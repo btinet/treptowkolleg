@@ -47,8 +47,9 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 
 // Wie wir sehen, führen viele Wege nach Rom. Denn die Ausgaben aus Zeilen 25 und 38 sind von außen betrachtet identisch.
 ?>
+
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -156,8 +157,8 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                 <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-lg">
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-card">
-                            <div class="pf-v5-c-card__header">
-                                        <?=$mdParser->text($md)?>
+                            <div class="pf-v5-c-card__body">
+                                <?=$mdParser->text($md)?>
                             </div>
                         </div>
                     </div>
