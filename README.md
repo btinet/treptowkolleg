@@ -1,1 +1,1 @@
-[Dokumentationen](/docs/index.md)
+*Bitte Kategorie wählen*

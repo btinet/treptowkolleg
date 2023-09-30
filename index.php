@@ -162,7 +162,6 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                                 </div>
                                 <div class="pf-v5-c-card__body">
                                     <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
-                                        <li class=""><a class="pf-v5-c-simple-list__item-link"  href="/docs/index.md">Übersicht</a></li>
                                         <li class="">
                                             PHP
                                             <ul role="list" class="pf-v5-c-list pf-m-plain">
