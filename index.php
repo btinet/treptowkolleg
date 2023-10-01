@@ -120,7 +120,9 @@ $entries = dirToArray('./docs');
         pre  {
             position: relative!important;
             overflow: auto!important;
+        }
 
+        pre code {
             /* make space  */
             margin-top: 40px;
         }
