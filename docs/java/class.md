@@ -1,9 +1,10 @@
-# Klassen
+# Java
+## Klassen
 
 
 Jede Java Klasse besteht aus einem Klassenkopf und einem Klassenkörper.
 
-## Klassenkopf
+### Klassenkopf
 
 Der Klassenkopf enthält
 mindestens:
@@ -15,7 +16,7 @@ mindestens:
 Der Klassenname wird grundsätzlich am Anfang großgeschrieben und sollte
 nur ASCII-Zeichen enthalten.
 
-## Klassenkörper
+### Klassenkörper
 
 Die Attribute und Methoden der Klassen werden innerhalb der geschweiften
 Klammern notiert. Der Klassenkörper folgt unmittelbar dem Klassenkopf.
@@ -28,7 +29,7 @@ public class Klassenname // Klassenkopf
 }
 ````
 
-## Attribute
+### Attribute
 
 Jede Klasse kann mehrere Attribute besitzen, muss sie jedoch nicht.
 Attribute werden - ebenso wie Methoden - innerhalb des Klassenkörpers
@@ -63,7 +64,7 @@ public class Agent // Klassenkopf
 }
 ````
 
-## Methoden
+### Methoden
 
 Methoden werden im Klassenkörper notiert und haben denselben formalen Aufbau wie die Klassen
 selbst. Sie bestehen also aus einem Methodenkopf und einem Methodenkörper.
@@ -87,7 +88,7 @@ public class Klassenname // Klassenkopf
 Obwohl alle Methoden demselben Aufbau folgen, lassen sich mindestens drei Arten von Methoden
 unterscheiden.
 
-### Constructor
+#### Constructor
 
 Constructor-Methoden werden beim Initialisieren einer Instanz ausgeführt. Sie sind daran
 erkennbar, dass sie grundsätzlich großgeschrieben werden und denselben Namen haben wie ihre
@@ -128,7 +129,7 @@ der Auftrag erteilt, eine neue Instanz vom Typ Agent zu erstellen.
 
 Wir können also Methoden unterteilen in **Aufträge** und **Anfragen**.
 
-### Auftrag
+#### Auftrag
 
 Aufträge sind dadurch gekennzeichnet, dass Sie:
 
@@ -269,7 +270,7 @@ public class Agent
 }
 ````
 
-### Anfrage
+#### Anfrage
 
 Nun haben wir dem Agenten-Objekt einen Namen gegeben, allerdings fehlt uns noch eine Methode,
 um diesen wieder auszulesen. Hier kommt unser Getter (Anfrage) zum tragen.
@@ -321,7 +322,7 @@ public class Agent
 
 **Du bist dran**: implementiere weitere Attribute sowie dessen Setter und Getter
 
-## Method Overloading
+#### Method Overloading
 
 Jeder Agent soll bis zu zwei Fahrzeuge haben dürfen. Überlegen wir kurz, welchen Datentyp
 wir dafür dem entsprechenden Attribut geben möchten.
@@ -347,7 +348,7 @@ Gibt es weitere Möglichkeiten?
 
 **Im Folgenden einmal zwei Vorschläge**:
 
-### Variante A
+#### Variante A
 
 ````java
 // Variante A
@@ -366,7 +367,7 @@ public class Agent
 Eine Sammlung ist leicht implementiert, die Manipulation der Einträge ist jedoch wesentlich
 komplizierter, da die Sammlung sehr statisch ist.
 
-### Variante B
+#### Variante B
 
 ````java
 // Variante B
