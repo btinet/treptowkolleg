@@ -39,6 +39,7 @@ Wenn alles geklappt hat, kannst du mit dem Befehl ``choco -?`` überprüfen, ob 
 - Git
 - Node.js (npm)
 - Yarn
+- Symfony CLI
 - PHP IDE
 
 ### PHP Binary
@@ -81,6 +82,26 @@ Bevor **Yarn** installiert werden kann, muss Node.js installiert sein.
 
 ````shell
 npm install --global yarn
+````
+
+### Symfony CLI
+Symfony ist eigentlich für das gleichnamige PHP-Framework gedacht. Dennoch ist
+es für unsere Zwecke perfekt geeignet, da die Verwaltung des Testservers so
+deutlich einfacher erledigt werden kann.
+
+````shell
+choco install symfony-cli
+````
+
+Über ein Terminal im Projektordner kann dann der PHP-Testserver einfach gestartet
+oder beendet werden:
+
+````shell
+symfony server:start
+````
+
+````shell
+symfony server:stop
 ````
 
 ### PHP IDE (Integrated Development Environment)
