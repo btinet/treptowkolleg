@@ -124,7 +124,7 @@ $entries = dirToArray('./docs');
 
         pre code {
             /* make space  */
-            margin-top: 40px;
+            padding-top: 40px;
         }
 
         pre button {
