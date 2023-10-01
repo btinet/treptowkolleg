@@ -327,21 +327,31 @@ $entries = dirToArray('./docs');
         // only add button if browser supports Clipboard API
         if (navigator.clipboard) {
             let button = document.createElement("button");
-
-            button.innerText = copyButtonLabel;
             block.appendChild(button);
 
             button.addEventListener("click", async () => {
                 await copyCode(block,button);
+                await rollBackButtonText(button);
             });
         }
     });
 
+    function Sleep(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    }
+
     async function copyCode(block,button) {
         let code = block.querySelector("code");
         let text = code.innerText;
-        button.innerText = copiedButtonLabel;
         await navigator.clipboard.writeText(text);
+    }
+
+    async function rollBackButtonText(button) {
+        console.log("Vor der sleep-Funktion");
+        button.innerText = copiedButtonLabel;
+        await Sleep(1000); // Pausiert die Funktion für 3 Sekunden
+        button.innerText = copyButtonLabel;
+        console.log("Nach der Sleep Funktion");
     }
 </script>
 
