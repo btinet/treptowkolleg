@@ -78,5 +78,3 @@ gerade, wird sie normal im Attribut ``$myInteger`` abgelegt. Ist die Zahl jedoch
 ungerade, wird sie um eins erhöht und ihr Spiegelwert gespeichert. Dieser Algorithmus
 könnte umgangen werden, wenn das Attribut auf ``public`` gesetzt worden wäre.
 
-![Klassendiagramm](/docs/img/uml-computer.png)
-
