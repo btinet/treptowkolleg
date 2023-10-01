@@ -20,7 +20,7 @@ Set-ExecutionPolicy AllSigned
 ````
 oder
 ````shell
-``Set-ExecutionPolicy Bypass -Scope Process``
+Set-ExecutionPolicy Bypass -Scope Process
 ````
 aus.
 
