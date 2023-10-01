@@ -141,12 +141,29 @@ $entries = dirToArray('./docs');
             background-color: #eaeef2;
         }
 
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+        }
+
+        #myBtn:hover {
+            background-color: #555; /* Add a dark-grey background on hover */
+        }
+
 
     </style>
 
     <title>Informatik AG</title>
 </head>
 <body>
+
+
+<button class="pf-v5-c-button pf-m-primary" type="button" onclick="topFunction()" id="myBtn">
+    nach oben
+    <span class="pf-v5-c-button__icon pf-m-end">
+      <i class="fas fa-angle-up" aria-hidden="true"></i>
+    </span>
+</button>
 
 <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
     <div class="pf-v5-c-masthead__content">
@@ -352,6 +369,26 @@ $entries = dirToArray('./docs');
         await Sleep(1000); // Pausiert die Funktion für 3 Sekunden
         button.innerText = copyButtonLabel;
         console.log("Nach der Sleep Funktion");
+    }
+
+    // Get the button:
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 </script>
 
