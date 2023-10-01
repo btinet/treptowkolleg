@@ -117,8 +117,8 @@ $entries = dirToArray('./docs');
         }
 
         pre  {
-            position: relative;
-            overflow: auto;
+            position: relative!important;
+            overflow: auto!important;
 
             /* make space  */
             margin: 5px 0;
@@ -127,8 +127,8 @@ $entries = dirToArray('./docs');
         }
 
         pre button {
-            position: absolute;
-            top: 15px;
+            position: absolute!important;
+            top: 35px;
             right: 5px;
 
             font-size: 0.9rem;
