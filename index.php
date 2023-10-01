@@ -343,7 +343,7 @@ $entries = dirToArray('./docs');
         console.log("los!");
 
         function myFunction() {
-            if (document.body.scrollTop  >= 150 || document.documentElement.scrollTop >= 1500) {
+            if (document.body.scrollTop  >= 150 || document.documentElement.scrollTop >= 150) {
                 button.style.display = "block";
                 console.log("block");
             } else {
@@ -352,8 +352,9 @@ $entries = dirToArray('./docs');
             }
         }
         function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            //document.body.scrollTop = 0; // For Safari
+            //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
         button.addEventListener("click",topFunction);
         window.onscroll = function () { myFunction() };
