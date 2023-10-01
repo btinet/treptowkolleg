@@ -142,13 +142,12 @@ $entries = dirToArray('./docs');
         }
 
         #myBtn {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed/sticky position */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
         }
 
-        #myBtn:hover {
-            background-color: #555; /* Add a dark-grey background on hover */
-        }
 
 
     </style>
@@ -158,12 +157,12 @@ $entries = dirToArray('./docs');
 <body>
 
 
-<button class="pf-v5-c-button pf-m-primary" type="button" onclick="topFunction()" id="myBtn">
+<a class="pf-v5-c-button pf-m-primary" href="#" id="myBtn">
     nach oben
     <span class="pf-v5-c-button__icon pf-m-end">
       <i class="fas fa-angle-up" aria-hidden="true"></i>
     </span>
-</button>
+</a>
 
 <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
     <div class="pf-v5-c-masthead__content">
@@ -334,62 +333,62 @@ $entries = dirToArray('./docs');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
-    const copyButtonLabel = "kopieren";
-    const copiedButtonLabel = "kopiert!";
 
-    // use a class selector if available
-    let blocks = document.querySelectorAll("pre");
+    document.addEventListener("DOMContentLoaded", function(event) {
+        const copyButtonLabel = "kopieren";
+        const copiedButtonLabel = "kopiert!";
 
-    blocks.forEach((block) => {
-        // only add button if browser supports Clipboard API
-        if (navigator.clipboard) {
-            let button = document.createElement("button");
-            block.appendChild(button);
+        let button = document.getElementById("myBtn");
+        console.log("los!");
+
+        function myFunction() {
+            if (document.body.scrollTop  >= 20 || document.documentElement.scrollTop >= 20) {
+                button.style.display = "block";
+                console.log("block");
+            } else {
+                button.style.display = "none";
+                console.log("none");
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        button.addEventListener("click",topFunction);
+        window.onscroll = function () { myFunction() };
+
+        // use a class selector if available
+        let blocks = document.querySelectorAll("pre");
+
+        blocks.forEach((block) => {
+            // only add button if browser supports Clipboard API
+            if (navigator.clipboard) {
+                let button = document.createElement("button");
+                block.appendChild(button);
+                button.innerText = copyButtonLabel;
+                button.addEventListener("click", async () => {
+                    await copyCode(block);
+                    await rollBackButtonText(button);
+                });
+            }
+        });
+
+        function Sleep(milliseconds) {
+            return new Promise(resolve => setTimeout(resolve, milliseconds));
+        }
+
+        async function copyCode(block) {
+            let code = block.querySelector("code");
+            let text = code.innerText;
+            await navigator.clipboard.writeText(text);
+        }
+
+        async function rollBackButtonText(button) {
+            button.innerText = copiedButtonLabel;
+            await Sleep(1000); // Pausiert die Funktion für 3 Sekunden
             button.innerText = copyButtonLabel;
-            button.addEventListener("click", async () => {
-                await copyCode(block);
-                await rollBackButtonText(button);
-            });
         }
     });
-
-    function Sleep(milliseconds) {
-        return new Promise(resolve => setTimeout(resolve, milliseconds));
-    }
-
-    async function copyCode(block) {
-        let code = block.querySelector("code");
-        let text = code.innerText;
-        await navigator.clipboard.writeText(text);
-    }
-
-    async function rollBackButtonText(button) {
-        console.log("Vor der sleep-Funktion");
-        button.innerText = copiedButtonLabel;
-        await Sleep(1000); // Pausiert die Funktion für 3 Sekunden
-        button.innerText = copyButtonLabel;
-        console.log("Nach der Sleep Funktion");
-    }
-
-
-    console.log("los!");
-    function myFunction() {
-        if (window.pageYOffset - 20 >= 0) {
-            button.style.display = "block";
-            console.log("block");
-        } else {
-            button.style.display = "none";
-            console.log("none");
-        }
-    }
-
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-
-    window.onscroll = function () { myFunction() };
-
 </script>
 
 </body>
