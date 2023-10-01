@@ -127,8 +127,9 @@ $entries = dirToArray('./docs');
             top: 10px;
             right: 10px;
 
+
             font-size: 0.9rem;
-            padding: 0.15rem;
+            padding: 0.5rem;
             background-color: #f6f8fa;
             border: none;
         }
