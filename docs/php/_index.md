@@ -1,5 +1,7 @@
 # PHP Web Development
 
+![PHP-Logo](/docs/img/new-php-logo.png)
+
 **Wichtige Links**
 
 [PHP Dokumentation](https://www.php.net/manual/de/)
