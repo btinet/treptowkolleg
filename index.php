@@ -194,12 +194,12 @@ $entries = dirToArray('./docs');
                                                     echo '<li>';
 
                                                     if(is_array($value)) {
-                                                        echo strtoupper(substr($dir,0,-3));
+                                                        echo strtoupper($dir);
                                                         echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                                         foreach ($value as $key => $subValue) {
                                                             echo '<li>';
                                                             echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '">';
-                                                            echo $subValue;
+                                                            echo substr($subValue,0,-3);
                                                             echo '</a>';
                                                             echo '</li>';
                                                         }
