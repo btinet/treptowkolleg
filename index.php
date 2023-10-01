@@ -116,15 +116,6 @@ $entries = dirToArray('./docs');
             background-color: #f6f8fa!important;
         }
 
-        pre[class*="language-"] {
-            position: relative;
-            overflow: auto;
-
-            /* make space  */
-            margin: 5px 0;
-            padding: 1.75rem 0 1.75rem 1rem;
-            border-radius: 10px;
-        }
 
         pre[class*="language-"] button {
             position: absolute;
