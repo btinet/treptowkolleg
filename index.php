@@ -45,6 +45,21 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 
 }
 
+
+
+function getName(string $file): string
+{
+    $fileNames = [
+        'basics' => 'Grundlagen',
+        'class' => 'Klassen',
+        '_index' => 'Einleitung',
+        'associations' => 'Beziehungen'
+    ];
+    $fileName = substr($file,0,-3);
+
+    return $fileNames[$fileName];
+}
+
 function dirToArray($dir): array
 {
     $result = array();
@@ -199,14 +214,14 @@ $entries = dirToArray('./docs');
                                                         foreach ($value as $key => $subValue) {
                                                             echo '<li>';
                                                             echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '">';
-                                                            echo substr($subValue,0,-3);
+                                                            echo getName($subValue);
                                                             echo '</a>';
                                                             echo '</li>';
                                                         }
                                                         echo '</ul>';
                                                     } else {
                                                         echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '">';
-                                                        echo $value;
+                                                        echo getName($value);
                                                         echo '</a>';
                                                     }
 
