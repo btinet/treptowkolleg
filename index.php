@@ -114,6 +114,7 @@ $entries = dirToArray('./docs');
         code {
             color: #c7254e;
             background-color: #f6f8fa!important;
+            padding-top: 30px;
         }
 
         pre  {
