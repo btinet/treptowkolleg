@@ -21,7 +21,7 @@ Es gibt insgesamt sechs standardmäßig verschiedene Überschriften.
 <h5>&Uuml;berschrift 5</h5>
 <h6>&Uuml;berschrift 6</h6>
 ````
-Dir ist bestimmt schon das &Uuml; aufgefallen. Dies ist ein Code, der dem Browser sagt, dass es sich um einen U-Umlaut handelt. Die ganze Liste findest du (später) hier.
+Dir ist bestimmt schon das ``&Uuml;`` aufgefallen. Dies ist ein Code, der dem Browser sagt, dass es sich um einen U-Umlaut handelt. Die ganze Liste findest du (später) hier.
 
 
 ## Absätze
