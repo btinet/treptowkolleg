@@ -317,7 +317,7 @@ $entries = dirToArray('./docs');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
-    const copyButtonLabel = "kopieren";
+    let copyButtonLabel = "kopieren";
 
     // use a class selector if available
     let blocks = document.querySelectorAll("pre");
@@ -339,6 +339,7 @@ $entries = dirToArray('./docs');
     async function copyCode(block) {
         let code = block.querySelector("code");
         let text = code.innerText;
+        copyButtonLabel = "kopiert!";
 
         await navigator.clipboard.writeText(text);
     }
