@@ -118,6 +118,15 @@ $entries = dirToArray('./docs');
 </head>
 <body>
 
+<div class="pf-v5-c-back-to-top">
+    <a class="pf-v5-c-button pf-m-primary" href="#">
+        Back to top
+        <span class="pf-v5-c-button__icon pf-m-end">
+      <i class="fas fa-angle-up" aria-hidden="true"></i>
+    </span>
+    </a>
+</div>
+
 <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
     <div class="pf-v5-c-masthead__content">
         <div
