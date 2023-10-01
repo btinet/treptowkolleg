@@ -340,6 +340,7 @@ $entries = dirToArray('./docs');
         const copiedButtonLabel = "kopiert!";
 
         let button = document.getElementById("myBtn");
+
         console.log("los!");
 
         function myFunction() {
@@ -351,13 +352,16 @@ $entries = dirToArray('./docs');
                 console.log("none");
             }
         }
-        function topFunction() {
+        function topFunction(e) {
+            e.preventDefault();
             window.scrollTo({top: 0, behavior: 'smooth'});
             //document.body.scrollTop = 0; // For Safari
             //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
         button.addEventListener("click",topFunction);
-        window.onscroll = function () { myFunction() };
+        window.onscroll = function () {
+            myFunction()
+        };
 
         // use a class selector if available
         let blocks = document.querySelectorAll("pre");
