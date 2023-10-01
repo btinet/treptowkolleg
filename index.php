@@ -115,6 +115,42 @@ $entries = dirToArray('./docs');
             color: #c7254e;
             background-color: #f6f8fa!important;
         }
+
+        pre[class*="language-"] {
+            position: relative;
+            overflow: auto;
+
+            /* make space  */
+            margin: 5px 0;
+            padding: 1.75rem 0 1.75rem 1rem;
+            border-radius: 10px;
+        }
+
+        pre[class*="language-"] button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+            font-size: 0.9rem;
+            padding: 0.15rem;
+            background-color: #828282;
+
+            border: ridge 1px #7b7b7c;
+            border-radius: 5px;
+            text-shadow: #c4c4c4 0 0 2px;
+        }
+
+        pre[class*="language-"] button:hover {
+            cursor: pointer;
+            background-color: #bcbabb;
+        }
+
+        main {
+            display: grid;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
     </style>
 
     <title>Informatik AG</title>
@@ -289,6 +325,26 @@ $entries = dirToArray('./docs');
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
+<script>
+    const copyButtonLabel = "Copy Code";
+
+    // use a class selector if available
+    let blocks = document.querySelectorAll("pre");
+
+    blocks.forEach((block) => {
+        // only add button if browser supports Clipboard API
+        if (navigator.clipboard) {
+            let button = document.createElement("button");
+
+            button.innerText = copyButtonLabel;
+            block.appendChild(button);
+
+            button.addEventListener("click", async () => {
+                await copyCode(block, button);
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
