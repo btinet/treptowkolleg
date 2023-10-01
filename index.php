@@ -328,9 +328,9 @@ $entries = dirToArray('./docs');
         if (navigator.clipboard) {
             let button = document.createElement("button");
             block.appendChild(button);
-
+            button.innerText = copyButtonLabel;
             button.addEventListener("click", async () => {
-                await copyCode(block,button);
+                await copyCode(block);
                 await rollBackButtonText(button);
             });
         }
@@ -340,7 +340,7 @@ $entries = dirToArray('./docs');
         return new Promise(resolve => setTimeout(resolve, milliseconds));
     }
 
-    async function copyCode(block,button) {
+    async function copyCode(block) {
         let code = block.querySelector("code");
         let text = code.innerText;
         await navigator.clipboard.writeText(text);
