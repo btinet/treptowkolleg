@@ -113,6 +113,7 @@ $entries = dirToArray('./docs');
     <style>
         code {
             color: #c7254e;
+            background-color: #eaeef2!important;
         }
     </style>
 
