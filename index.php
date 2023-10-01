@@ -107,7 +107,11 @@ $entries = dirToArray('./docs');
     <link rel="stylesheet" href="/node_modules/@patternfly/patternfly/patternfly-addons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
+    <style>
+        code {
+            color: #c7254e;
+        }
+    </style>
 
     <title>Informatik AG</title>
 </head>
