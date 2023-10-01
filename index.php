@@ -279,14 +279,6 @@ $entries = dirToArray('./docs');
             </div>
         </div>
     </section>
-    <div class="pf-v5-c-back-to-top">
-        <a class="pf-v5-c-button pf-m-primary" href="#">
-            nach oben
-            <span class="pf-v5-c-button__icon pf-m-end">
-      <i class="fas fa-angle-up" aria-hidden="true"></i>
-    </span>
-        </a>
-    </div>
 </main>
 
 
