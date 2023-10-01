@@ -146,6 +146,7 @@ $entries = dirToArray('./docs');
             bottom: 20px;
             right: 20px;
             z-index: 9999;
+            display: none;
         }
 
 
@@ -342,7 +343,7 @@ $entries = dirToArray('./docs');
         console.log("los!");
 
         function myFunction() {
-            if (document.body.scrollTop  >= 20 || document.documentElement.scrollTop >= 20) {
+            if (document.body.scrollTop  >= 150 || document.documentElement.scrollTop >= 1500) {
                 button.style.display = "block";
                 console.log("block");
             } else {
