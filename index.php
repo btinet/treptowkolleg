@@ -120,7 +120,7 @@ $entries = dirToArray('./docs');
 
 <div class="pf-v5-c-back-to-top">
     <a class="pf-v5-c-button pf-m-primary" href="#">
-        Back to top
+        nach oben
         <span class="pf-v5-c-button__icon pf-m-end">
       <i class="fas fa-angle-up" aria-hidden="true"></i>
     </span>
