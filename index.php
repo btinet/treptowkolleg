@@ -371,25 +371,25 @@ $entries = dirToArray('./docs');
         console.log("Nach der Sleep Funktion");
     }
 
-    // Get the button:
-    let mybutton = document.getElementById("myBtn");
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
+    console.log("los!");
+    function myFunction() {
+        if (window.pageYOffset - 20 >= 0) {
+            button.style.display = "block";
+            console.log("block");
         } else {
-            mybutton.style.display = "none";
+            button.style.display = "none";
+            console.log("none");
         }
     }
 
-    // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
+
+    window.onscroll = function () { myFunction() };
+
 </script>
 
 </body>
