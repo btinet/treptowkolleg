@@ -279,7 +279,7 @@ $entries = dirToArray('./docs');
     <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
         <div class="pf-v5-c-page__main-body">
             <div class="pf-v5-c-content">
-                <span>&copy;2023 - Benjamin Wagner (Kollegiat am Treptow-Kolleg Berlin) - Das ziemlich beste Kolleg der Stadt</span>
+                <span>&copy;2023 - Benjamin Wagner (Kollegiat am Treptow-Kolleg Berlin - das ziemlich beste Kolleg der Stadt)</span>
             </div>
         </div>
     </section>
