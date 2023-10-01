@@ -317,7 +317,8 @@ $entries = dirToArray('./docs');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
-    let copyButtonLabel = "kopieren";
+    const copyButtonLabel = "kopieren";
+    const copiedButtonLabel = "kopiert!";
 
     // use a class selector if available
     let blocks = document.querySelectorAll("pre");
@@ -331,16 +332,15 @@ $entries = dirToArray('./docs');
             block.appendChild(button);
 
             button.addEventListener("click", async () => {
-                await copyCode(block);
+                await copyCode(block,button);
             });
         }
     });
 
-    async function copyCode(block) {
+    async function copyCode(block,button) {
         let code = block.querySelector("code");
         let text = code.innerText;
-        copyButtonLabel = "kopiert!";
-
+        button.innerText = copiedButtonLabel;
         await navigator.clipboard.writeText(text);
     }
 </script>
