@@ -10,12 +10,18 @@ Programmiersprachen, benötigen wir einen Softwarepaketmanager. Ein einfacher Pa
 
 Öffne die Windows Powershell mit Administratorrechten und gib folgenden Befehl ein:
 
-``Get-ExecutionPolicy ``
+````shell
+Get-ExecutionPolicy
+````
 
 Sollte ''Restricted'' zurückgegeben werden, führe
-
-``Set-ExecutionPolicy AllSigned`` oder ``Set-ExecutionPolicy Bypass -Scope Process``
-
+````shell
+Set-ExecutionPolicy AllSigned
+````
+oder
+````shell
+``Set-ExecutionPolicy Bypass -Scope Process``
+````
 aus.
 
 Installiere abschließend **Chocolatey** mit:
