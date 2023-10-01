@@ -5,7 +5,7 @@ Projekten unterstützen.
 
 ## Code-kopieren-Button
 
-Dank Bastian Herbstlebs Hinweis, dass Buttons zum Kopieren von Quellcode aus Codeblocks
+>Dank Bastian Herbstlebs Hinweis, dass Buttons zum Kopieren von Quellcode aus Codeblocks
 in die Zwischenablage auf meinen Dokuseiten fehlen, habe ich diese nun erstmalig mit
 **Javascript** implementiert.
 
