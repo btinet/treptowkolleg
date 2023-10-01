@@ -335,10 +335,17 @@ $entries = dirToArray('./docs');
             block.appendChild(button);
 
             button.addEventListener("click", async () => {
-                await copyCode(block, button);
+                await copyCode(block);
             });
         }
     });
+
+    async function copyCode(block) {
+        let code = block.querySelector("code");
+        let text = code.innerText;
+
+        await navigator.clipboard.writeText(text);
+    }
 </script>
 
 </body>
