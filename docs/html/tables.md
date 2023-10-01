@@ -99,22 +99,6 @@ Jedoch finden wir nicht immer all diese Bereiche vor. Insbesondere der Tabellenf
         class="pf-v5-c-table__td"
         role="cell"
         data-label="Repository name"
-      >Repository 1</td>
-      <td class="pf-v5-c-table__td" role="cell" data-label="Branches">10</td>
-      <td class="pf-v5-c-table__td" role="cell" data-label="Pull requests">25</td>
-      <td class="pf-v5-c-table__td" role="cell" data-label="Workspaces">5</td>
-      <td
-        class="pf-v5-c-table__td"
-        role="cell"
-        data-label="Last commit"
-      >2 days ago</td>
-    </tr>
-
-    <tr class="pf-v5-c-table__tr" role="row">
-      <td
-        class="pf-v5-c-table__td"
-        role="cell"
-        data-label="Repository name"
       >Repository 2</td>
       <td class="pf-v5-c-table__td" role="cell" data-label="Branches">10</td>
       <td class="pf-v5-c-table__td" role="cell" data-label="Pull requests">25</td>
@@ -125,7 +109,6 @@ Jedoch finden wir nicht immer all diese Bereiche vor. Insbesondere der Tabellenf
         data-label="Last commit"
       >2 days ago</td>
     </tr>
-
     <tr class="pf-v5-c-table__tr" role="row">
       <td
         class="pf-v5-c-table__td"
@@ -141,7 +124,6 @@ Jedoch finden wir nicht immer all diese Bereiche vor. Insbesondere der Tabellenf
         data-label="Last commit"
       >2 days ago</td>
     </tr>
-
     <tr class="pf-v5-c-table__tr" role="row">
       <td
         class="pf-v5-c-table__td"
