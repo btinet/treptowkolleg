@@ -5,3 +5,5 @@
 Grundlagen
 
 <a class="pf-v5-c-button pf-m-control pf-m-small" href="https://it.treptowkolleg.de/admin" target="_blank">phpMyAdmin</a>
+
+$$f(x)=mx + n$$
