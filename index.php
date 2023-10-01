@@ -53,7 +53,8 @@ function getName(string $file): string
         'basics' => 'Grundlagen',
         'class' => 'Klassen',
         '_index' => 'Einleitung',
-        'associations' => 'Beziehungen'
+        'associations' => 'Beziehungen',
+        'vars' => 'Variablen & Konstanten'
     ];
     $fileName = substr($file,0,-3);
 
