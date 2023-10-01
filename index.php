@@ -125,7 +125,7 @@ $entries = dirToArray('./docs');
 
         pre button {
             position: absolute!important;
-            top: 40px;
+            top: -20px;
             right: 10px;
 
             font-size: 0.9rem;
