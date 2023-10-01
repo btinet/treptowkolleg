@@ -114,7 +114,7 @@ $entries = dirToArray('./docs');
         code {
             color: #c7254e;
             background-color: #f6f8fa!important;
-            padding-top: 30px;
+
         }
 
         pre  {
@@ -122,6 +122,7 @@ $entries = dirToArray('./docs');
             overflow: auto!important;
 
             /* make space  */
+            padding-top: 30px;
         }
 
         pre button {
