@@ -121,8 +121,6 @@ $entries = dirToArray('./docs');
             overflow: auto!important;
 
             /* make space  */
-            margin: 5px 0;
-            padding: 1.75rem 0 1.75rem 1rem;
         }
 
         pre button {
