@@ -194,7 +194,7 @@ $entries = dirToArray('./docs');
                                                     echo '<li>';
 
                                                     if(is_array($value)) {
-                                                        echo strtoupper($dir);
+                                                        echo strtoupper(substr($dir,0,-3));
                                                         echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                                         foreach ($value as $key => $subValue) {
                                                             echo '<li>';
