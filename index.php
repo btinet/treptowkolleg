@@ -121,6 +121,21 @@ $entries = dirToArray('./docs');
             <div class="pf-v5-c-toolbar__content">
                 <div class="pf-v5-c-toolbar__content-section">
                     <div
+                            class="pf-v5-c-toolbar__group pf-m-icon-button-group pf-m-align-left pf-m-spacer-none pf-m-spacer-md-on-md"
+                    >
+                        <div class="pf-v5-c-toolbar__item">
+                            <a
+                                    href="/"
+                                    class="pf-v5-c-menu-toggle pf-m-plain"
+                                    aria-expanded="false"
+                                    aria-label="Application launcher"
+                            >
+                                Informatik Kompendium
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
                             class="pf-v5-c-toolbar__group pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"
                     >
                         <div
