@@ -57,6 +57,7 @@ function getName(string $file): string
         'vars' => 'Variablen & Konstanten',
         'magic_methods' => 'Magische Methoden',
         'tables' => 'Tabellen',
+        'php-ide' => 'PHP Entwicklungsumgebung',
         'typo' => 'Typographie'
     ];
     $fileName = substr($file,0,-3);
