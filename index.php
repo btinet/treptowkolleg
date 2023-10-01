@@ -45,6 +45,30 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
 
 }
 
+function dirToArray($dir): array
+{
+    $result = array();
+    $cdir = scandir($dir,SCANDIR_SORT_ASCENDING);
+
+    foreach ($cdir as $key => $value)
+    {
+        if (!in_array($value,array(".","..")))
+        {
+            if (is_dir($dir . DIRECTORY_SEPARATOR . $value))
+            {
+                $result[$value] = dirToArray($dir . DIRECTORY_SEPARATOR . $value);
+            }
+            else
+            {
+                $result[] = $value;
+            }
+        }
+    }
+    return $result;
+}
+
+$entries = dirToArray('./docs');
+
 // Wie wir sehen, führen viele Wege nach Rom. Denn die Ausgaben aus Zeilen 25 und 38 sind von außen betrachtet identisch.
 ?>
 <!doctype html>
@@ -163,13 +187,33 @@ if (isset($_GET['file']) and !empty($_GET['file']) ) {
                                 </div>
                                 <div class="pf-v5-c-card__body">
                                     <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
-                                        <li class="">
-                                            PHP
-                                            <ul role="list" class="pf-v5-c-list pf-m-plain">
-                                                <li class=""><a class="pf-v5-c-simple-list__item-link" href="/docs/php/basics.md">Grundlagen</a></li>
-                                                <li class=""><a class="pf-v5-c-simple-list__item-link" href="/docs/php/class.md">Klassen</a></li>
-                                            </ul>
-                                        </li>
+                                        <?php
+                                        asort($entries);
+                                            foreach ($entries as $dir => $value) {
+                                                if ($dir != "img") {
+                                                    echo '<li>';
+
+                                                    if(is_array($value)) {
+                                                        echo strtoupper($dir);
+                                                        echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
+                                                        foreach ($value as $key => $subValue) {
+                                                            echo '<li>';
+                                                            echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '">';
+                                                            echo $subValue;
+                                                            echo '</a>';
+                                                            echo '</li>';
+                                                        }
+                                                        echo '</ul>';
+                                                    } else {
+                                                        echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '">';
+                                                        echo $value;
+                                                        echo '</a>';
+                                                    }
+
+                                                    echo '</li>';
+                                                }
+                                            }
+                                        ?>
                                     </ul>
                                 </div>
 
