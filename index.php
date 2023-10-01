@@ -116,7 +116,7 @@ $entries = dirToArray('./docs');
             background-color: #f6f8fa!important;
         }
 
-        pre[class*="language-"] {
+        pre  {
             position: relative;
             overflow: auto;
 
@@ -126,7 +126,7 @@ $entries = dirToArray('./docs');
             border-radius: 10px;
         }
 
-        pre[class*="language-"] button {
+        pre button {
             position: absolute;
             top: 5px;
             right: 5px;
@@ -140,7 +140,7 @@ $entries = dirToArray('./docs');
             text-shadow: #c4c4c4 0 0 2px;
         }
 
-        pre[class*="language-"] button:hover {
+        pre button:hover {
             cursor: pointer;
             background-color: #bcbabb;
         }
