@@ -122,11 +122,6 @@ $entries = dirToArray('./docs');
             overflow: auto!important;
         }
 
-        pre code {
-            /* make space  */
-            padding-top: 40px;
-        }
-
         pre button {
             position: absolute!important;
             top: 10px;
@@ -353,8 +348,8 @@ $entries = dirToArray('./docs');
 <script>
 
     document.addEventListener("DOMContentLoaded", function(event) {
-        const copyButtonLabel = "kopieren";
-        const copiedButtonLabel = "kopiert!";
+        const copyButtonLabel = "<i class='fas fa-copy'></i>";
+        const copiedButtonLabel = "<i class='fas fa-check'></i>";
 
         let button = document.getElementById("myBtn");
 
@@ -385,7 +380,7 @@ $entries = dirToArray('./docs');
             if (navigator.clipboard) {
                 let button = document.createElement("button");
                 block.appendChild(button);
-                button.innerText = copyButtonLabel;
+                button.innerHTML = copyButtonLabel;
                 button.addEventListener("click", async () => {
                     await copyCode(block);
                     await rollBackButtonText(button);
@@ -404,9 +399,9 @@ $entries = dirToArray('./docs');
         }
 
         async function rollBackButtonText(button) {
-            button.innerText = copiedButtonLabel;
+            button.innerHTML = copiedButtonLabel;
             await Sleep(1000); // Pausiert die Funktion für 3 Sekunden
-            button.innerText = copyButtonLabel;
+            button.innerHTML = copyButtonLabel;
         }
     });
 </script>
