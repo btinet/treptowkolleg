@@ -350,7 +350,7 @@ $entries = dirToArray('./docs');
 
     document.addEventListener("DOMContentLoaded", function(event) {
         const copyButtonLabel = "<i class='fas fa-copy'></i>";
-        const copiedButtonLabel = "<i class='fas fa-check'></i>";
+        const copiedButtonLabel = "<i class='fas fa-check'></i> kopiert";
 
         let button = document.getElementById("myBtn");
 
