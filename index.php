@@ -132,6 +132,8 @@ $entries = dirToArray('./docs');
 
             font-size: 0.9rem;
             padding: 0.15rem;
+            background-color: #f6f8fa;
+            border: none;
         }
 
         pre button:hover {
@@ -315,7 +317,7 @@ $entries = dirToArray('./docs');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>
-    const copyButtonLabel = "<i class='fas fa-copy'></i>";
+    const copyButtonLabel = "kopieren";
 
     // use a class selector if available
     let blocks = document.querySelectorAll("pre");
