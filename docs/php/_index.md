@@ -1,4 +1,13 @@
 # PHP Web Development
+
+**Wichtige Links**
+
+[PHP Dokumentation](https://www.php.net/manual/de/)
+
+[Programming Standard Recommendations](https://www.php-fig.org/psr/)
+
+[Packagist](https://packagist.org/)
+
 ## Einleitung
 
 PHP ist ein serverseitiger Text-Interpreter, der PHP-Code kompiliert und als Text,
