@@ -356,15 +356,12 @@ $entries = dirToArray('./docs');
 
         let button = document.getElementById("myBtn");
 
-        console.log("los!");
 
         function myFunction() {
             if (document.body.scrollTop  >= 150 || document.documentElement.scrollTop >= 150) {
                 button.style.display = "block";
-                console.log("block");
             } else {
                 button.style.display = "none";
-                console.log("none");
             }
         }
         function topFunction(e) {
