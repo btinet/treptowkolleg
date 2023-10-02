@@ -16,3 +16,10 @@
 ### Komposition (B ist Teil von A)
 
 ![Klassendiagramm](/docs/img/uml-composition.png)
+
+### Generalisierung/Spezialisierung (B erbt von A)
+
+Bei der `Generalisierung/Spezialisierung` spricht man davon, dass die **Unterklasse**
+Attribute und Methoden der **Oberklasse** erbt.
+
+![Klassendiagramm](/docs/img/uml-inherit.png)
