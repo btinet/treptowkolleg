@@ -281,14 +281,14 @@ $entries = dirToArray('./docs');
                                                         echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                                         foreach ($value as $key => $subValue) {
                                                             echo '<li>';
-                                                            echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '">';
+                                                            echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '#content">';
                                                             echo getName($subValue);
                                                             echo '</a>';
                                                             echo '</li>';
                                                         }
                                                         echo '</ul>';
                                                     } else {
-                                                        echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '">';
+                                                        echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '#content">';
                                                         echo getName($value);
                                                         echo '</a>';
                                                     }
@@ -304,7 +304,7 @@ $entries = dirToArray('./docs');
                         </div>
                     </div>
                 </div>
-                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-2xl">
+                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-2xl" id="content">
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-content">
                         <div class="pf-v5-c-card">
