@@ -281,14 +281,14 @@ $entries = dirToArray('./docs');
                                                         echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                                         foreach ($value as $key => $subValue) {
                                                             echo '<li>';
-                                                            echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '#content">';
+                                                            echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '">';
                                                             echo getName($subValue);
                                                             echo '</a>';
                                                             echo '</li>';
                                                         }
                                                         echo '</ul>';
                                                     } else {
-                                                        echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '#content">';
+                                                        echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '">';
                                                         echo getName($value);
                                                         echo '</a>';
                                                     }
