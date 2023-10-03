@@ -19,6 +19,11 @@
 
 ### Generalisierung/Spezialisierung (B erbt von A)
 
+Bei der `Generalisierung/Spezialisierung` spricht man davon, dass die **Unterklasse**
+Attribute und Methoden der **Oberklasse** erbt.
+
+![Klassendiagramm](/docs/img/uml-inherit.png)
+
 ````php
 <?php
 
@@ -44,11 +49,4 @@ class SubClass extends SuperClass
     $this->setMyPrivateAttribute($myParameter);
     
 }
-
-
 ````
-
-Bei der `Generalisierung/Spezialisierung` spricht man davon, dass die **Unterklasse**
-Attribute und Methoden der **Oberklasse** erbt.
-
-![Klassendiagramm](/docs/img/uml-inherit.png)
