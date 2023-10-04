@@ -9,6 +9,9 @@
 
 ![Klassendiagramm](/docs/img/uml-association.png)
 
+Der Browser kennt den Webserver, was durch die Methode ``addHost(Webserver $server)`` zum Ausdruck
+gebracht wird.
+
 ````php
 <?php
 
@@ -29,12 +32,14 @@ class Browser
 }
 ````
 
-Der Browser kennt den Webserver, was durch die Methode ``addHost(Webserver $server)`` zum Ausdruck
-gebracht wird.
-
 ### Aggregation (A hat B)
 
 ![Klassendiagramm](/docs/img/uml-aggregation.png)
+
+Eine Firma kann nicht ohne einen Mitarbeiter (einschließlich Geschäftsführung) existieren.
+Ein Mitarbeiter kann jedoch auch ohne Firma existieren (Dann hat er den Status *arbeitslos*).
+Wird eine neue Firma gegründet, muss wenigstens ein Mitarbeiter zugeordnet werden. Das
+passiert im Konstruktor.
 
 ````php
 <?php
@@ -66,14 +71,12 @@ class Firma
 }
 ````
 
-Eine Firma kann nicht ohne einen Mitarbeiter (einschließlich Geschäftsführung) existieren.
-Ein Mitarbeiter kann jedoch auch ohne Firma existieren (Dann hat er den Status *arbeitslos*).
-Wird eine neue Firma gegründet, muss wenigstens ein Mitarbeiter zugeordnet werden. Das
-passiert im Konstruktor.
-
 ### Komposition (B ist Teil von A)
 
 ![Klassendiagramm](/docs/img/uml-composition.png)
+
+Ein neues Dokument benötigt mindestens einen Absatz. Daher wird bei Instantiierung
+eines ``Dokument``-Objekts ein ``Paragraph``-Objekt im Konstruktor instantiiert.
 
 ````php
 <?php
@@ -97,11 +100,11 @@ class Document
 
 ### Generalisierung/Spezialisierung (B erbt von A)
 
+![Klassendiagramm](/docs/img/uml-inherit.png)
+
 Bei der Generalisierung/Spezialisierung spricht man davon, dass die **Unterklasse**
 Attribute und Methoden der **Oberklasse** erbt. Die Unterklasse ist eine spezialisierte
 Variante der Oberklasse.
-
-![Klassendiagramm](/docs/img/uml-inherit.png)
 
 ````php
 <?php
