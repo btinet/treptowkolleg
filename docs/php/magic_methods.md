@@ -102,8 +102,7 @@ class Person
 
     public function __toString()
     {
-        return "{$this->firstname} {$this->firstname}";
-        // ODER: return $this->firstname . " " . $this->firstname;
+        return $this->firstname . " " . $this->firstname;
     }
 
 }
