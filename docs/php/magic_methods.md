@@ -85,3 +85,26 @@ Nachdem die drei Parameter den Klassenattributen zugewiesen wurden, wird die Kla
 ``connect()`` ausgeführt, die dem Attribut ``$link`` das neue ``PDO``-Objekt zuweist.
 
 ### __toString()
+
+Manchmal wollen wir einen bestimmten Inhalt eines Objekts ausgeben, ohne erst zu überlegen,
+welche Methoden die vielen Objekte haben, um gewisse Informationen auszugeben. Mithilfe der
+magischen Methode ``toString()`` können wir dieses Problem umgehen. Denn jede Instanz (Objekt)
+einer Klasse, die diese Methode implementiert, nutzt genau diese Methode zur Ausgabe eines
+ebensolchen Strings:
+
+````php
+<?php # Connection.php
+
+class Person
+{
+    protected $firstname;
+    protected $lastname;
+
+    public function __toString()
+    {
+        return "{$this->firstname} {$this->firstname}";
+        // ODER: return $this->firstname . " " . $this->firstname;
+    }
+
+}
+````
