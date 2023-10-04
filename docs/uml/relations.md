@@ -12,6 +12,12 @@
 ````php
 <?php
 
+class Webserver
+{
+    private string $title = 'website title';
+    private string $ip = '192.168.0.1';    
+}
+
 class Browser
 {
     private array $hosts = [];
@@ -21,13 +27,10 @@ class Browser
         $this->hosts[] = $server;
     }    
 }
-
-class Webserver
-{
-    private string $title = 'website title';
-    private string $ip = '192.168.0.1';    
-}
 ````
+
+Der Browser kennt den Webserver, was durch die Methode ``addHost(Webserver $server)`` zum Ausdruck
+gebracht wird.
 
 ### Aggregation (A hat B)
 
@@ -35,6 +38,11 @@ class Webserver
 
 ````php
 <?php
+
+class Employee
+{
+    private string $name;    
+}
 
 class Firma
 {
@@ -56,16 +64,36 @@ class Firma
         $this->$employees[] = $employee;
     }    
 }
-
-class Employee
-{
-    private string $name;    
-}
 ````
+
+Eine Firma kann nicht ohne einen Mitarbeiter (einschließlich Geschäftsführung) existieren.
+Ein Mitarbeiter kann jedoch auch ohne Firma existieren (Dann hat er den Status *arbeitslos*).
+Wird eine neue Firma gegründet, muss wenigstens ein Mitarbeiter zugeordnet werden. Das
+passiert im Konstruktor.
 
 ### Komposition (B ist Teil von A)
 
 ![Klassendiagramm](/docs/img/uml-composition.png)
+
+````php
+<?php
+
+class Paragraph
+{
+    private string $text;    
+}
+
+class Document
+{
+    private array $paragraphs = [];
+    
+    public function __construct()
+    {
+        $this->paragraphs[] = new Paragraph();
+    }
+
+}
+````
 
 ### Generalisierung/Spezialisierung (B erbt von A)
 
