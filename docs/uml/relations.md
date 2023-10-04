@@ -15,24 +15,17 @@
 class Browser
 {
     private array $hosts = [];
-    
-    public function __construct()
-    {
-    
-    }
-    
+        
     protected function addHost(Webserver $server): void
     {
         $this->hosts[] = $server;
-    }
-    
+    }    
 }
 
 class Webserver
 {
     private string $title = 'website title';
-    private string $ip = '192.168.0.1';
-    
+    private string $ip = '192.168.0.1';    
 }
 ````
 
