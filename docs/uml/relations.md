@@ -107,6 +107,8 @@ class Document
 
 }
 ````
+Ein weiteres Beispiel für eine Komposition findest du auch unter [Magische Methoden](/docs/php/magic_methods.md)
+im Abschnitt [PHP](/docs/php/_index.md). Weißt du, welches Beispiel gemeint ist?
 
 ### Generalisierung/Spezialisierung (B erbt von A)
 
