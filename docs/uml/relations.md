@@ -16,7 +16,7 @@ class Browser
 {
     private array $hosts = [];
         
-    protected function addHost(Webserver $server): void
+    public function addHost(Webserver $server): void
     {
         $this->hosts[] = $server;
     }    
@@ -32,6 +32,36 @@ class Webserver
 ### Aggregation (A hat B)
 
 ![Klassendiagramm](/docs/img/uml-aggregation.png)
+
+````php
+<?php
+
+class Firma
+{
+    private array $employees = [];
+    
+    public function __construct($employee)
+    {
+        if(is_array($employee)) {
+            $this->employees = $employee;
+        } elseif($employee instanceof Employee) {
+            $this->employees[] = $employee;
+        } else {
+            throw new \Exception('Construct parameter contains no employee!');
+        }
+    }
+        
+    public function addEmployee(Employee $employee): void
+    {
+        $this->$employees[] = $employee;
+    }    
+}
+
+class Employee
+{
+    private string $name;    
+}
+````
 
 ### Komposition (B ist Teil von A)
 
