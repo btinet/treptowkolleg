@@ -86,24 +86,31 @@ Nachdem die drei Parameter den Klassenattributen zugewiesen wurden, wird die Kla
 
 ### __toString()
 
-Manchmal wollen wir einen bestimmten Inhalt eines Objekts ausgeben, ohne erst zu überlegen,
+Manchmal wollen wir einen bestimmten Inhalt eines Objekts ausgeben (``echo``), ohne erst zu überlegen,
 welche Methoden die vielen Objekte haben, um gewisse Informationen auszugeben. Mithilfe der
 magischen Methode ``toString()`` können wir dieses Problem umgehen. Denn jede Instanz (Objekt)
 einer Klasse, die diese Methode implementiert, nutzt genau diese Methode zur Ausgabe eines
 ebensolchen Strings:
 
 ````php
-<?php # Connection.php
+<?php 
 
+# Person.php
 class Person
 {
-    protected $firstname;
-    protected $lastname;
+    protected $firstname = 'Susi';
+    protected $lastname = 'Sorglos';
 
     public function __toString()
     {
-        return $this->firstname . " " . $this->firstname;
+        return $this->firstname . " " . $this->lastname;
     }
 
 }
+
+# index.php
+$myObject = new Person();
+
+echo $myObject; // gibt zurück: Susi Sorglos
+
 ````
