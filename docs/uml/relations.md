@@ -46,10 +46,16 @@ passiert im Konstruktor.
 
 class Employee
 {
-    private string $name;    
+    private Company $company;    
+    
+    public function addCompany(Company $company)
+    {
+        $this->company = $company;
+    }
+    
 }
 
-class Firma
+class Company
 {
     private array $employees = [];
     
@@ -62,11 +68,15 @@ class Firma
         } else {
             throw new \Exception('Construct parameter contains no employee!');
         }
+        foreach($this->employees as $employee) {
+            $employee->addCompany(this);
+        }
     }
         
     public function addEmployee(Employee $employee): void
     {
-        $this->$employees[] = $employee;
+        $employee->addCompany(this);
+        $this->$employees[] = $employee;        
     }    
 }
 ````
