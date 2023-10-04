@@ -48,7 +48,7 @@ class Employee
 {
     private Company $company;    
     
-    public function addCompany(Company $company)
+    public function setCompany(Company $company)
     {
         $this->company = $company;
     }
@@ -69,13 +69,13 @@ class Company
             throw new \Exception('Construct parameter contains no employee!');
         }
         foreach($this->employees as $employee) {
-            $employee->addCompany(this);
+            $employee->setCompany($this);
         }
     }
         
     public function addEmployee(Employee $employee): void
     {
-        $employee->addCompany(this);
+        $employee->setCompany($this);
         $this->$employees[] = $employee;        
     }    
 }
