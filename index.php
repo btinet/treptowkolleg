@@ -164,7 +164,7 @@ $entries = dirToArray('./docs');
     <title>Informatik AG</title>
 </head>
 <body>
-
+<div data-app id="main">Please wait...</div>
 
 <a class="pf-v5-c-button pf-m-primary" href="#" id="myBtn">
     nach oben
