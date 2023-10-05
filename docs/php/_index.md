@@ -47,7 +47,32 @@ Die obige Konfiguration würde am Beispiel der aktuellen URL also Folgendes ausg
 https://it.treptowkolleg.de/index.php?file=docs/php/_index.md
 ````
 
-Mehr zu diesem Thema jedoch erst an anderer Stelle.
+Die ``index.php`` verarbeitet den GET-Request dann, um die entsprechende Dokumentation
+auszugeben:
+
+````php
+<?php
+
+// Standarddatei zuweisen
+$md = file_get_contents("./README.md");
+
+// Request überprüfen und ggf. neue Datei zuweisen
+if (isset($_GET['file']) and !empty($_GET['file']) ) {
+    if(file_exists($file = './'. $_GET['file'])) {
+        $md = file_get_contents($file );
+    }
+}
+
+// Markdown parsen und ausgeben
+$mdParser->text($md);
+
+````
+
+Warum nun eigentlich Markdown? Dieses Format wird für Dokumentationen auf Github verwendet.
+So kann ich mit einer Dokumentationsdatei gleichzeitig die Inhalte auf Github und hier
+aktualisieren.
+
+Das Repository dieser Website ist nämlich auch [auf Github gehostet](https://github.com/btinet/treptowkolleg).
 
 
 
