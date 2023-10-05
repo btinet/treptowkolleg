@@ -170,6 +170,7 @@ class Sort
     public function __invoke($a,$b)
     {
         if(method_exists($a,$method) and method_exists($b,$method)) {
+            // Methoden müssen String zurückgeben, da strcmp zwei Zeichenketten vergleicht
             return strcmp($a->$method(),$b->$method());
         }
         return 0;
