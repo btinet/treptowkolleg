@@ -144,7 +144,7 @@ class myClass
     public function main()
     {
         // Array mit Objekten
-        $supervisorList = [];
+        $supervisorList = [$obj1, $obj2, $obj3, $obj4];
         
         // Methode zum Sortieren von Arrays
         // uasort(array &$array, callable $callback);
