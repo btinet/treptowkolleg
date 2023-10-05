@@ -1,5 +1,5 @@
 # Unified Modeling Language
-## Klassenbeziehungen
+## Objektbeziehungen
 
 ### Allgemeine Form
 
@@ -110,6 +110,7 @@ class Document
 Ein weiteres Beispiel für eine Komposition findest du auch unter [Magische Methoden](/docs/php/magic_methods.md)
 im Abschnitt [PHP](/docs/php/_index.md). Weißt du, welches Beispiel gemeint ist?
 
+## Klassenbeziehungen
 ### Generalisierung/Spezialisierung (B erbt von A)
 
 ![Klassendiagramm](/docs/img/uml-inherit.png)
