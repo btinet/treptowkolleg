@@ -14,7 +14,7 @@ gebracht wird.
 
 <!-- tabs:start -->
 
-#### **PHP**
+<!-- tab:PHP -->
 
 ````php
 <?php
@@ -36,12 +36,11 @@ class Browser
 }
 ````
 
-#### **Java**
+<!-- tab:Java -->
 
-Java Code
+Bonjour!
 
 <!-- tabs:end -->
-
 
 
 ### Aggregation (A hat B)
