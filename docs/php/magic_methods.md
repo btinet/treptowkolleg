@@ -112,5 +112,78 @@ class Person
 $myObject = new Person();
 
 echo $myObject; // gibt zurück: Susi Sorglos
+````
 
+### __invoke()
+
+Mit dieser magischen Methode ist es möglich, ein Objekt als Callable zu behandeln. Die Prüfung
+``is_callable($meinObjekt)`` ergibt immer dann ``true``, wenn die Methode ``__invoke()`` implementiert
+wurde.
+
+````php
+<?php 
+
+# Beispiel OHNE __invoke()
+class myClass
+{
+    /**
+    * Methode, die User-Objekte nach Nachnamen sortiert.
+    * x < 0 => a vor b;
+    * x == 0 => a = a;
+    * x > 0 => b vor a; 
+     */
+    protected function sort($a,$b): int
+        {
+            if($a instanceof User and $b instanceof User)
+            {
+                return strcmp($a->getLastName(true),$b->getLastName(true));
+            }
+            return 0;
+        }
+    
+    public function main()
+    {
+        // Array mit Objekten
+        $supervisorList = [];
+        
+        // Methode zum Sortieren von Arrays
+        // uasort(array &$array, callable $callback);
+        uasort($supervisorList, Array($this,'sorting')); 
+    }
+    
+}
+````
+
+````php
+<?php 
+
+# Beispiel MIT __invoke()
+class Sort
+{
+    private string $method;
+    
+    public function __construct(string $attribute)
+    {
+        $this->key = 'get' . ucfirst($attribute);
+    }
+    
+    public function __invoke($a,$b)
+    {
+        if(method_exists($a,$method) and method_exists($b,$method)) {
+            return strcmp($a->$method(),$b->$method());
+        }
+        return 0;
+    }
+}
+    
+    
+// Array mit Objekten
+$array = [$obj1, $obj2, $obj3, $obj4];
+
+// Methode zum Sortieren von Arrays
+// uasort(array &$array, callable $callback);
+uasort($array, new Sort('lastName'));
+
+// Gibt Objekte sortiert nach Nachnamen aus.
+print_r($array);
 ````
