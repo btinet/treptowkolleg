@@ -398,16 +398,7 @@ $entries = dirToArray('./docs');
             }
         });
 
-        window.$docsify = {
-            // ...
-            tabs: {
-                persist    : true,      // default
-                sync       : true,      // default
-                theme      : 'classic', // default
-                tabComments: true,      // default
-                tabHeadings: true       // default
-            }
-        };
+
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
