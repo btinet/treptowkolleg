@@ -164,16 +164,20 @@ class Sort
     
     public function __construct(string $attribute)
     {
-        $this->key = 'get' . ucfirst($attribute);
+        $this->method = 'get' . ucfirst($attribute);
     }
     
-    public function __invoke($a,$b)
+    public function __invoke($a,$b): int
     {
         if(method_exists($a,$method) and method_exists($b,$method)) {
-            // Methoden müssen String zurückgeben, da strcmp zwei Zeichenketten vergleicht
-            return strcmp($a->$method(),$b->$method());
+            return $a->$method() <=> $b->$method();
         }
         return 0;
+    }
+    
+    public function __toString()
+    {
+        return $this->method;
     }
 }
     
