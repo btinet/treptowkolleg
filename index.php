@@ -163,7 +163,7 @@ $entries = dirToArray('./docs');
 
     <title>Informatik AG</title>
 </head>
-<body>
+<body id="app">
 
 <a class="pf-v5-c-button pf-m-primary" href="#" id="myBtn">
     nach oben
@@ -316,7 +316,7 @@ $entries = dirToArray('./docs');
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-content">
                         <div class="pf-v5-c-card">
-                            <div class="pf-v5-c-card__body" id="app">
+                            <div class="pf-v5-c-card__body">
                                 <?=$mdParser->text($md)?>
                             </div>
                         </div>
