@@ -48,8 +48,7 @@ public class SuperClass {
     
 }
 
-public class SubClass extends SuperClass 
-{
+public class SubClass extends SuperClass {
     // SubClass hat nun die Attribute und Methoden von SuperClass geerbt
     // Der direkte Zugriff ist aber nur auf protected/public Attribute möglich    
     this.myProtectedAttribute = 5;
