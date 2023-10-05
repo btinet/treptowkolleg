@@ -413,9 +413,17 @@ $entries = dirToArray('./docs');
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-
-<!-- docsify-tabs (latest v1.x.x) -->
-<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-plugin-ethicalads@1"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/class-change@1"></script>
+<script>
+    // Initialize the default attribute listener
+    classChange.attrs();
+</script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script>

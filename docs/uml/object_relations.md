@@ -16,7 +16,25 @@ gebracht wird.
 
 <!-- tab:PHP -->
 
-xxx
+````php
+<?php
+
+class Webserver
+{
+    private string $title = 'website title';
+    private string $ip = '192.168.0.1';    
+}
+
+class Browser
+{
+    private array $hosts = [];
+        
+    public function addHost(Webserver $server): void
+    {
+        $this->hosts[] = $server;
+    }    
+}
+````
 
 <!-- tab:Java -->
 
