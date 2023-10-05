@@ -59,6 +59,8 @@ function getName(string $file): string
         'tables' => 'Tabellen',
         'php-ide' => 'PHP Entwicklungsumgebung',
         'relations' => 'Beziehungen',
+        'object_relations' => 'Objektbeziehungen',
+        'class_relations' => 'Classbeziehungen',
         'typo' => 'Typographie'
     ];
     $fileName = substr($file,0,-3);
