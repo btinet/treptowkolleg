@@ -405,7 +405,14 @@ $entries = dirToArray('./docs');
 </script>
 <script>
     window.$docsify = {
-        //...
+        // ...
+        tabs: {
+            persist    : true,      // default
+            sync       : true,      // default
+            theme      : 'classic', // default
+            tabComments: true,      // default
+            tabHeadings: true       // default
+        }
     };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
