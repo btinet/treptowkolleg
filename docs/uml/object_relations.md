@@ -12,22 +12,8 @@
 Der Browser kennt den Webserver, was durch die Methode ``addHost(Webserver $server)`` zum Ausdruck
 gebracht wird.
 
-<!-- tabs:start -->
 
-#### **English**
-
-Hello!
-
-#### **French**
-
-Bonjour!
-
-#### **Italian**
-
-Ciao!
-
-<!-- tabs:end -->
-
+#### PHP
 ````php
 <?php
 
@@ -48,6 +34,25 @@ class Browser
 }
 ````
 
+#### JAVA
+````java
+
+
+class Webserver
+{
+    private String title = "website title";
+    private String ip = "192.168.0.1";    
+}
+
+class Browser
+{
+    private ArrayList<Webserver> hosts = new ArrayList<>();
+        
+    public void addHost(Webserver server) {
+        this.hosts.add(server);
+    }    
+}
+````
 
 
 ### Aggregation (A hat B)
