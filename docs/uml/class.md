@@ -10,3 +10,11 @@ Eine Klassenkarte besteht aus insgesamt drei Segmenten. Diese sind von oben nach
 3. Methoden
 
 ![UML-Class](/docs/img/uml-class.png)
+
+### Sichtbarkeit
+
+Attribute und Methoden können verschiedene Sichtbarkeiten annehmen:
+
+1. public: **+**
+2. private: **-**
+3. protected: **#**
