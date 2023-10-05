@@ -60,7 +60,7 @@ function getName(string $file): string
         'php-ide' => 'PHP Entwicklungsumgebung',
         'relations' => 'Beziehungen',
         'object_relations' => 'Objektbeziehungen',
-        'class_relations' => 'Classbeziehungen',
+        'class_relations' => 'Klassenbeziehungen',
         'typo' => 'Typographie'
     ];
     $fileName = substr($file,0,-3);
