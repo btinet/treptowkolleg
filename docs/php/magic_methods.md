@@ -148,7 +148,7 @@ class myClass
         
         // Methode zum Sortieren von Arrays
         // uasort(array &$array, callable $callback);
-        uasort($supervisorList, Array($this,'sorting')); 
+        uasort($supervisorList, Array($this,'sort')); 
     }
     
 }
