@@ -36,12 +36,12 @@ class Browser
 
 #### JAVA
 ````php
-class Webserver {
+public class Webserver {
     private String title = "website title";
     private String ip = "192.168.0.1";    
 }
 
-class Browser
+public class Browser
 {
     private ArrayList<Webserver> hosts = new ArrayList<>();
         
@@ -103,7 +103,7 @@ class Company
 ````
 #### JAVA
 ````php
-class Employee {
+public class Employee {
 
     private Company company;    
     
@@ -113,7 +113,7 @@ class Employee {
     
 }
 
-class Company {
+public class Company {
 
     private ArrayList<Employeee> employees = new ArrayList<>();
     
