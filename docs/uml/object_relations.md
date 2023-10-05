@@ -36,8 +36,6 @@ class Browser
 
 #### JAVA
 ````php
-
-
 class Webserver {
     private String title = "website title";
     private String ip = "192.168.0.1";    
@@ -63,6 +61,7 @@ Ein Mitarbeiter kann jedoch auch ohne Firma existieren (Dann hat er den Status *
 Wird eine neue Firma gegründet, muss wenigstens ein Mitarbeiter zugeordnet werden. Das
 passiert im Konstruktor.
 
+#### PHP
 ````php
 <?php
 
@@ -99,6 +98,41 @@ class Company
     {
         $employee->setCompany($this);
         $this->employees[] = $employee;        
+    }    
+}
+````
+#### JAVA
+````php
+class Employee {
+
+    private Company company;    
+    
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+    
+}
+
+class Company {
+
+    private ArrayList<Employeee> employees = new ArrayList<>();
+    
+    public Company(ArrayList<Employee> employees) {
+        this.employees = employees;
+        
+       for(Employee employee : this.employees) {
+            employee.setCompany(this);
+       }
+    }
+    
+    public Company(Employee employee) {
+        this.addEmployee(employee);
+    }
+           
+    public void addEmployee(Employee employee)
+    {
+        this.employees.add(employee);
+        employee.setCompany(this);      
     }    
 }
 ````
