@@ -12,6 +12,10 @@
 Der Browser kennt den Webserver, was durch die Methode ``addHost(Webserver $server)`` zum Ausdruck
 gebracht wird.
 
+<!-- tabs:start -->
+
+#### **PHP**
+
 ````php
 <?php
 
@@ -31,6 +35,14 @@ class Browser
     }    
 }
 ````
+
+#### **Java**
+
+Java Code
+
+<!-- tabs:end -->
+
+
 
 ### Aggregation (A hat B)
 

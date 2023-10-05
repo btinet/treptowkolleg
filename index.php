@@ -334,6 +334,11 @@ $entries = dirToArray('./docs');
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
+<!-- docsify (latest v4.x.x)-->
+<script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+
+<!-- docsify-tabs (latest v1.x.x) -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script>
     MathJax = {
@@ -391,6 +396,17 @@ $entries = dirToArray('./docs');
                 });
             }
         });
+
+        window.$docsify = {
+            // ...
+            tabs: {
+                persist    : true,      // default
+                sync       : true,      // default
+                theme      : 'classic', // default
+                tabComments: true,      // default
+                tabHeadings: true       // default
+            }
+        };
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
