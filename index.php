@@ -340,21 +340,7 @@ $entries = dirToArray('./docs');
 <script>hljs.highlightAll();</script>
 <!-- docsify (latest v4.x.x)-->
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        svg: {
-            fontCache: 'global'
-        }
-    };
-</script>
-<script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -398,7 +384,16 @@ $entries = dirToArray('./docs');
             }
         });
 
-
+        window.$docsify = {
+            // ...
+            tabs: {
+                persist    : true,      // default
+                sync       : true,      // default
+                theme      : 'classic', // default
+                tabComments: true,      // default
+                tabHeadings: true       // default
+            }
+        };
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
