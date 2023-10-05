@@ -37,17 +37,21 @@ class Browser
 #### JAVA
 ````php
 public class Webserver {
+
     private String title = "website title";
     private String ip = "192.168.0.1";    
+    
 }
 
 public class Browser
 {
+
     private ArrayList<Webserver> hosts = new ArrayList<>();
         
     public void addHost(Webserver server) {
         this.hosts.add(server);
-    }    
+    }  
+      
 }
 ````
 
@@ -144,6 +148,7 @@ public class Company {
 Ein neues Dokument benötigt mindestens einen Absatz. Daher wird bei Instantiierung
 eines ``Dokument``-Objekts ein ``Paragraph``-Objekt im Konstruktor instantiiert.
 
+#### PHP
 ````php
 <?php
 
@@ -165,3 +170,22 @@ class Document
 ````
 Ein weiteres Beispiel für eine Komposition findest du auch unter [Magische Methoden](/docs/php/magic_methods.md)
 im Abschnitt [PHP](/docs/php/_index.md). Weißt du, welches Beispiel gemeint ist?
+
+#### JAVA
+````php
+public class Paragraph {
+
+    private String text;    
+    
+}
+
+public class Document {
+
+    private ArrayList<Paragraph> paragraphs = new ArrayList<>();
+    
+    public Document() {
+        this.paragraphs.add(new Paragraph());
+    }
+
+}
+````
