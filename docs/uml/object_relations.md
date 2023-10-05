@@ -43,8 +43,7 @@ public class Webserver {
     
 }
 
-public class Browser
-{
+public class Browser {
 
     private ArrayList<Webserver> hosts = new ArrayList<>();
         
@@ -109,24 +108,23 @@ class Company
 ````php
 public class Employee {
 
-    private Company company;    
+   private Company company;    
     
-    public void setCompany(Company company) {
-        this.company = company;
-    }
+   public void setCompany(Company company) {
+       this.company = company;
+   }
     
 }
 
 public class Company {
 
-    private ArrayList<Employeee> employees = new ArrayList<>();
+   private ArrayList<Employeee> employees = new ArrayList<>();
     
     public Company(ArrayList<Employee> employees) {
-        this.employees = employees;
-        
-       for(Employee employee : this.employees) {
+        this.employees = employees;        
+        for(Employee employee : this.employees) {
             employee.setCompany(this);
-       }
+        }
     }
     
     public Company(Employee employee) {
