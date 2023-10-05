@@ -130,7 +130,7 @@ class myClass
     * Methode, die User-Objekte nach Nachnamen sortiert.
     * x < 0 => a vor b;
     * x == 0 => a = a;
-    * x > 0 => b vor a; 
+    * x > 0 => b nach a; 
      */
     protected function sort($a,$b): int
         {
