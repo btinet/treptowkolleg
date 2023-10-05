@@ -35,11 +35,10 @@ class Browser
 ````
 
 #### JAVA
-````java
+````php
 
 
-class Webserver
-{
+class Webserver {
     private String title = "website title";
     private String ip = "192.168.0.1";    
 }
