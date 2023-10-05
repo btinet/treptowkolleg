@@ -384,17 +384,6 @@ $entries = dirToArray('./docs');
             }
         });
 
-        window.$docsify = {
-            // ...
-            tabs: {
-                persist    : true,      // default
-                sync       : true,      // default
-                theme      : 'classic', // default
-                tabComments: true,      // default
-                tabHeadings: true       // default
-            }
-        };
-
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
         }
@@ -420,6 +409,18 @@ $entries = dirToArray('./docs');
 <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/class-change@1"></script>
+<script>
+    window.$docsify = {
+        // ...
+        tabs: {
+            persist    : true,      // default
+            sync       : true,      // default
+            theme      : 'classic', // default
+            tabComments: true,      // default
+            tabHeadings: true       // default
+        }
+    };
+</script>
 <script>
     // Initialize the default attribute listener
     classChange.attrs();
