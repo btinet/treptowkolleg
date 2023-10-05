@@ -8,6 +8,7 @@ Bei der Generalisierung/Spezialisierung spricht man davon, dass die **Unterklass
 Attribute und Methoden der **Oberklasse** erbt. Die Unterklasse ist eine spezialisierte
 Variante der Oberklasse.
 
+#### PHP
 ````php
 <?php
 
@@ -25,12 +26,35 @@ class SuperClass
 
 class SubClass extends SuperClass
 {
-    // SubClass hat nun die Attribute von SuperClass geerbt
-    // Der direkte Zugriff ist aber nur auf protected Attribute möglich
+    // SubClass hat nun die Attribute und Methoden von SuperClass geerbt
+    // Der direkte Zugriff ist aber nur auf protected/public Attribute möglich
     
     $this->myProtectedAttribute = 5;
     
     $this->setMyPrivateAttribute($myParameter);
+    
+}
+````
+#### JAVA
+````php
+public class SuperClass {
+
+    private int myPrivateAttribute;
+    protected int myProtectedAttribute;
+    
+    protected void setMyPrivateAttribute(int parameter) {
+        this.myPrivateAttribute = parameter;
+    }
+    
+}
+
+public class SubClass extends SuperClass 
+{
+    // SubClass hat nun die Attribute und Methoden von SuperClass geerbt
+    // Der direkte Zugriff ist aber nur auf protected/public Attribute möglich    
+    this.myProtectedAttribute = 5;
+    
+    this.setMyPrivateAttribute(5);
     
 }
 ````
