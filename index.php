@@ -402,8 +402,9 @@ $entries = dirToArray('./docs');
         toggleButton.addEventListener("click", () => {
            if(sidebar.style.display === "none") {
                sidebar.style.display = "block";
-               console.log("Toggle-Click");
+
            }
+            console.log("Toggle-Click");
         });
 
         function Sleep(milliseconds) {
