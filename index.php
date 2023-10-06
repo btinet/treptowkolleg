@@ -226,7 +226,7 @@ $entries = dirToArray('./docs');
             </div>
         </div>
     </header>
-    <div class="pf-v5-c-page__sidebar pf-m-collapsed">
+    <div class="pf-v5-c-page__sidebar pf-m-show">
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <div
