@@ -265,11 +265,11 @@ $entries = dirToArray('./docs');
                 <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-md">
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-content">
-                            <div class="pf-v5-c-card pf-m-sticky pf-m-sticky-top">
+                            <div class="pf-v5-c-card">
                                 <div class="pf-v5-c-card__header">
                                     <h2 class="pf-v5-c-card__title-text">Inhaltsverzeichnis</h2>
                                 </div>
-                                <div class="pf-v5-c-card__body">
+                                <div class="pf-v5-c-card__body pf-m-sticky">
                                     <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
                                         <?php
                                         asort($entries);
