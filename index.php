@@ -405,7 +405,7 @@ $entries = dirToArray('./docs');
                 if(sidebar.style.transform === "translateX(-100%)") {
                     sidebar.style.transform = "translateX(0)";
                 } else {
-                    sidebar.style.transform = "translateX(-100%)"
+                    sidebar.style.transform = "translateX(-100%)";
                 }
             }
         });
@@ -413,6 +413,8 @@ $entries = dirToArray('./docs');
         addEventListener("resize", (event) => {
             if(document.body.clientWidth >= 768) {
                 sidebar.style.transform = "translateX(0)";
+            } else {
+                sidebar.style.transform = "translateX(-100%)";
             }
         });
 
