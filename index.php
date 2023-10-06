@@ -228,7 +228,7 @@ $entries = dirToArray('./docs');
                     asort($entries);
                     foreach ($entries as $dir => $value) {
                         if ($dir != "img") {
-                            echo '<span class="pf-v5-c-nav__section-title">';
+                            echo '<div class="pf-v5-c-nav__section-title">';
 
                             if(is_array($value)) {
                                 echo strtoupper($dir);
@@ -242,12 +242,12 @@ $entries = dirToArray('./docs');
                                 }
                                 echo '</ul>';
                             } else {
-                                echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '">';
+                                echo '<a class="pf-v5-c-nav__link" href="/docs/'. $value . '">';
                                 echo getName($value);
                                 echo '</a>';
                             }
 
-                            echo '</span>';
+                            echo '</div>';
                         }
                     }
                     ?>
