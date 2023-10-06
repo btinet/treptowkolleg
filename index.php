@@ -222,7 +222,7 @@ $entries = dirToArray('./docs');
             </div>
         </div>
     </header>
-    <div class="pf-v5-c-page__sidebar" id="sidebar" style="translate: none!important;">
+    <div class="pf-v5-c-page__sidebar" id="sidebar">
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <div
@@ -401,6 +401,7 @@ $entries = dirToArray('./docs');
 
         toggleButton.addEventListener("click", () => {
             console.log("Toggle-Click");
+            sidebar.style.transform = "translateX(200px)";
         });
 
         function Sleep(milliseconds) {
