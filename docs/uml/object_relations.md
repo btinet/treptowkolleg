@@ -5,8 +5,6 @@
 
 ![Klassendiagramm](/docs/img/uml-relations.png)
 
-#### Multiziplität
-
 | Multiplizität 	|                               	|
 |---------------	|----------------------------------	|
 | 1             	| ein Objekt                       	|
