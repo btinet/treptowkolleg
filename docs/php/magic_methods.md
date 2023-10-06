@@ -161,34 +161,33 @@ class myClass
 class Sort
 {
     private string $method;
-    
+
     public function __construct(string $attribute)
     {
         $this->method = 'get' . ucfirst($attribute);
     }
-    
+
     public function __invoke($a,$b): int
     {
-        if(method_exists($a,$method) and method_exists($b,$method)) {
-            return $a->$method() <=> $b->$method();
+        if(method_exists($a,$this->method) and method_exists($b,$this->method)) {
+            return $a->{$this->method}() <=> $b->{$this->method}();
         }
         return 0;
     }
-    
+
     public function __toString()
     {
         return $this->method;
     }
 }
     
-    
 // Array mit Objekten
-$array = [$obj1, $obj2, $obj3, $obj4];
+$array = [new CPU("Intel"), new CPU("AMD"), new CPU("Texas Instruments"), new CPU("BASIF")];
 
 // Methode zum Sortieren von Arrays
 // uasort(array &$array, callable $callback);
-uasort($array, new Sort('lastName'));
+uasort($array, new Sort('name'));
 
-// Gibt Objekte sortiert nach Nachnamen aus.
+// Gibt Objekte sortiert nach Name aus.
 print_r($array);
 ````
