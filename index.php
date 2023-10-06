@@ -410,6 +410,9 @@ $entries = dirToArray('./docs');
             }
         });
 
+        addEventListener("resize", (event) => {
+            console.log(window.width);
+        });
         if(window.width >= 768) {
             sidebar.style.transform = "translateX(0)";
         }
