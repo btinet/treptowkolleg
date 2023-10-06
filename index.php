@@ -36,7 +36,7 @@ const INF_EOL = "\n";
 // Für komplexe Definitionen von Konstanten nehmen wir jedoch 'define();':
 define('CPU_I7', $intelCPU->getName() );
 
-
+$file = './';
 $md = file_get_contents("./README.md");
 if (isset($_GET['file']) and !empty($_GET['file']) ) {
     if(file_exists($file = './'. $_GET['file'])) {
@@ -236,7 +236,10 @@ $entries = dirToArray('./docs');
                                 echo '</div>';
                                 echo '<ul role="list" class="pf-v5-c-nav__list" style="padding: 0">';
                                 foreach ($value as $key => $subValue) {
-                                    echo '<li class="pf-v5-c-nav__item">';
+                                    $active = '';
+                                    if($file == './'.$dir.'/'.$subValue.'.md')
+                                    { $active = 'pf-m-current'; }
+                                    echo '<li class="pf-v5-c-nav__item '.$active.'">';
                                     echo '<a class="pf-v5-c-nav__link" href="/docs/' .$dir . '/' . $subValue . '">';
                                     echo getName($subValue);
                                     echo '</a>';
