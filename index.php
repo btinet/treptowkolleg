@@ -223,7 +223,7 @@ $entries = dirToArray('./docs');
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <div
                         class="pf-v5-c-page__sidebar-body pf-m-fill pf-m-page-insets"
-                >inset content</div>
+                >
                     <?php
                     asort($entries);
                     foreach ($entries as $dir => $value) {
@@ -231,9 +231,9 @@ $entries = dirToArray('./docs');
 
 
                             if(is_array($value)) {
-                                echo '<div class="pf-v5-c-nav__section-title">';
+                                echo '<span class="pf-v5-c-nav__section-title">';
                                 echo strtoupper($dir);
-                                echo '</div>';
+                                echo '</span>';
                                 echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                 foreach ($value as $key => $subValue) {
                                     echo '<li>';
@@ -243,13 +243,7 @@ $entries = dirToArray('./docs');
                                     echo '</li>';
                                 }
                                 echo '</ul>';
-                            } else {
-                                echo '<a class="" href="/docs/'. $value . '">';
-                                echo getName($value);
-                                echo '</a>';
                             }
-
-
                         }
                     }
                     ?>
