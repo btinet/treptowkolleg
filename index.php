@@ -222,7 +222,7 @@ $entries = dirToArray('./docs');
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <div
-                        class="pf-v5-c-page__sidebar-body pf-m-fill pf-m-page-insets"
+                        class="pf-v5-c-page__sidebar-body pf-m-fill"
                 >
                     <?php
                     asort($entries);
@@ -231,7 +231,7 @@ $entries = dirToArray('./docs');
 
 
                             if(is_array($value)) {
-                                echo '<div class="pf-v5-c-nav__section-title">';
+                                echo '<div class="pf-v5-c-nav__section-title pf-m-page-insets">';
                                 echo strtoupper($dir);
                                 echo '</div>';
                                 echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
