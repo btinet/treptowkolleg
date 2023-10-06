@@ -231,9 +231,9 @@ $entries = dirToArray('./docs');
 
 
                             if(is_array($value)) {
-                                echo '<span class="pf-v5-c-nav__section-title">';
+                                echo '<div class="pf-v5-c-nav__section-title">';
                                 echo strtoupper($dir);
-                                echo '</span>';
+                                echo '</div>';
                                 echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                 foreach ($value as $key => $subValue) {
                                     echo '<li>';
