@@ -228,10 +228,12 @@ $entries = dirToArray('./docs');
                     asort($entries);
                     foreach ($entries as $dir => $value) {
                         if ($dir != "img") {
-                            echo '<div class="pf-v5-c-nav__section-title">';
+
 
                             if(is_array($value)) {
+                                echo '<div class="pf-v5-c-nav__section-title">';
                                 echo strtoupper($dir);
+                                echo '</div>';
                                 echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                 foreach ($value as $key => $subValue) {
                                     echo '<li>';
@@ -242,12 +244,12 @@ $entries = dirToArray('./docs');
                                 }
                                 echo '</ul>';
                             } else {
-                                echo '<a class="pf-v5-c-nav__link" href="/docs/'. $value . '">';
+                                echo '<a class="" href="/docs/'. $value . '">';
                                 echo getName($value);
                                 echo '</a>';
                             }
 
-                            echo '</div>';
+
                         }
                     }
                     ?>
