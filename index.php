@@ -222,21 +222,33 @@ $entries = dirToArray('./docs');
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <ul class="pf-v5-c-nav__list" role="list">
-                    <li class="pf-v5-c-nav__item">
-                        <a href="#" class="pf-v5-c-nav__link">System panel</a>
-                    </li>
-                    <li class="pf-v5-c-nav__item">
-                        <a href="#" class="pf-v5-c-nav__link pf-m-current" aria-current="page">Policy</a>
-                    </li>
-                    <li class="pf-v5-c-nav__item">
-                        <a href="#" class="pf-v5-c-nav__link">Authentication</a>
-                    </li>
-                    <li class="pf-v5-c-nav__item">
-                        <a href="#" class="pf-v5-c-nav__link">Network services</a>
-                    </li>
-                    <li class="pf-v5-c-nav__item">
-                        <a href="#" class="pf-v5-c-nav__link">Server</a>
-                    </li>
+                    <?php
+                    asort($entries);
+                    foreach ($entries as $dir => $value) {
+                        if ($dir != "img") {
+                            echo '<li class="pf-v5-c-nav__item">';
+
+                            if(is_array($value)) {
+                                echo strtoupper($dir);
+                                echo '<ul role="list" class="pf-v5-c-nav__list">';
+                                foreach ($value as $key => $subValue) {
+                                    echo '<li>';
+                                    echo '<a class="pf-v5-c-nav__link" href="/docs/' .$dir . '/' . $subValue . '">';
+                                    echo getName($subValue);
+                                    echo '</a>';
+                                    echo '</li>';
+                                }
+                                echo '</ul>';
+                            } else {
+                                echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '">';
+                                echo getName($value);
+                                echo '</a>';
+                            }
+
+                            echo '</li>';
+                        }
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>
@@ -288,50 +300,7 @@ $entries = dirToArray('./docs');
         <section class="pf-v5-c-page__main-section pf-m-limit-width">
             <div class="pf-v5-c-page__main-body">
                 <div class="pf-v5-l-grid pf-m-gutter">
-                    <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-md">
-                        <div class="pf-v5-l-flex pf-m-column">
-                            <div class="pf-v5-c-content">
-                                <div class="pf-v5-c-card">
-                                    <div class="pf-v5-c-card__header">
-                                        <h2 class="pf-v5-c-card__title-text">Inhaltsverzeichnis</h2>
-                                    </div>
-                                    <div class="pf-v5-c-card__body">
-                                        <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
-                                            <?php
-                                            asort($entries);
-                                            foreach ($entries as $dir => $value) {
-                                                if ($dir != "img") {
-                                                    echo '<li>';
-
-                                                    if(is_array($value)) {
-                                                        echo strtoupper($dir);
-                                                        echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
-                                                        foreach ($value as $key => $subValue) {
-                                                            echo '<li>';
-                                                            echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/' .$dir . '/' . $subValue . '">';
-                                                            echo getName($subValue);
-                                                            echo '</a>';
-                                                            echo '</li>';
-                                                        }
-                                                        echo '</ul>';
-                                                    } else {
-                                                        echo '<a class="pf-v5-c-simple-list__item-link" href="/docs/'. $value . '">';
-                                                        echo getName($value);
-                                                        echo '</a>';
-                                                    }
-
-                                                    echo '</li>';
-                                                }
-                                            }
-                                            ?>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-md" id="content">
+                    <div class="pf-v5-l-grid__item pf-m-gutter pf-m-12-col-on-md" id="content">
                         <div class="pf-v5-l-flex pf-m-column">
                             <div class="pf-v5-c-content">
                                 <div class="pf-v5-c-card">
