@@ -401,7 +401,7 @@ $entries = dirToArray('./docs');
 
         toggleButton.addEventListener("click", () => {
             console.log("Toggle-Click");
-            sidebar.style.transform = "translateX(200px)";
+            sidebar.style.transform = "translateX(0)";
         });
 
         function Sleep(milliseconds) {
