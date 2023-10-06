@@ -262,7 +262,7 @@ $entries = dirToArray('./docs');
     <section class="pf-v5-c-page__main-section pf-m-limit-width">
         <div class="pf-v5-c-page__main-body">
             <div class="pf-v5-l-grid pf-m-gutter">
-                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-2xl">
+                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-md">
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-content">
                             <div class="pf-v5-c-card">
@@ -305,7 +305,7 @@ $entries = dirToArray('./docs');
                         </div>
                     </div>
                 </div>
-                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-2xl" id="content">
+                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-md" id="content">
                     <div class="pf-v5-l-flex pf-m-column">
                         <div class="pf-v5-c-content">
                         <div class="pf-v5-c-card">
