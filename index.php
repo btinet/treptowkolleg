@@ -230,7 +230,7 @@ $entries = dirToArray('./docs');
 
                             if(is_array($value)) {
                                 echo strtoupper($dir);
-                                echo '<ul role="list" class="pf-v5-c-nav__list">';
+                                echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                 foreach ($value as $key => $subValue) {
                                     echo '<li>';
                                     echo '<a class="pf-v5-c-nav__link" href="/docs/' .$dir . '/' . $subValue . '">';
