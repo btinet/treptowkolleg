@@ -222,7 +222,7 @@ $entries = dirToArray('./docs');
             </div>
         </div>
     </header>
-    <div class="pf-v5-c-page__sidebar" id="sidebar" style="transform: translateX(-100%)">
+    <div class="pf-v5-c-page__sidebar" id="sidebar">
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <div
@@ -401,13 +401,17 @@ $entries = dirToArray('./docs');
 
         toggleButton.addEventListener("click", () => {
             console.log("Toggle-Click");
-            if(sidebar.style.transform === "translateX(-100%)") {
+            if(sidebar.style.transform === "translateX(-100%)" && window.width < 768) {
                 sidebar.style.transform = "translateX(0)";
             } else {
                 sidebar.style.transform = "translateX(-100%)"
             }
 
         });
+
+        if(window.width >= 768) {
+            sidebar.style.transform = "translateX(0)";
+        }
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
