@@ -165,6 +165,11 @@ $entries = dirToArray('./docs');
         <a class="pf-v5-c-button pf-m-primary" href="#main-content-page-demo-basic">Skip to content</a>
     </div>
     <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
+        <span class="pf-v5-c-masthead__toggle">
+      <button class="pf-v5-c-button pf-m-plain" type="button" aria-label="Global navigation">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </span>
         <div class="pf-v5-c-masthead__content">
             <div
                     class="pf-v5-c-toolbar pf-m-full-height pf-m-static"
