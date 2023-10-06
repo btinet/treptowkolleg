@@ -7,7 +7,7 @@
 
 #### Multiziplität
 
-| Multiplizität 	| Bedeutung                        	|
+| Multiplizität 	|                               	|
 |---------------	|----------------------------------	|
 | 1             	| ein Objekt                       	|
 | 2             	| zwei Objekte                     	|
