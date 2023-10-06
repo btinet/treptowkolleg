@@ -222,7 +222,29 @@ $entries = dirToArray('./docs');
         </div>
     </div>
 </header>
-
+<div class="pf-v5-c-page__sidebar">
+    <div class="pf-v5-c-page__sidebar-body">
+        <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
+            <ul class="pf-v5-c-nav__list" role="list">
+                <li class="pf-v5-c-nav__item">
+                    <a href="#" class="pf-v5-c-nav__link">System panel</a>
+                </li>
+                <li class="pf-v5-c-nav__item">
+                    <a href="#" class="pf-v5-c-nav__link pf-m-current" aria-current="page">Policy</a>
+                </li>
+                <li class="pf-v5-c-nav__item">
+                    <a href="#" class="pf-v5-c-nav__link">Authentication</a>
+                </li>
+                <li class="pf-v5-c-nav__item">
+                    <a href="#" class="pf-v5-c-nav__link">Network services</a>
+                </li>
+                <li class="pf-v5-c-nav__item">
+                    <a href="#" class="pf-v5-c-nav__link">Server</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 <main
         class="pf-v5-c-page__main"
         tabindex="-1"
@@ -250,7 +272,7 @@ $entries = dirToArray('./docs');
             </nav>
         </div>
     </section>
-    <div class="pf-v5-c-page__main-group pf-m-sticky-top">
+
     <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
         <div class="pf-v5-c-page__main-body">
             <div class="pf-v5-c-content">
@@ -259,7 +281,7 @@ $entries = dirToArray('./docs');
             </div>
         </div>
     </section>
-    </div>
+
 
     <section class="pf-v5-c-page__main-section pf-m-limit-width">
         <div class="pf-v5-c-page__main-body">
