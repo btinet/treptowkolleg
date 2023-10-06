@@ -229,7 +229,7 @@ $entries = dirToArray('./docs');
                             echo '<li class="pf-v5-c-nav__item">';
 
                             if(is_array($value)) {
-                                echo strtoupper($dir);
+                                echo "<span class='pf-v5-c-nav__section-title'>" . strtoupper($dir) . "</span>";
                                 echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                 foreach ($value as $key => $subValue) {
                                     echo '<li>';
