@@ -165,34 +165,17 @@ $entries = dirToArray('./docs');
     </span>
 </a>
 
-<header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
-    <div class="pf-v5-c-masthead__content">
-        <div
-                class="pf-v5-c-toolbar pf-m-full-height pf-m-static"
-                id="card-view-basic-example-masthead-toolbar"
-        >
-            <div class="pf-v5-c-toolbar__content">
-                <div class="pf-v5-c-toolbar__content-section">
-                    <div
-                            class="pf-v5-c-toolbar__group pf-m-icon-button-group pf-m-align-left pf-m-spacer-none pf-m-spacer-md-on-md"
-                    >
-                        <div class="pf-v5-c-toolbar__item">
-                            <a
-                                    href="/"
-                                    class="pf-v5-c-menu-toggle pf-m-plain"
-                                    aria-expanded="false"
-                                    aria-label="Application launcher"
-                            >
-                                Informatik Kompendium
-                            </a>
-                        </div>
-                    </div>
-
-                    <div
-                            class="pf-v5-c-toolbar__group pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"
-                    >
+<div class="pf-v5-c-page" id="doc-site">
+    <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
+        <div class="pf-v5-c-masthead__content">
+            <div
+                    class="pf-v5-c-toolbar pf-m-full-height pf-m-static"
+                    id="card-view-basic-example-masthead-toolbar"
+            >
+                <div class="pf-v5-c-toolbar__content">
+                    <div class="pf-v5-c-toolbar__content-section">
                         <div
-                                class="pf-v5-c-toolbar__group pf-m-icon-button-group"
+                                class="pf-v5-c-toolbar__group pf-m-icon-button-group pf-m-align-left pf-m-spacer-none pf-m-spacer-md-on-md"
                         >
                             <div class="pf-v5-c-toolbar__item">
                                 <a
@@ -201,102 +184,120 @@ $entries = dirToArray('./docs');
                                         aria-expanded="false"
                                         aria-label="Application launcher"
                                 >
-                                    <i class="fas fa-home" aria-hidden="true"></i>
+                                    Informatik Kompendium
                                 </a>
                             </div>
-                            <div class="pf-v5-c-toolbar__item">
-                                <a
-                                        href="https://it.treptowkolleg.de/admin"
-                                        target="_blank"
-                                        class="pf-v5-c-menu-toggle pf-m-plain"
-                                        aria-expanded="false"
-                                        aria-label="Settings"
-                                >
-                                    <i class="fas fa-cog" aria-hidden="true"></i>
-                                </a>
+                        </div>
+
+                        <div
+                                class="pf-v5-c-toolbar__group pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"
+                        >
+                            <div
+                                    class="pf-v5-c-toolbar__group pf-m-icon-button-group"
+                            >
+                                <div class="pf-v5-c-toolbar__item">
+                                    <a
+                                            href="/"
+                                            class="pf-v5-c-menu-toggle pf-m-plain"
+                                            aria-expanded="false"
+                                            aria-label="Application launcher"
+                                    >
+                                        <i class="fas fa-home" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="pf-v5-c-toolbar__item">
+                                    <a
+                                            href="https://it.treptowkolleg.de/admin"
+                                            target="_blank"
+                                            class="pf-v5-c-menu-toggle pf-m-plain"
+                                            aria-expanded="false"
+                                            aria-label="Settings"
+                                    >
+                                        <i class="fas fa-cog" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<div class="pf-v5-c-page__sidebar">
-    <div class="pf-v5-c-page__sidebar-body">
-        <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
-            <ul class="pf-v5-c-nav__list" role="list">
-                <li class="pf-v5-c-nav__item">
-                    <a href="#" class="pf-v5-c-nav__link">System panel</a>
-                </li>
-                <li class="pf-v5-c-nav__item">
-                    <a href="#" class="pf-v5-c-nav__link pf-m-current" aria-current="page">Policy</a>
-                </li>
-                <li class="pf-v5-c-nav__item">
-                    <a href="#" class="pf-v5-c-nav__link">Authentication</a>
-                </li>
-                <li class="pf-v5-c-nav__item">
-                    <a href="#" class="pf-v5-c-nav__link">Network services</a>
-                </li>
-                <li class="pf-v5-c-nav__item">
-                    <a href="#" class="pf-v5-c-nav__link">Server</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
-<main
-        class="pf-v5-c-page__main"
-        tabindex="-1"
-        id="main-content-card-view-basic-example"
->
-    <section class="pf-v5-c-page__main-breadcrumb pf-m-limit-width">
-        <div class="pf-v5-c-page__main-body">
-            <nav class="pf-v5-c-breadcrumb" aria-label="breadcrumb">
-                <ol class="pf-v5-c-breadcrumb__list" role="list">
-                    <li class="pf-v5-c-breadcrumb__item">
-                        <a href="https://it.treptowkolleg.de" class="pf-v5-c-breadcrumb__link">Informatik AG</a>
+    </header>
+    <div class="pf-v5-c-page__sidebar">
+        <div class="pf-v5-c-page__sidebar-body">
+            <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
+                <ul class="pf-v5-c-nav__list" role="list">
+                    <li class="pf-v5-c-nav__item">
+                        <a href="#" class="pf-v5-c-nav__link">System panel</a>
                     </li>
-                    <li class="pf-v5-c-breadcrumb__item">
+                    <li class="pf-v5-c-nav__item">
+                        <a href="#" class="pf-v5-c-nav__link pf-m-current" aria-current="page">Policy</a>
+                    </li>
+                    <li class="pf-v5-c-nav__item">
+                        <a href="#" class="pf-v5-c-nav__link">Authentication</a>
+                    </li>
+                    <li class="pf-v5-c-nav__item">
+                        <a href="#" class="pf-v5-c-nav__link">Network services</a>
+                    </li>
+                    <li class="pf-v5-c-nav__item">
+                        <a href="#" class="pf-v5-c-nav__link">Server</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main
+            class="pf-v5-c-page__main"
+            tabindex="-1"
+            id="main-content-card-view-basic-example"
+    >
+        <section class="pf-v5-c-page__main-breadcrumb pf-m-limit-width">
+            <div class="pf-v5-c-page__main-body">
+                <nav class="pf-v5-c-breadcrumb" aria-label="breadcrumb">
+                    <ol class="pf-v5-c-breadcrumb__list" role="list">
+                        <li class="pf-v5-c-breadcrumb__item">
+                            <a href="https://it.treptowkolleg.de" class="pf-v5-c-breadcrumb__link">Informatik AG</a>
+                        </li>
+                        <li class="pf-v5-c-breadcrumb__item">
               <span class="pf-v5-c-breadcrumb__item-divider">
                 <i class="fas fa-angle-right" aria-hidden="true"></i>
               </span>
 
-                        <a
-                                href="#"
-                                class="pf-v5-c-breadcrumb__link pf-m-current"
-                                aria-current="page"
-                        >Dokumentation</a>
-                    </li>
-                </ol>
-            </nav>
-        </div>
-    </section>
-
-    <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
-        <div class="pf-v5-c-page__main-body">
-            <div class="pf-v5-c-content">
-                <h1>Unterrichtsmaterial</h1>
-                <p>Wissenswertes und Ergänzungen</p>
+                            <a
+                                    href="#"
+                                    class="pf-v5-c-breadcrumb__link pf-m-current"
+                                    aria-current="page"
+                            >Dokumentation</a>
+                        </li>
+                    </ol>
+                </nav>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
+            <div class="pf-v5-c-page__main-body">
+                <div class="pf-v5-c-content">
+                    <h1>Unterrichtsmaterial</h1>
+                    <p>Wissenswertes und Ergänzungen</p>
+                </div>
+            </div>
+        </section>
 
 
-    <section class="pf-v5-c-page__main-section pf-m-limit-width">
-        <div class="pf-v5-c-page__main-body">
-            <div class="pf-v5-l-grid pf-m-gutter">
-                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-md">
-                    <div class="pf-v5-l-flex pf-m-column">
-                        <div class="pf-v5-c-content">
-                            <div class="pf-v5-c-card">
-                                <div class="pf-v5-c-card__header">
-                                    <h2 class="pf-v5-c-card__title-text">Inhaltsverzeichnis</h2>
-                                </div>
-                                <div class="pf-v5-c-card__body">
-                                    <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
-                                        <?php
-                                        asort($entries);
+        <section class="pf-v5-c-page__main-section pf-m-limit-width">
+            <div class="pf-v5-c-page__main-body">
+                <div class="pf-v5-l-grid pf-m-gutter">
+                    <div class="pf-v5-l-grid__item pf-m-gutter pf-m-4-col-on-md">
+                        <div class="pf-v5-l-flex pf-m-column">
+                            <div class="pf-v5-c-content">
+                                <div class="pf-v5-c-card">
+                                    <div class="pf-v5-c-card__header">
+                                        <h2 class="pf-v5-c-card__title-text">Inhaltsverzeichnis</h2>
+                                    </div>
+                                    <div class="pf-v5-c-card__body">
+                                        <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
+                                            <?php
+                                            asort($entries);
                                             foreach ($entries as $dir => $value) {
                                                 if ($dir != "img") {
                                                     echo '<li>';
@@ -321,37 +322,40 @@ $entries = dirToArray('./docs');
                                                     echo '</li>';
                                                 }
                                             }
-                                        ?>
-                                    </ul>
+                                            ?>
+                                        </ul>
+                                    </div>
+
                                 </div>
-
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-md" id="content">
+                        <div class="pf-v5-l-flex pf-m-column">
+                            <div class="pf-v5-c-content">
+                                <div class="pf-v5-c-card">
+                                    <div class="pf-v5-c-card__body">
+                                        <?=$mdParser->text($md)?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="pf-v5-l-grid__item pf-m-gutter pf-m-8-col-on-md" id="content">
-                    <div class="pf-v5-l-flex pf-m-column">
-                        <div class="pf-v5-c-content">
-                        <div class="pf-v5-c-card">
-                            <div class="pf-v5-c-card__body">
-                                <?=$mdParser->text($md)?>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+            </div>
+        </section>
+
+        <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
+            <div class="pf-v5-c-page__main-body">
+                <div class="pf-v5-c-content">
+                    <small>&copy;2023 - Benjamin Wagner (Kollegiat am Treptow-Kolleg Berlin - das ziemlich beste Kolleg der Stadt)</small>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+</div>
 
-    <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
-        <div class="pf-v5-c-page__main-body">
-            <div class="pf-v5-c-content">
-                <small>&copy;2023 - Benjamin Wagner (Kollegiat am Treptow-Kolleg Berlin - das ziemlich beste Kolleg der Stadt)</small>
-            </div>
-        </div>
-    </section>
-</main>
+
 
 
 
