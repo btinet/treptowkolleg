@@ -253,7 +253,7 @@ $entries = dirToArray('./docs');
             </nav>
         </div>
     </div>
-    <div class="pf-v5-c-page__main-group pf-m-sticky-top">
+    <div class="pf-v5-c-page__main-group">
         <main
                 class="pf-v5-c-page__main"
                 tabindex="-1"
