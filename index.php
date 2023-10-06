@@ -222,7 +222,7 @@ $entries = dirToArray('./docs');
             </div>
         </div>
     </header>
-    <div class="pf-v5-c-page__sidebar">
+    <div class="pf-v5-c-page__sidebar" id="sidebar">
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <div
@@ -396,6 +396,14 @@ $entries = dirToArray('./docs');
             }
         });
 
+        let toggleButton = document.getElementById("nav-toggle");
+        let sidebar = document.getElementById("sidebar");
+
+        toggleButton.addEventListener("click", () => {
+           if(sidebar.style.display === "none") {
+               sidebar.style.display = "block";
+           }
+        });
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
