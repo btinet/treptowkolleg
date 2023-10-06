@@ -5,6 +5,16 @@
 
 ![Klassendiagramm](/docs/img/uml-relations.png)
 
+#### Multiziplität
+
+| Multiplizität 	| Bedeutung                        	|
+|---------------	|----------------------------------	|
+| 1             	| ein Objekt                       	|
+| 2             	| zwei Objekte                     	|
+| 0..1          	| kein oder ein Objekt             	|
+| 0..*          	| kein oder beliebig viele Objekte 	|
+| *             	| beliebig viele Objekte (außer 0) 	|
+
 ### Assoziation (A kennt B)
 
 ![Klassendiagramm](/docs/img/uml-association.png)
