@@ -165,11 +165,7 @@ $entries = dirToArray('./docs');
         <a class="pf-v5-c-button pf-m-primary" href="#main-content-page-demo-basic">Skip to content</a>
     </div>
     <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
-        <span class="pf-v5-c-masthead__toggle">
-      <button class="pf-v5-c-button pf-m-plain" type="button" aria-label="Global navigation">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-      </button>
-    </span>
+        <button id="nav-toggle" aria-expanded="true" aria-disabled="false" aria-label="Global navigation" class="pf-v5-c-button pf-m-plain" type="button" data-ouia-component-type="PF5/Button" data-ouia-safe="true" data-ouia-component-id="OUIA-Generated-Button-plain-1"><svg class="pf-v5-svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" role="img" width="1em" height="1em"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></button>
         <div class="pf-v5-c-masthead__content">
             <div
                     class="pf-v5-c-toolbar pf-m-full-height pf-m-static"
@@ -226,7 +222,7 @@ $entries = dirToArray('./docs');
             </div>
         </div>
     </header>
-    <div class="pf-v5-c-page__sidebar pf-v5-u-visible">
+    <div class="pf-v5-c-page__sidebar">
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
                 <div
