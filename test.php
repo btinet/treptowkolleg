@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 
 
 // Array mit Objekten
-$array = [new CPU("Intel"), new CPU("AMD"), new CPU("Texas Instruments"), new CPU("BASIF")];
+$array = [new CPU("Intel"), new CPU("AMD"), new CPU("Texas Instruments"), new CPU("Analog Devices")];
 
 // Methode zum Sortieren von Arrays
 // uasort(array &$array, callable $callback);
