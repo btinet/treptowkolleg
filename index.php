@@ -253,7 +253,6 @@ $entries = dirToArray('./docs');
             </nav>
         </div>
     </div>
-    <div class="pf-v5-c-page__main-group">
         <main
                 class="pf-v5-c-page__main"
                 tabindex="-1"
@@ -324,7 +323,6 @@ $entries = dirToArray('./docs');
                 </div>
             </section>
         </main>
-    </div>
 </div>
 
 
