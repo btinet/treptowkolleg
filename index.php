@@ -234,7 +234,7 @@ $entries = dirToArray('./docs');
                                 echo '<div class="pf-v5-c-nav__section-title pf-m-page-insets" style="background-color: #0d0d0d;font-weight: 700; margin-bottom: 0;">';
                                 echo strtoupper($dir);
                                 echo '</div>';
-                                echo '<ul role="list" class="pf-v5-c-nav__list">';
+                                echo '<ul role="list" class="pf-v5-c-nav__list" style="margin: 0">';
                                 foreach ($value as $key => $subValue) {
                                     echo '<li class="pf-v5-c-nav__item">';
                                     echo '<a class="pf-v5-c-nav__link" href="/docs/' .$dir . '/' . $subValue . '">';
