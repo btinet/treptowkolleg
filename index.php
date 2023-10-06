@@ -400,7 +400,7 @@ $entries = dirToArray('./docs');
         let sidebar = document.getElementById("sidebar");
 
         toggleButton.addEventListener("click", () => {
-               sidebar.style.display = "block";
+               sidebar.classList.add("__sidebar--m-expanded--TranslateX: 100;")
             console.log("Toggle-Click");
         });
 
