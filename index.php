@@ -231,7 +231,7 @@ $entries = dirToArray('./docs');
 
 
                             if(is_array($value)) {
-                                echo '<div class="pf-v5-c-nav__section-title pf-m-page-insets" style="border-bottom: none; margin-top: 15px;font-weight: 700">';
+                                echo '<div class="pf-v5-c-nav__section-title pf-m-page-insets" style="border-bottom: none;background-color: #0d0d0d;font-weight: 700">';
                                 echo strtoupper($dir);
                                 echo '</div>';
                                 echo '<ul role="list" class="pf-v5-c-nav__list">';
