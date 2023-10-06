@@ -57,3 +57,71 @@ public class SubClass extends SuperClass {
     
 }
 ````
+
+### Schnittstellen (Interfaces)
+
+![Interface](/docs/img/uml-interface.png)
+
+Schnittstellen bzw. Interfaces werden zur losen Kopplung zwischen Klassen genutzt. Ändert sich
+die Klasse, die eine Schnittstelle implementiert, kann ein anderes Objekt, dass diese Schnittstelle
+nutzt, unverändert bleiben. Denn die Schnittstelle selbst bleibt dieselbe.
+
+Interfaces können statische Attribute und default-Implementierungen, also nur Methodenköpfe.
+
+#### PHP
+
+````php
+<?php
+
+interface BankAccountInterface
+{
+    public function deposit(int $amount): bool;
+    public function withdraw(int $amount): bool;
+}
+
+class PayPalAccount implements BankAccountInterface
+{
+    private int $money = 0;
+
+    public function deposit(int $amount): bool
+    {
+        $this->money += $amount;
+        echo sprintf("Es wurden %s per PayPal eingezahlt.",$amount). PHP_EOL;
+        return true;
+    }
+
+    public function withdraw(int $amount): bool
+    {
+        if($this->money - $amount >= 0) {
+            $this->money -= $amount;
+            echo sprintf("Es wurden %s per PayPal gezahlt.",$amount). PHP_EOL;
+            return true;
+        } else {
+            echo "Der Verfügungsrahmen reicht nicht aus." . PHP_EOL;
+            return false;
+        }
+    }
+}
+
+class Customer
+{
+    private array $myProducts = [];
+
+    public function payFor(StoreProduct $product, BankAccountInterface $bankAccount) : void
+    {
+        if($bankAccount->withdraw($product->getPrice())) {
+            echo sprintf("%s wurde gekauft.",$product->getLabel()). PHP_EOL;
+            $this->myProducts[] = $product;
+        }
+    }
+}
+
+function clientCode() {
+    $microwaveProduct = new StoreProduct('Mikrowelle',20);
+    $customer = new Customer();
+    $paypal = new PayPalAccount();
+    $paypal->deposit(50);
+    $customer->payFor($microwaveProduct,$paypal);
+}
+
+````
