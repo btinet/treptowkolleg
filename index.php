@@ -161,6 +161,9 @@ $entries = dirToArray('./docs');
 
 
 <div class="pf-v5-c-page" id="doc-site">
+    <div class="pf-v5-c-skip-to-content">
+        <a class="pf-v5-c-button pf-m-primary" href="#main-content-page-demo-basic">Skip to content</a>
+    </div>
     <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
         <div class="pf-v5-c-masthead__content">
             <div
