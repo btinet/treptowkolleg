@@ -250,7 +250,7 @@ $entries = dirToArray('./docs');
             </nav>
         </div>
     </section>
-    <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
+    <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light pf-m-sticky">
         <div class="pf-v5-c-page__main-body">
             <div class="pf-v5-c-content">
                 <h1>Unterrichtsmaterial</h1>
@@ -269,7 +269,7 @@ $entries = dirToArray('./docs');
                                 <div class="pf-v5-c-card__header">
                                     <h2 class="pf-v5-c-card__title-text">Inhaltsverzeichnis</h2>
                                 </div>
-                                <div class="pf-v5-c-card__body pf-m-sticky">
+                                <div class="pf-v5-c-card__body">
                                     <ul role="list" class="pf-v5-c-list pf-m-bordered pf-m-plain">
                                         <?php
                                         asort($entries);
