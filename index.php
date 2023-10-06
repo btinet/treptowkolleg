@@ -401,12 +401,13 @@ $entries = dirToArray('./docs');
 
         toggleButton.addEventListener("click", () => {
             console.log("Toggle-Click");
-            if(sidebar.style.transform === "translateX(-100%)" && window.width < 768) {
-                sidebar.style.transform = "translateX(0)";
-            } else {
-                sidebar.style.transform = "translateX(-100%)"
+            if(window.width < 768) {
+                if(sidebar.style.transform === "translateX(-100%)") {
+                    sidebar.style.transform = "translateX(0)";
+                } else {
+                    sidebar.style.transform = "translateX(-100%)"
+                }
             }
-
         });
 
         if(window.width >= 768) {
