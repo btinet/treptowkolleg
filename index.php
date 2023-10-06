@@ -237,7 +237,7 @@ $entries = dirToArray('./docs');
                                 echo '<ul role="list" class="pf-v5-c-nav__list" style="padding: 0">';
                                 foreach ($value as $key => $subValue) {
                                     $active = '';
-                                    if($file == './'.$dir.'/'.$subValue.'.md')
+                                    if($file == './docs/'.strtolower($dir).'/'.$subValue.'.md')
                                     { $active = 'pf-m-current'; }
                                     echo '<li class="pf-v5-c-nav__item '.$active.'">';
                                     echo '<a class="pf-v5-c-nav__link" href="/docs/' .$dir . '/' . $subValue . '">';
