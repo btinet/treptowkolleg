@@ -399,6 +399,9 @@ $entries = dirToArray('./docs');
                 });
             }
         });
+        $(document).ready(function() {
+            $().setupVerticalNavigation(true);
+        });
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
