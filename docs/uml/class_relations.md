@@ -67,6 +67,11 @@ die Klasse, die eine Schnittstelle implementiert, kann ein anderes Objekt, dass 
 nutzt, unverändert bleiben. Denn die Schnittstelle selbst bleibt dieselbe. Jede Klasse, die
 ein Interface implementiert, muss zwanghaft alle Interface-Methoden implementieren.
 
+Falls die Darstellung des Interfaces nicht so wichtig ist, kann auch die **Lollipop- / Ball-and-Socket-Notation**
+verwendet werden:
+
+![Interface-Lollipop](/docs/img/uml-interface-2.png)
+
 Interfaces können statische Attribute und default-Implementierungen,
 also nur Methodenköpfe, enthalten.
 
