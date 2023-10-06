@@ -401,7 +401,7 @@ $entries = dirToArray('./docs');
 
         toggleButton.addEventListener("click", () => {
             console.log("Toggle-Click");
-            if(document.width < 768) {
+            if(document.body.clientWidth < 768) {
                 if(sidebar.style.transform === "translateX(-100%)") {
                     sidebar.style.transform = "translateX(0)";
                 } else {
@@ -411,9 +411,9 @@ $entries = dirToArray('./docs');
         });
 
         addEventListener("resize", (event) => {
-            console.log(window.width);
+            console.log(document.body.clientWidth);
         });
-        if(window.width >= 768) {
+        if(document.body.clientWidth >= 768) {
             sidebar.style.transform = "translateX(0)";
         }
 
