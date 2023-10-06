@@ -253,76 +253,78 @@ $entries = dirToArray('./docs');
             </nav>
         </div>
     </div>
-    <main
-            class="pf-v5-c-page__main"
-            tabindex="-1"
-            id="main-content-card-view-basic-example"
-    >
-        <a class="pf-v5-c-button pf-m-primary" href="#" id="myBtn">
-            nach oben
-            <span class="pf-v5-c-button__icon pf-m-end">
-      <i class="fas fa-angle-up" aria-hidden="true"></i>
-    </span>
-        </a>
-        <section class="pf-v5-c-page__main-breadcrumb pf-m-limit-width">
-            <div class="pf-v5-c-page__main-body">
-                <nav class="pf-v5-c-breadcrumb" aria-label="breadcrumb">
-                    <ol class="pf-v5-c-breadcrumb__list" role="list">
-                        <li class="pf-v5-c-breadcrumb__item">
-                            <a href="https://it.treptowkolleg.de" class="pf-v5-c-breadcrumb__link">Informatik AG</a>
-                        </li>
-                        <li class="pf-v5-c-breadcrumb__item">
-              <span class="pf-v5-c-breadcrumb__item-divider">
-                <i class="fas fa-angle-right" aria-hidden="true"></i>
-              </span>
+    <div class="pf-v5-c-page__main-group pf-m-sticky-top">
+        <main
+                class="pf-v5-c-page__main"
+                tabindex="-1"
+                id="main-content-card-view-basic-example"
+        >
+            <a class="pf-v5-c-button pf-m-primary" href="#" id="myBtn">
+                nach oben
+                <span class="pf-v5-c-button__icon pf-m-end">
+          <i class="fas fa-angle-up" aria-hidden="true"></i>
+        </span>
+            </a>
+            <section class="pf-v5-c-page__main-breadcrumb pf-m-limit-width">
+                <div class="pf-v5-c-page__main-body">
+                    <nav class="pf-v5-c-breadcrumb" aria-label="breadcrumb">
+                        <ol class="pf-v5-c-breadcrumb__list" role="list">
+                            <li class="pf-v5-c-breadcrumb__item">
+                                <a href="https://it.treptowkolleg.de" class="pf-v5-c-breadcrumb__link">Informatik AG</a>
+                            </li>
+                            <li class="pf-v5-c-breadcrumb__item">
+                  <span class="pf-v5-c-breadcrumb__item-divider">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                  </span>
 
-                            <a
-                                    href="#"
-                                    class="pf-v5-c-breadcrumb__link pf-m-current"
-                                    aria-current="page"
-                            >Dokumentation</a>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-        </section>
-
-        <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
-            <div class="pf-v5-c-page__main-body">
-                <div class="pf-v5-c-content">
-                    <h1>Unterrichtsmaterial</h1>
-                    <p>Wissenswertes und Ergänzungen</p>
+                                <a
+                                        href="#"
+                                        class="pf-v5-c-breadcrumb__link pf-m-current"
+                                        aria-current="page"
+                                >Dokumentation</a>
+                            </li>
+                        </ol>
+                    </nav>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
+                <div class="pf-v5-c-page__main-body">
+                    <div class="pf-v5-c-content">
+                        <h1>Unterrichtsmaterial</h1>
+                        <p>Wissenswertes und Ergänzungen</p>
+                    </div>
+                </div>
+            </section>
 
 
-        <section class="pf-v5-c-page__main-section pf-m-limit-width">
-            <div class="pf-v5-c-page__main-body">
-                <div class="pf-v5-l-grid pf-m-gutter">
-                    <div class="pf-v5-l-grid__item pf-m-gutter pf-m-12-col-on-md" id="content">
-                        <div class="pf-v5-l-flex pf-m-column">
-                            <div class="pf-v5-c-content">
-                                <div class="pf-v5-c-card">
-                                    <div class="pf-v5-c-card__body">
-                                        <?=$mdParser->text($md)?>
+            <section class="pf-v5-c-page__main-section pf-m-limit-width">
+                <div class="pf-v5-c-page__main-body">
+                    <div class="pf-v5-l-grid pf-m-gutter">
+                        <div class="pf-v5-l-grid__item pf-m-gutter pf-m-12-col-on-md" id="content">
+                            <div class="pf-v5-l-flex pf-m-column">
+                                <div class="pf-v5-c-content">
+                                    <div class="pf-v5-c-card">
+                                        <div class="pf-v5-c-card__body">
+                                            <?=$mdParser->text($md)?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
-            <div class="pf-v5-c-page__main-body">
-                <div class="pf-v5-c-content">
-                    <small>&copy;2023 - Benjamin Wagner (Kollegiat am Treptow-Kolleg Berlin - das ziemlich beste Kolleg der Stadt)</small>
+            <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
+                <div class="pf-v5-c-page__main-body">
+                    <div class="pf-v5-c-content">
+                        <small>&copy;2023 - Benjamin Wagner (Kollegiat am Treptow-Kolleg Berlin - das ziemlich beste Kolleg der Stadt)</small>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
 </div>
 
 
