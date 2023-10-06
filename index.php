@@ -221,15 +221,17 @@ $entries = dirToArray('./docs');
     <div class="pf-v5-c-page__sidebar">
         <div class="pf-v5-c-page__sidebar-body">
             <nav class="pf-v5-c-nav" id="page-demo-sticky-top-section-group-primary-nav" aria-label="Global">
-                <ul class="pf-v5-c-nav__list" role="list">
+                <div
+                        class="pf-v5-c-page__sidebar-body pf-m-fill pf-m-page-insets"
+                >inset content</div>
                     <?php
                     asort($entries);
                     foreach ($entries as $dir => $value) {
                         if ($dir != "img") {
-                            echo '<li class="pf-v5-c-nav__item">';
+                            echo '<span class="pf-v5-c-nav__section-title">';
 
                             if(is_array($value)) {
-                                echo "<span class='pf-v5-c-nav__section-title'>" . strtoupper($dir) . "</span>";
+                                echo strtoupper($dir);
                                 echo '<ul role="list" class="pf-v5-c-list pf-m-plain">';
                                 foreach ($value as $key => $subValue) {
                                     echo '<li>';
@@ -245,11 +247,11 @@ $entries = dirToArray('./docs');
                                 echo '</a>';
                             }
 
-                            echo '</li>';
+                            echo '</span>';
                         }
                     }
                     ?>
-                </ul>
+                </div>
             </nav>
         </div>
     </div>
