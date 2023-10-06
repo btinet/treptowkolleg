@@ -180,6 +180,22 @@ class Sort
         return $this->method;
     }
 }
+
+class CPU
+{
+    private string $name;
+    
+    public function __construct(string $name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+}
     
 // Array mit Objekten
 $array = [new CPU("Intel"), new CPU("AMD"), new CPU("Texas Instruments"), new CPU("Analog Devices")];
