@@ -67,7 +67,8 @@ die Klasse, die eine Schnittstelle implementiert, kann ein anderes Objekt, dass 
 nutzt, unverändert bleiben. Denn die Schnittstelle selbst bleibt dieselbe. Jede Klasse, die
 ein Interface implementiert, muss zwanghaft alle Interface-Methoden implementieren.
 
-Interfaces können statische Attribute und default-Implementierungen, also nur Methodenköpfe.
+Interfaces können statische Attribute und default-Implementierungen,
+also nur Methodenköpfe, enthalten.
 
 #### PHP
 
