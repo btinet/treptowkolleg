@@ -411,11 +411,11 @@ $entries = dirToArray('./docs');
         });
 
         addEventListener("resize", (event) => {
-            console.log(document.body.clientWidth);
+            if(document.body.clientWidth >= 768) {
+                sidebar.style.transform = "translateX(0)";
+            }
         });
-        if(document.body.clientWidth >= 768) {
-            sidebar.style.transform = "translateX(0)";
-        }
+
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
