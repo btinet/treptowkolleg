@@ -239,6 +239,7 @@ $entries = dirToArray('./docs');
                                     $active = '';
                                     if($file == './docs/'.strtolower($dir).'/'.$subValue.'.md')
                                     { $active = 'pf-m-current'; }
+                                    echo './docs/'.strtolower($dir).'/'.$subValue.'.md';
                                     echo '<li class="pf-v5-c-nav__item '.$active.'">';
                                     echo '<a class="pf-v5-c-nav__link" href="/docs/' .$dir . '/' . $subValue . '">';
                                     echo getName($subValue);
