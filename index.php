@@ -158,12 +158,7 @@ $entries = dirToArray('./docs');
 </head>
 <body>
 
-<a class="pf-v5-c-button pf-m-primary" href="#" id="myBtn">
-    nach oben
-    <span class="pf-v5-c-button__icon pf-m-end">
-      <i class="fas fa-angle-up" aria-hidden="true"></i>
-    </span>
-</a>
+
 
 <div class="pf-v5-c-page" id="doc-site">
     <header class="pf-v5-c-masthead" id="card-view-basic-example-masthead">
@@ -251,6 +246,12 @@ $entries = dirToArray('./docs');
             tabindex="-1"
             id="main-content-card-view-basic-example"
     >
+        <a class="pf-v5-c-button pf-m-primary" href="#" id="myBtn">
+            nach oben
+            <span class="pf-v5-c-button__icon pf-m-end">
+      <i class="fas fa-angle-up" aria-hidden="true"></i>
+    </span>
+        </a>
         <section class="pf-v5-c-page__main-breadcrumb pf-m-limit-width">
             <div class="pf-v5-c-page__main-body">
                 <nav class="pf-v5-c-breadcrumb" aria-label="breadcrumb">
