@@ -64,7 +64,8 @@ public class SubClass extends SuperClass {
 
 Schnittstellen bzw. Interfaces werden zur losen Kopplung zwischen Klassen genutzt. Ändert sich
 die Klasse, die eine Schnittstelle implementiert, kann ein anderes Objekt, dass diese Schnittstelle
-nutzt, unverändert bleiben. Denn die Schnittstelle selbst bleibt dieselbe.
+nutzt, unverändert bleiben. Denn die Schnittstelle selbst bleibt dieselbe. Jede Klasse, die
+ein Interface implementiert, muss zwanghaft alle Interface-Methoden implementieren.
 
 Interfaces können statische Attribute und default-Implementierungen, also nur Methodenköpfe.
 
