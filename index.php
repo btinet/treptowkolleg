@@ -400,10 +400,7 @@ $entries = dirToArray('./docs');
         let sidebar = document.getElementById("sidebar");
 
         toggleButton.addEventListener("click", () => {
-           if(sidebar.style.display === "none") {
                sidebar.style.display = "block";
-
-           }
             console.log("Toggle-Click");
         });
 
