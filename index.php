@@ -399,9 +399,7 @@ $entries = dirToArray('./docs');
                 });
             }
         });
-        $(document).ready(function() {
-            $().setupVerticalNavigation(true);
-        });
+
 
         function Sleep(milliseconds) {
             return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -421,6 +419,9 @@ $entries = dirToArray('./docs');
     });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/js/patternfly.min.js"></script>
 
 
 </body>
