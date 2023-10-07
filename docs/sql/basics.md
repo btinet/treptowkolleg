@@ -21,6 +21,10 @@ FROM person
 GROUP BY election_result_person.person_id;
 `````
 
+Die obige Abfrage ergibt folgendes Ergebnis (als Diagramm dargestellt):
+
+![Diagramm](/docs/img/diagramm.jpg)
+
 Unter manchen Konfigurationen gibt das obige Beispiel eine Fehlermeldung aus, da es
 sich nicht um ein vollständig qualifiziertes ``GROUP BY`` handelt (ohne ``HAVING``). Die Konfiguration
 kann folgendermaßen geändert werden:
