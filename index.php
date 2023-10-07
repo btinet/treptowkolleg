@@ -302,8 +302,9 @@ $currentSubSection = "";
             <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
                 <div class="pf-v5-c-page__main-body">
                     <div class="pf-v5-c-content">
-                        <h1><?= $currentSection ?? 'Unterrichtsmaterial'?></h1>
-                        <h2><?= $currentSubSection ?? 'Wissenswertes und Ergänzungen'?></h2>
+                        <h1><?= $currentSection ?? 'Unterrichtsmaterial'?>
+                        <small><?= $currentSubSection ?? 'Wissenswertes und Ergänzungen'?></small>
+                        </h1>
                     </div>
                 </div>
             </section>
