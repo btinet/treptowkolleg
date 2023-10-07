@@ -15,4 +15,9 @@ class Customer
         }
     }
 
+    public function getMyProducts(): array
+    {
+        return $this->myProducts;
+    }
+
 }

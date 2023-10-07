@@ -22,9 +22,8 @@ uasort($array, new Sort('name'));
 $microwaveProduct = new StoreProduct('Mikrowelle',20);
 $customer = new Customer();
 $paypal = new PayPalAccount();
+$customer->payFor($microwaveProduct,$paypal);
 $paypal->deposit(50);
 $customer->payFor($microwaveProduct,$paypal);
 
-
-$customer->payFor($microwaveProduct,$paypal);
-echo $paypal->getAmount();
+print_r($customer->getMyProducts());
