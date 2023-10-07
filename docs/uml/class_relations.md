@@ -130,5 +130,56 @@ function clientCode() {
     $paypal->deposit(50);
     $customer->payFor($microwaveProduct,$paypal);
 }
+````
 
+#### JAVA
+
+````php
+
+interface BankAccountInterface {
+    public boolean deposit(int amount);
+    public boolean withdraw(int amount);
+}
+
+public class PayPalAccount implements BankAccountInterface {
+
+    private int money = 0;
+
+    public boolean deposit(int amount) {
+        this.money += amount;
+        System.out.printf("Es wurden %s per PayPal eingezahlt.%n",amount);
+        return true;
+    }
+
+    public boolean withdraw(int amount) {
+        if(this.money - amount >= 0) {
+            this.money -= amount;
+            System.out.printf("Es wurden %s per PayPal gezahlt.%n",amount);
+            return true;
+        } else {
+            System.out.println("Der Verfügungsrahmen reicht nicht aus.");
+            return false;
+        }
+    }
+}
+
+class Customer {
+
+    private ArrayList<StoreProduct> myProducts = new ArrayList<>();
+
+    public void payFor(StoreProduct product, BankAccountInterface bankAccount) {
+        if(bankAccount.withdraw(product.getPrice())) {
+            System.out.printf("%s wurde gekauft.%n",product.getLabel());
+            this.myProducts.add(product);
+        }
+    }
+}
+
+static void main() {
+    StoreProduct microwaveProduct = new StoreProduct('Mikrowelle',20);
+    Customer customer = new Customer();
+    PayPalAccount paypal = new PayPalAccount();
+    paypal.deposit(50);
+    customer.payFor(microwaveProduct,paypal);
+}
 ````
