@@ -28,6 +28,7 @@ Zeichenkette einer Zahl entspricht.
 $myString = '5';    // string
 
 $myResult = $myString * 2;  // Multiplikation ergibt 10. $myResult ist vom Typ int
+$anotherResult = $myString + 5; // Addition ergibt 10. $anotherResult ist vom Typ int
 ````
 
 ### Zeichenkettenoperatoren
