@@ -92,6 +92,9 @@ function dirToArray($dir): array
 
 $entries = dirToArray('./docs');
 
+$currentSection = "";
+$currentSubSection = "";
+
 // Wie wir sehen, führen viele Wege nach Rom. Denn die Ausgaben aus Zeilen 25 und 38 sind von außen betrachtet identisch.
 ?>
 <!doctype html>
@@ -242,7 +245,11 @@ $entries = dirToArray('./docs');
                                 foreach ($value as $key => $subValue) {
                                     $active = '';
                                     if($file == './docs/'.strtolower($dir).'/'.$subValue)
-                                    { $active = 'pf-m-current'; }
+                                    {
+                                        $active = 'pf-m-current';
+                                        $currentSection = strtoupper($dir);
+                                        $currentSubSection = getName($subValue);
+                                    }
                                     echo '<li class="pf-v5-c-nav__item '.$active.'">';
                                     echo '<a class="pf-v5-c-nav__link" href="/docs/' .$dir . '/' . $subValue . '">';
                                     echo getName($subValue);
@@ -295,8 +302,8 @@ $entries = dirToArray('./docs');
             <section class="pf-v5-c-page__main-section pf-m-limit-width pf-m-light">
                 <div class="pf-v5-c-page__main-body">
                     <div class="pf-v5-c-content">
-                        <h1>Unterrichtsmaterial</h1>
-                        <p>Wissenswertes und Ergänzungen</p>
+                        <h1><?= $currentSection ?? 'Unterrichtsmaterial'?></h1>
+                        <p><?= $currentSubSection ?? 'Wissenswertes und Ergänzungen'?></p>
                     </div>
                 </div>
             </section>
