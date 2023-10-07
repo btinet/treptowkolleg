@@ -177,7 +177,7 @@ public class Customer {
 
 public class Main {
     public static void main(String[] args) {
-        StoreProduct microwaveProduct = new StoreProduct('Mikrowelle',20);
+        StoreProduct microwaveProduct = new StoreProduct("Mikrowelle",20);
         Customer customer = new Customer();
         PayPalAccount paypal = new PayPalAccount();
         paypal.deposit(50);
