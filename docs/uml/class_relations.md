@@ -134,7 +134,7 @@ function clientCode() {
 
 #### JAVA
 
-````php
+````java
 
 public interface BankAccountInterface {
     public boolean deposit(int amount);
