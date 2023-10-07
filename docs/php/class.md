@@ -43,7 +43,7 @@ echo $class->myString; // Klassenattribut ausgeben
 Dies ist nicht immer ratsam, da vielleicht die Attribute nach bestimmten Algorithmen
 gespeichert und ausgelesen werden sollen. Ein Beispiel:
 
-Wir speichern eine Zahl nach folgendem Algorithmus: $ f(x) = -(x+1); x\in\mathbb{N}_U $ und
+Wir speichern eine natürliche Zahl nach folgendem Algorithmus: $ f(x) = -(x+1); x\in\mathbb{N}_U $ und
 $ f(x) = x; x\in 2\mathbb{N} $
 
 ````php
@@ -55,11 +55,13 @@ class MyClass
     
     public function setInteger(int $newInteger): void
     {
-        if($newInteger % 2 == 0) {
-            $this->myInteger = $newInteger;
-            } else {
-                $this->myInteger = -($newInteger + 1);
-        }
+        if($newInteger >= 0) {
+            if($newInteger % 2 == 0) {
+                $this->myInteger = $newInteger;
+                } else {
+                    $this->myInteger = -($newInteger + 1);
+            }
+        }        
     }
     
     public function getInteger(): int
