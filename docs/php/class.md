@@ -43,6 +43,8 @@ echo $class->myString; // Klassenattribut ausgeben
 Dies ist nicht immer ratsam, da vielleicht die Attribute nach bestimmten Algorithmen
 gespeichert und ausgelesen werden sollen. Ein Beispiel:
 
+Wir speichern eine Zahl nach folgendem Algorithmus: $$ f(x) = -(x+1); x\in\mathbb{N} $$
+
 ````php
 <?php # MyClass.php
 
