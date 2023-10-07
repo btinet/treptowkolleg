@@ -303,7 +303,7 @@ $currentSubSection = "";
                 <div class="pf-v5-c-page__main-body">
                     <div class="pf-v5-c-content">
                         <h1><?= $currentSection ?? 'Unterrichtsmaterial'?></h1>
-                        <p><?= $currentSubSection ?? 'Wissenswertes und Ergänzungen'?></p>
+                        <h2><?= $currentSubSection ?? 'Wissenswertes und Ergänzungen'?></h2>
                     </div>
                 </div>
             </section>
