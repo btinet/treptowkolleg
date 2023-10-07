@@ -34,7 +34,7 @@ aufgefallen, dass hier nicht auf eine ``.php``-Datei, sondern auf eine Markdownd
 verwiesen wird? Tatsächlich sieht es so aus. Jedoch habe ich den Webserver so eingestellt,
 dass der Pfad als Parameter an die ``index.php`` übergeben wird:
 
-````apacheconf
+````shell
 Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{REQUEST_URI} !^.*\.(jpg|css|js|gif|png|otf|svg|woff|woff2)$ [NC]
