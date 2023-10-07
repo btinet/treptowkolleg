@@ -136,7 +136,7 @@ function clientCode() {
 
 ````php
 
-interface BankAccountInterface {
+public interface BankAccountInterface {
     public boolean deposit(int amount);
     public boolean withdraw(int amount);
 }
@@ -163,7 +163,7 @@ public class PayPalAccount implements BankAccountInterface {
     }
 }
 
-class Customer {
+public class Customer {
 
     private ArrayList<StoreProduct> myProducts = new ArrayList<>();
 
@@ -175,11 +175,13 @@ class Customer {
     }
 }
 
-static void main() {
-    StoreProduct microwaveProduct = new StoreProduct('Mikrowelle',20);
-    Customer customer = new Customer();
-    PayPalAccount paypal = new PayPalAccount();
-    paypal.deposit(50);
-    customer.payFor(microwaveProduct,paypal);
+public class Main {
+    public static void main(String[] args) {
+        StoreProduct microwaveProduct = new StoreProduct('Mikrowelle',20);
+        Customer customer = new Customer();
+        PayPalAccount paypal = new PayPalAccount();
+        paypal.deposit(50);
+        customer.payFor(microwaveProduct,paypal);
+    }
 }
 ````
