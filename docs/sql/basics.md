@@ -6,6 +6,9 @@ Grundlagen
 
 <a class="pf-v5-c-button pf-m-control pf-m-small" href="https://it.treptowkolleg.de/admin" target="_blank">phpMyAdmin</a>
 
+## Grundlagen
+
+Um ein Gefühl für SQL zu bekommen, erstmal eine *Select-Query* üblichen Ausmaßes:
 `````sql
 SELECT person.name AS Name, election.label AS Wahl, COUNT(*) AS Stimmen
 FROM person
