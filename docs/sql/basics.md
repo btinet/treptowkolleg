@@ -2,10 +2,6 @@
 
 ![sql-logo](/docs/img/Sql_data_base_with_logo.png)
 
-Grundlagen
-
-
-
 ## Grundlagen
 
 Um ein Gefühl für SQL zu bekommen, erstmal eine *Select-Query* üblichen Ausmaßes:
