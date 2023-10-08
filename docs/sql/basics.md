@@ -39,3 +39,41 @@ wird folgendes Kommando benötigt:
 ````sql
 mysql > SET PERSIST sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 ````
+
+## Bestandteile eines Datenbanksystems
+
+Ein Datenbanksystem ist eine systematische und strukturierte Zusammenfassung von Daten eines Problembereichs. Diese umfasst die sogenannte **Datenbasis**. Aufgaben eines Datenbanksystems sind:
+
+- Eingabe
+- Verwaltung
+- Auswertung
+- Ausgabe
+
+Diese Aufgaben werden durch ein **Datenbankmanagementsystem** erledigt *(DBMS)*.
+Ein DBMS dient der zentralen Speicherung und einheitlichen Verwaltung einer Datenbasis. Außerdem kontrolliert es den Zugriff und überwacht die Zugangsberechtigungen als Maßnahme zur Datensicherheit.
+
+## Datenbankarchitektur
+
+### Externe Ebene
+
+Die externe Ebene stellt die Benutzersicht auf die Daten dar. Für verschiedene Benutzer kann es verschiedene Benutzersichten geben.
+
+### Konzeptionelle Ebene
+
+Die konzeptionelle Ebene stellt die logische Ebene, also das Datenmodell dar. Das Datenmodell besteht genau einmal.
+
+### Interne Ebene
+
+Die interne Ebene beschreibt die Implementierung des konzeptionellen Schemas. Für diese Ebene ist das DBMS zuständig.
+
+## Datenbankarten
+
+### Hierarchische Datenbank
+
+Hierarchische Datenbanken weisen eine Baumstruktur auf. Sie werden heutzutage kaum noch verwendet, da die Verwaltung sehr starr und unflexibel ist. Die Verbindungen werden Parent-Child-Verbindugen genannt.
+
+### Netzwerkdatenbank
+
+Netzwerkdatenbanken
+
+### Relationale Datenbank
