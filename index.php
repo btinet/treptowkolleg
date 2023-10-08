@@ -53,6 +53,7 @@ function getName(string $file): string
         'basics' => 'Grundlagen',
         'class' => 'Klassen',
         '_index' => 'Einleitung',
+        'projection' => 'Projektion',
         'associations' => 'Beziehungen',
         'vars' => 'Variablen & Konstanten',
         'magic_methods' => 'Magische Methoden',
