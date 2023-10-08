@@ -2,7 +2,7 @@
 
 namespace App;
 
-class CPU
+class CPU implements EntityInterface
 {
 
     // Attribut

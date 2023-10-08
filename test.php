@@ -1,7 +1,9 @@
 <?php
 
+use App\CPUArray;
 use App\CPU;
 use App\Customer;
+use App\MyArray;
 use App\PayPalAccount;
 use App\Sort;
 use App\StoreProduct;
@@ -26,4 +28,10 @@ $customer->payFor($microwaveProduct,$paypal);
 $paypal->deposit(50);
 $customer->payFor($microwaveProduct,$paypal);
 
-print_r($customer->getMyProducts());
+
+$myArray = new CPUArray(new CPU("Intel"));
+
+
+foreach ($myArray->getList() as $cpu) {
+    echo $cpu->getName();
+}

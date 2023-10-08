@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'btinet/infag',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '61f14389f6983a7726f2f95e7d81195503fc6ae5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'btinet/infag' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '61f14389f6983a7726f2f95e7d81195503fc6ae5',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
