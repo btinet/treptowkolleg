@@ -17,3 +17,18 @@ WHERE
 ORDER BY
         examNumber ASC
 ````
+
+Die obige SQL-Abfrage benennt die selektierten Spalten so um, dass sie zu folgender
+Klasse passen:
+
+````php
+public class Exam extends Entity {
+
+    public String schoolSubject;
+
+    protected int id;
+    protected Integer pupilId;
+    protected Integer schoolSubjectId;
+    protected Integer examNumber;
+    protected Integer points;
+````
