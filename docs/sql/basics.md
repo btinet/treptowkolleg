@@ -4,7 +4,7 @@
 
 Grundlagen
 
-<a class="pf-v5-c-button pf-m-control pf-m-small" href="https://it.treptowkolleg.de/admin" target="_blank">phpMyAdmin</a>
+
 
 ## Grundlagen
 
@@ -51,6 +51,11 @@ Ein Datenbanksystem ist eine systematische und strukturierte Zusammenfassung von
 
 Diese Aufgaben werden durch ein **Datenbankmanagementsystem** erledigt *(DBMS)*.
 Ein DBMS dient der zentralen Speicherung und einheitlichen Verwaltung einer Datenbasis. Außerdem kontrolliert es den Zugriff und überwacht die Zugangsberechtigungen als Maßnahme zur Datensicherheit.
+
+Für relationale Datenbanken, die für uns eine wesentliche Rolle spielen werden, kann
+folgende Administration verwendet werden:
+
+<a class="pf-v5-c-button pf-m-control pf-m-small" href="https://it.treptowkolleg.de/admin" target="_blank">phpMyAdmin</a>
 
 ## Datenbankarchitektur
 
