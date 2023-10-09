@@ -10,18 +10,22 @@ werden.
 ````php
 public class Pupil {
 
+    // einzelne Spalte, Fremdschlüssel liegt hier
     @Join(entity=Tutor.class, column = "firstname", on = "tutorId")
-    public String tutorFirstname;
+    protected String tutorFirstname;    
     
     @Join(entity=Tutor.class, column = "lastname", on = "tutorId")
-    public String tutorLastname;
+    protected String tutorLastname;
     
+    // einzelne Spalte, Fremdschlüssel in Fremdtabelle
     @InverseJoin(entity = Exam.class, column = "SUM(exam.points * 4)", on = "pupilId")
-    public Integer summedExamPoints;
+    protected Integer summedExamPoints;
     
+    // einfache Spalte
     @ORM
     protected int id;
     
+    // komplettes Entity-Objekt, Fremdschlüssel liegt hier
     @ManyToOne(entity=Tutor.class, origin = "id")
     protected Integer tutorId;
     
@@ -66,7 +70,10 @@ SELECT
        tutor.lastname AS tutorLastname,
        SUM(exam.points * 4) AS summedExamPoints,
        pupil.id AS id,
+
+        /* Spalte führt zu neuer Instanz eines Tutor-Objekts */
        pupil.tutor_id AS tutorId,
+       
        pupil.firstname AS firstname,
        pupil.lastname AS lastname,
        pupil.birth_date AS birthDate,
