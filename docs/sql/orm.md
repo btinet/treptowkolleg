@@ -56,6 +56,9 @@ Dabei werden folgende MySQL-Tabllen verknüpft:
 
 ![Exam-Table](/docs/img/tbl-exam.png)
 
+Das ORM generiert nun aus den Attributen der ``Pupil``-Klasse die folgende *SQL-Abfrage*,
+um die gezeigten Tabellen so zu verknüpfen, dass alle zusammenhängenden Datensätze je
+Zeile (*Tupel*) ausgegeben werden.
 
 ````sql
 SELECT
