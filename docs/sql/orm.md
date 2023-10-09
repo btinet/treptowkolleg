@@ -45,12 +45,15 @@ public class Pupil {
 Dabei werden folgende MySQL-Tabllen verknüpft:
 
 **pupil**
+
 ![Pupil-Table](/docs/img/tbl-pupil.png)
 
 **tutor**
+
 ![Tutor-Table](/docs/img/tbl-tutor.png)
 
 **exam**
+
 ![Exam-Table](/docs/img/tbl-exam.png)
 
 
