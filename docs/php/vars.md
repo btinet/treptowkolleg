@@ -42,6 +42,7 @@ $name = "myVar";
 ${$name} = "Die Variable $name wurde jetzt deklariert.";
 
 echo $myVar;
+// Gibt aus: Die Variable myVar wurde jetzt deklariert.
 ````
 
 Damit die IDE uns nicht aus Versehen warnt, dass die Variable nicht deklariert ist,
