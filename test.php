@@ -28,10 +28,12 @@ $customer->payFor($microwaveProduct,$paypal);
 $paypal->deposit(50);
 $customer->payFor($microwaveProduct,$paypal);
 
+/**
+ * @var $myVar int Variable, die wir gleich dynamisch deklarieren werden.
+ */
 
-$myArray = new CPUArray(new CPU("Intel"));
+$name = "myVar";
 
+${$name} = "Die Variable $name wurde jetzt deklariert.";
 
-foreach ($myArray->getList() as $cpu) {
-    echo $cpu->getName();
-}
+echo $myVar;

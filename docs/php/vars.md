@@ -17,6 +17,109 @@ $myArray = [];  // array
 $myArray = true;  // bool
 ````
 
+### Dynamisch deklarieren
+
+In PHP lässt sich etwas total verrücktes machen, was zum Beispiel in JAVA undenkbar wäre.
+Wir können Variablen nämlich auch dynamisch während der Laufzeit deklarieren:
+
+````php
+<?php
+
+/**
+ * Dies ist ein sogenannter PHP-Docs-Block. Hier können Informationen an die
+ * Entwickler weitergegeben werden.
+ * 
+ * @var $myVar int Variable, die wir gleich dynamisch deklarieren werden.
+ */
+
+// Erstmal eine normale Variable vom Typ String deklarieren und initialisieren.
+$name = "myVar";
+
+/*
+ * Und jetzt deklarieren wir eine Variable, deren Bezeichnung der Wert der zuvor
+ * deklarierten Variable ist. Klingt komisch, ist aber so. 
+ */ 
+${$name} = "Die Variable $name wurde jetzt deklariert.";
+
+echo $myVar;
+````
+
+Damit die IDE uns nicht aus Versehen warnt, dass die Variable nicht deklariert ist,
+haben wir oben den Docs-Block benutzt. Diese Art der Deklaration kann verwendet werden,
+um in PHP-Templates Variablen bereitzustellen, ohne vorher den Namen festlegen zu müssen.
+
+Im folgenden Beispiel (Auszug) wird ein Template gerendert, das HTML-Code enthält. Dem Template
+wird außerdem ein ``Exam``-Objekt übergeben.
+
+````php
+class ExamController extends AbstractController
+{
+    public function show(int $examId): string
+    {
+        $exam = $this->repository->setEntity(Exam::class)->find($examId);
+
+        return $this->render('exam/show.html', [
+            'exam' => $exam,
+        ]);
+    }
+
+}
+````
+
+Schauen wir uns das Template (Auszug) an:
+
+````php
+<?php
+/**
+ * @var object $exam enthält die MySQL-Tabelle "exam"
+ */
+?>
+
+<div class="list-group list-group-flush rounded-3 border shadow-sm">
+    <?php foreach($exams as $exam): ?>
+        <?php $examState = ' key-question '; ?>
+        <?php if(date('Y') < ($exam->getYear()+3)):?>
+            <?php $examState .= 'key-question-restricted'; ?>
+        <?php else: ?>
+            <?php if($exam->getUser()):?>
+                <?php $examState .= 'key-question-blocked'; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+        <a href="<?=$response->generateUrlFromRoute('exam_show',[$exam->getId()])?>" class="list-group-item <?=$examState?> list-group-item-action lh-sm py-3 d-flex justify-content-between align-items-start">
+            <div class="d-flex flex-column justify-content-between align-items-start">
+
+                <div class="d-flex mb-2 small fw-light justify-content-start align-items-center">
+                    <?php foreach($exam->getSchoolSubjects() as $subject): ?>
+                        <span class="badge me-1 text-capitalize <?=$subject->isMainSchoolSubject() ? 'bg-primary' :'bg-secondary' ?>"><?=$subject->getAbbr()?></span>
+                    <?php endforeach; ?>
+                    <?php if(date('Y') < ($exam->getYear()+3)):?>
+                        <span class="me-1 badge badge-pill text-bg-danger small">gesperrt</span>
+                    <?php else: ?>
+                        <?php if($exam->getUser()):?>
+                            <span class="badge badge-pill text-bg-info small">belegt</span>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+                <p class="card-text"><?=$exam->getKeyQuestion()?></p>
+            </div>
+            <div class="d-flex align-items-end flex-column">
+                <span class="small badge text-bg-light fw-light bg-gradient border text-nowrap">
+                    frei ab
+                    <?= $exam->getYear()+3 ?>
+                </span>
+            </div>
+        </a>
+    <?php endforeach; ?>
+    <?php if(!$exams): ?>
+        <li class="list-group-item">Keine Prüfungen gefunden.</li>
+    <?php endif; ?>
+</div>
+
+````
+
+
+## Gängige Operatoren
+
 ### Mathematische Operatoren
 
 Aufgrund der Typen-Dynamik können wir sogar mit Zeichenketten rechnen. Zumindest, solange die
