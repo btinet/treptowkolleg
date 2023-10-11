@@ -69,7 +69,7 @@ class ExamController extends AbstractController
 
 Schauen wir uns das Template (Auszug) an:
 
-````twig
+````php
 <?php
 /**
  * @var object $exam enthält die MySQL-Tabelle "exam"
