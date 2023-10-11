@@ -55,13 +55,20 @@ wird außerdem ein ``Exam``-Objekt übergeben.
 ````php
 class ExamController extends AbstractController
 {
-    public function show(int $examId): string
-    {
-        $exam = $this->repository->setEntity(Exam::class)->find($examId);
+    public function index(){
 
-        return $this->render('exam/show.html', [
-            'exams' => [$exam],
-        ]);
+        if ($user){
+            $this->session->set('user',$userSession);
+            $this->security->denyAccessUntilGranted('ROLE_USER');
+        }
+
+        $categoryRepository = $this->getRepository(Category::class);
+        $categories = $categoryRepository->findAllAndParentAsArray();
+
+        $this->view->render('base/index.html.twig', [
+            'flash' => $this->flash,
+            'categories' => $categories,
+            ]);
     }
 
 }
@@ -70,52 +77,44 @@ class ExamController extends AbstractController
 Schauen wir uns das Template (Auszug) an:
 
 ````php-template
-<?php
-/**
- * @var array $exams enthält die MySQL-Tabelle "exam"
- */
-?>
-
-<div class="list-group list-group-flush rounded-3 border shadow-sm">
-    <?php foreach($exams as $exam): ?>
-        <?php $examState = ' key-question '; ?>
-        <?php if(date('Y') < ($exam->getYear()+3)):?>
-            <?php $examState .= 'key-question-restricted'; ?>
-        <?php else: ?>
-            <?php if($exam->getUser()):?>
-                <?php $examState .= 'key-question-blocked'; ?>
-            <?php endif; ?>
-        <?php endif; ?>
-        <a href="<?=$response->generateUrlFromRoute('exam_show',[$exam->getId()])?>" class="list-group-item <?=$examState?> list-group-item-action lh-sm py-3 d-flex justify-content-between align-items-start">
-            <div class="d-flex flex-column justify-content-between align-items-start">
-
-                <div class="d-flex mb-2 small fw-light justify-content-start align-items-center">
-                    <?php foreach($exam->getSchoolSubjects() as $subject): ?>
-                        <span class="badge me-1 text-capitalize <?=$subject->isMainSchoolSubject() ? 'bg-primary' :'bg-secondary' ?>"><?=$subject->getAbbr()?></span>
-                    <?php endforeach; ?>
-                    <?php if(date('Y') < ($exam->getYear()+3)):?>
-                        <span class="me-1 badge badge-pill text-bg-danger small">gesperrt</span>
-                    <?php else: ?>
-                        <?php if($exam->getUser()):?>
-                            <span class="badge badge-pill text-bg-info small">belegt</span>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                </div>
-                <p class="card-text"><?=$exam->getKeyQuestion()?></p>
-            </div>
-            <div class="d-flex align-items-end flex-column">
-                <span class="small badge text-bg-light fw-light bg-gradient border text-nowrap">
-                    frei ab
-                    <?= $exam->getYear()+3 ?>
-                </span>
-            </div>
-        </a>
-    <?php endforeach; ?>
-    <?php if(!$exams): ?>
-        <li class="list-group-item">Keine Prüfungen gefunden.</li>
-    <?php endif; ?>
-</div>
-
+<table class="tablesorter ts-index uk-table uk-table-expand uk-table-hover uk-table-small uk-table-striped">
+        <caption class="uk-margin-bottom uk-padding-small">
+            Tabelle Category <small>({{ categories|length }} {% if (categories|length == 1) %}Eintrag{% else %}Einträge{% endif %})</small>
+        </caption>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Titel</th>
+            <th class="ts-title filter-select" data-placeholder="_ alle">Parent</th>
+            <th>Beschreibung</th>
+            <th>Erstellt</th>
+            <th>Aktualisiert</th>
+            <th data-sorter="false" data-filter="false" style="width: 150px!important;">Aktion</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if categories %}
+            {% for category in categories %}
+                <tr>
+                    <td class="uk-text-middle">{{ category.id }}</td>
+                    <td class="uk-text-middle uk-text-nowrap uk-text-left uk-text-bold"><a href="{{ route('base/view',{'id':category.id}) }}">{{ category.title }}</a></td>
+                    <td class="uk-text-middle uk-text-nowrap uk-text-left uk-text-bold"><a class="{% if not category.parent %}uk-disabled uk-text-muted{% endif %}" href="{{ route('base/view',{'id':category.parent.id}) }}">{{ category.parent.title|default('_ ohne Parent') }}</a></td>
+                    <td class="uk-text-middle uk-text-nowrap">{{ category.description }}</td>
+                    <td class="uk-text-middle uk-text-nowrap">{{ category.created }}</td>
+                    <td class="uk-text-middle uk-text-nowrap">{{ category.updated ? category.updated : '-' }}</td>
+                    <td class="uk-flex">
+                        <a href="{{ route('base/edit',{'id':category.id}) }}" class="uk-button uk-button-secondary uk-button-small uk-margin-small-right">EDIT</a>
+                        {{ include('base/_delete_form.html.twig',{'class':'uk-button-danger uk-button-small','button':'entf'}) }}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="6">Es wurde kein Eintrag gefunden.</td>
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
 ````
 
 
