@@ -76,7 +76,7 @@ class ExamController extends AbstractController
 
 Schauen wir uns das Template (Auszug) an:
 
-````php-template
+````twig
 <table class="tablesorter ts-index uk-table uk-table-expand uk-table-hover uk-table-small uk-table-striped">
         <caption class="uk-margin-bottom uk-padding-small">
             Tabelle Category <small>({{ categories|length }} {% if (categories|length == 1) %}Eintrag{% else %}Einträge{% endif %})</small>
