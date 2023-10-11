@@ -22,7 +22,7 @@ $myArray = true;  // bool
 In PHP lässt sich etwas total verrücktes machen, was zum Beispiel in JAVA undenkbar wäre.
 Wir können Variablen nämlich auch dynamisch während der Laufzeit deklarieren:
 
-````php
+````html
 <?php
 
 /**
