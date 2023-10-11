@@ -60,7 +60,7 @@ class ExamController extends AbstractController
         $exam = $this->repository->setEntity(Exam::class)->find($examId);
 
         return $this->render('exam/show.html', [
-            'exam' => $exam,
+            'exams' => [$exam],
         ]);
     }
 
@@ -72,7 +72,7 @@ Schauen wir uns das Template (Auszug) an:
 ````php-template
 <?php
 /**
- * @var object $exam enthält die MySQL-Tabelle "exam"
+ * @var array $exams enthält die MySQL-Tabelle "exam"
  */
 ?>
 
