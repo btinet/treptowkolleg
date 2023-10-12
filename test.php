@@ -3,6 +3,7 @@
 use App\CPUArray;
 use App\CPU;
 use App\Customer;
+use App\Form;
 use App\MyArray;
 use App\PayPalAccount;
 use App\Sort;
@@ -37,3 +38,19 @@ $name = "myVar";
 ${$name} = "Die Variable $name wurde jetzt deklariert.";
 
 echo $myVar;
+
+$form = new Form();
+
+?>
+
+<form method="post">
+    <label>
+        Benutzername
+        <input name="user" type="text">
+    </label>
+    <button type="submit">
+        Absenden
+    </button>
+</form>
+<p><?=$form->getData('user')?></p>
+
