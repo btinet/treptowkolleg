@@ -11,10 +11,10 @@
 
 ### Aufgabenstellung
 
-1) Erstellen Sie die Klasse ``Form``
-2) Mit Instantiierung des ``Form``-Objekts soll einem `$data`-Attribut die PHP-Konstante (array) ``$_POST`` zugewiesen werden (constructor).
-3) Die Klasse soll über einen Getter verfügen, mit dem der Wert (string) eines bestimmten Schlüssels von ``$_POST`` zurückgegeben werden kann.
-4) Speichere die Datei entsprechend PSR-0 unter ``src/Form.php``.
+1. Erstellen Sie die Klasse ``Form``
+2. Mit Instantiierung des ``Form``-Objekts soll einem `$data`-Attribut die PHP-Konstante (array) ``$_POST`` zugewiesen werden (constructor).
+3. Die Klasse soll über einen Getter verfügen, mit dem der Wert (string) eines bestimmten Schlüssels von ``$_POST`` zurückgegeben werden kann.
+4. Speichere die Datei entsprechend PSR-0 unter ``src/Form.php``.
 
 Kurze Erinnerung zu Arrays und Verwendung einer einseitigen Kontrollstruktur:
 ````php
