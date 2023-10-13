@@ -53,7 +53,10 @@ echo "Der Benutzername lautet: $myUsername";
 
 ### Tipps und Hinweise
 
-Nutzt alle verfügbaren Ressourcen wie die [PHP Dokumentation](https://www.php.net/manual/de/)
+Nutzt alle verfügbaren Ressourcen wie die Dokumentationen über
+[Arrays](https://www.php.net/manual/de/language.types.array.php),
+[Kontrollstrukturen](https://www.php.net/manual/de/control-structures.if.php) und
+[isset()](https://www.php.net/manual/de/function.isset.php)
 oder euer gemeinsames Wissen. Im schlimmsten Fall erarbeiten wir die Lösung in der nächsten
 Stunde zusammen.
 
