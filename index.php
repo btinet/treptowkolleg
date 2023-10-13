@@ -51,6 +51,7 @@ function getName(string $file): string
 {
     $fileNames = [
         'basics' => 'Grundlagen',
+        'exercise' => 'Übungen',
         'class' => 'Klassen',
         '_index' => 'Einleitung',
         'projection' => 'Projektion',
