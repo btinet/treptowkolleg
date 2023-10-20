@@ -8,8 +8,12 @@ use App\MyArray;
 use App\PayPalAccount;
 use App\Sort;
 use App\StoreProduct;
+use App\StoreProduct as MyProduct;
 
-require 'vendor/autoload.php';
+// require 'vendor/autoload.php';
+require 'autoload.php';
+
+
 
 
 // Array mit Objekten
@@ -22,7 +26,7 @@ uasort($array, new Sort('name'));
 // Gibt Objekte sortiert nach Name aus.
 //print_r($array);
 
-$microwaveProduct = new StoreProduct('Mikrowelle',20);
+$microwaveProduct = new MyProduct('Mikrowelle',20);
 $customer = new Customer();
 $paypal = new PayPalAccount();
 $customer->payFor($microwaveProduct,$paypal);
@@ -38,6 +42,8 @@ $name = "myVar";
 ${$name} = "Die Variable $name wurde jetzt deklariert.";
 
 echo $myVar;
+
+$_POST['user'] = 'Ben';
 
 $form = new Form();
 

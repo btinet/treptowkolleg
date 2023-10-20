@@ -16,6 +16,7 @@ $ibmComputer = new Computer(16,512,$intelCPU);
 
 $mdParser = new ParsedownExtra();
 
+
 /*
  * Geben wir mal den Namen des CPUs vom Intel Computer aus:
  *
