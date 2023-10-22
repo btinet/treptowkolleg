@@ -32,6 +32,16 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 Wenn alles geklappt hat, kannst du mit dem Befehl ``choco -?`` überprüfen, ob **Chocolatey** nun verfügbar ist.
 
+Sollte beim späteren Ausführen eine Fehlermeldung ausgegeben werden
+wie ``xxx.ps1 cannot be loaded because the execution of scripts is disabled on this system``
+sollten die Sicherheitsrichtlinien für externe Quellen angepasst werden:
+
+````shell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+````
+
+Danach sollte das Ausführen funktionieren.
+
 ## Empfohlene Software für die PHP-Entwicklung
 
 - PHP Binary
