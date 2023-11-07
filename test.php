@@ -48,7 +48,7 @@ $_POST['user'] = 'Ben';
 $form = new Form();
 
 ?>
-
+<h1>Formular</h1>
 <form method="post">
     <label>
         Benutzername
@@ -58,5 +58,9 @@ $form = new Form();
         Absenden
     </button>
 </form>
-<p><?=$form->getData('user')?></p>
+
+<?php if ($form->isPost()): ?>
+    <h2>Formulardaten</h2>
+    <p>Benutzername: <b><?=$form->getData('user')?></b></p>
+<?php endif; ?>
 
