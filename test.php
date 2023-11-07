@@ -1,11 +1,6 @@
 <?php
 
-use App\CPU;
-use App\Customer;
-use App\Form;
-use App\PayPalAccount;
-use App\Sort;
-use App\StoreProduct as MyProduct;
+use App\{CPU, Customer, Form, PayPalAccount, Sort, StoreProduct as MyProduct};
 
 // require 'vendor/autoload.php';
 require 'autoload.php';
@@ -58,5 +53,5 @@ $form = new Form();
 <?php if ($form->isPost()): ?>
     <h2>Formulardaten</h2>
     <p>Benutzername: <b><?=$form->getData('user')?></b></p>
-<?php endif; ?>
+<?php endif ?>
 
