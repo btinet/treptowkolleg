@@ -1,13 +1,10 @@
 <?php
 
-use App\CPUArray;
 use App\CPU;
 use App\Customer;
 use App\Form;
-use App\MyArray;
 use App\PayPalAccount;
 use App\Sort;
-use App\StoreProduct;
 use App\StoreProduct as MyProduct;
 
 // require 'vendor/autoload.php';
