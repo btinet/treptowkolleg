@@ -40,7 +40,6 @@ ${$name} = "Die Variable $name wurde jetzt deklariert.";
 
 echo $myVar;
 
-$_POST['user'] = 'Ben';
 
 $form = new Form();
 
