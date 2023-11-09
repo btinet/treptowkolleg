@@ -372,8 +372,14 @@ $currentSubSection = "";
 <script src="
 https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
 "></script>
+<script type="text/javascript">
+    (function() {
+        $('div.tables-begin').nextUntil('div.tables-end', 'table').addClass('table table-bordered');
+    })();
+</script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -382,7 +388,7 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
 
         let button = document.getElementById("myBtn");
 
-        $('div.tables-begin').nextUntil('div.tables-end', 'table').addClass('display');
+
 
 
         new DataTable('table.display');
