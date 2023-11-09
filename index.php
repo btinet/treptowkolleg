@@ -122,6 +122,7 @@ $currentSubSection = "";
     <link rel="stylesheet" href="/node_modules/@patternfly/patternfly/patternfly.css">
     <link rel="stylesheet" href="/node_modules/@patternfly/patternfly/patternfly-addons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
 
     <style>
         code {
@@ -369,7 +370,7 @@ $currentSubSection = "";
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
 <script>
 
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -378,6 +379,9 @@ $currentSubSection = "";
 
         let button = document.getElementById("myBtn");
 
+        let table = new DataTable('table', {
+            // config options...
+        });
 
         function myFunction() {
             if (document.body.scrollTop  >= 150 || document.documentElement.scrollTop >= 150) {
