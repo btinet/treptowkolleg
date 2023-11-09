@@ -30,4 +30,4 @@ if ($a == $b) {
 |$a == b$|a gleich b|
 |$a === b$|a gleich b und gleiche Datentypen|
 |$a != b$|a ungleich b|
-|$a !== b$|a ungleich b und gleiche Datentypen|
+|$a !== b$|a ungleich b und gleiche Datentypen|{.display}
