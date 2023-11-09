@@ -53,7 +53,7 @@ if($a < $b) {
 }
 ````
 
-switch-Strukturen
+## switch-Strukturen
 
 ````php
 <?php
