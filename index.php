@@ -379,9 +379,7 @@ $currentSubSection = "";
 
         let button = document.getElementById("myBtn");
 
-        let table = new DataTable('table', {
-            // config options...
-        });
+        new DataTable('table');
 
         function myFunction() {
             if (document.body.scrollTop  >= 150 || document.documentElement.scrollTop >= 150) {
