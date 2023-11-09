@@ -24,10 +24,11 @@ if ($a == $b) {
     echo "$a ist ungleich $b";
 }
 ````
-
-|Operator|Bedeutung|{.display}
+<div class="tables-start"></div>
+|Operator|Bedeutung|
 | -------- | ------- |
 |$a == b$|a gleich b|
 |$a === b$|a gleich b und gleiche Datentypen|
 |$a != b$|a ungleich b|
 |$a !== b$|a ungleich b und gleiche Datentypen|
+<div class="tables-end"></div>

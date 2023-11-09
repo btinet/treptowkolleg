@@ -379,6 +379,9 @@ $currentSubSection = "";
 
         let button = document.getElementById("myBtn");
 
+        $('div.tables-begin').nextUntil('div.tables-end', 'table').addClass('display');
+
+
         new DataTable('table.display');
 
         function myFunction() {
