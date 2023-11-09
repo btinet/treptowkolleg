@@ -67,7 +67,8 @@ function getName(string $file): string
         'relations' => 'Beziehungen',
         'object_relations' => 'Objektbeziehungen',
         'class_relations' => 'Klassenbeziehungen',
-        'typo' => 'Typographie'
+        'typo' => 'Typographie',
+        'control' => 'Kontrollstrukturen',
     ];
     $fileName = substr($file,0,-3);
 
