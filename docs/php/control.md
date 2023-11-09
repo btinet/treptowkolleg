@@ -39,8 +39,56 @@ if ($a == $b) {
 # zweiseitig
 if ($a == $b) {
     echo "$a ist gleich $b";
-} else {
-    echo "$a ist ungleich $b";
+    } else {
+        echo "$a ist ungleich $b";
+}
+
+# mehrseitig
+if($a < $b) {
+    echo "$a ist kleiner als $b";
+    } elseif ($a > $b) {
+        echo "$a ist größer als $b";
+    } else {
+        echo "$a ist gleich $b";
+}
+````
+
+switch-Strukturen
+
+````php
+<?php
+
+# Standardnotation if-else
+if( array_key_exists('action', $_POST) ) {
+    $action = $_POST['action'];
+    } else {
+        $action = null;
+}
+
+# Kurzschreibweise if-else
+$action = array_key_exists('action', $_POST) ? $_POST['action'] : null;
+
+# mehrseitiger switch-Algorithmus
+switch ($action) {
+        
+    case 'create':
+        $myObject->new();
+        break;
+    
+    case 'read':
+        $myObject->show();
+        break;
+        
+    case 'update':
+        $myObject->update();
+        break;
+        
+    case 'delete':
+        $myObject->delete();
+        break;
+        
+    default:
+        $myObject->index();    
 }
 ````
 
