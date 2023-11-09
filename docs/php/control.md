@@ -20,6 +20,7 @@ werden diese Strukturen auch als Algorithmen bezeichnet.
 |$a$ ``xand`` $b$|nicht a und b|
 |$a$ ``or`` $b$|a oder b|
 |$a$ ``xor`` $b$|entweder a oder b|
+|``!`` $b$|nicht a|
 
 
 ## if-Strukturen
