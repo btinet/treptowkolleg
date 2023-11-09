@@ -397,7 +397,12 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
 
 
 
-        new DataTable('table.display');
+        new DataTable('table.display', {
+            info: false,
+            ordering: false,
+            search: false,
+            paging: false
+        });
 
         function myFunction() {
             if (document.body.scrollTop  >= 150 || document.documentElement.scrollTop >= 150) {
