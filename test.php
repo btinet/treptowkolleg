@@ -36,7 +36,9 @@ ${$name} = "Die Variable $name wurde jetzt deklariert.";
 echo $myVar;
 
 
-$form = new Form();
+$form = new Form(['name' => 'myForm','class' => 'form-control']);
+$form->addField('user');
+echo $form->renderForm();
 
 ?>
 <h1>Formular</h1>
@@ -52,6 +54,6 @@ $form = new Form();
 
 <?php if ($form->isPost()): ?>
     <h2>Formulardaten</h2>
-    <p>Benutzername: <b><?=$form->getData('user')?></b></p>
+    <p>Benutzername: <b><?=$form->getFieldData('user')?></b></p>
 <?php endif ?>
 
