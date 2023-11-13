@@ -49,14 +49,14 @@ echo $form->render();
 <form method="post">
     <label>
         Benutzername
-        <input name="user" type="text">
+        <input name="user" type="text" required>
     </label>
     <button type="submit">
         Absenden
     </button>
 </form>
 
-<?php if ($form->isPost()): ?>
+<?php if ( $form->isPost() ): ?>
     <h2>Formulardaten</h2>
     <p>Benutzername: <b><?=$form->getFieldData('user')?></b></p>
 <?php endif ?>
