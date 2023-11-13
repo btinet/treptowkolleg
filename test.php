@@ -1,6 +1,6 @@
 <?php
 
-use App\{CPU, Customer, Form, PayPalAccount, Sort, StoreProduct as MyProduct, TextFieldType};
+use App\{CPU, Customer, Form, PayPalAccount, Sort, StoreProduct as MyProduct, SubmitButtonType, TextFieldType};
 
 // require 'vendor/autoload.php';
 require 'autoload.php';
@@ -18,12 +18,12 @@ uasort($array, new Sort('name'));
 // Gibt Objekte sortiert nach Name aus.
 //print_r($array);
 
-$microwaveProduct = new MyProduct('Mikrowelle',20);
-$customer = new Customer();
-$paypal = new PayPalAccount();
-$customer->payFor($microwaveProduct,$paypal);
-$paypal->deposit(50);
-$customer->payFor($microwaveProduct,$paypal);
+//$microwaveProduct = new MyProduct('Mikrowelle',20);
+//$customer = new Customer();
+//$paypal = new PayPalAccount();
+//$customer->payFor($microwaveProduct,$paypal);
+//$paypal->deposit(50);
+//$customer->payFor($microwaveProduct,$paypal);
 
 /**
  * @var $myVar int Variable, die wir gleich dynamisch deklarieren werden.
@@ -33,31 +33,60 @@ $name = "myVar";
 
 ${$name} = "Die Variable $name wurde jetzt deklariert.";
 
-echo $myVar;
+//echo $myVar;
 
 
-$form = new Form(name: 'myForm', options: ['class' => 'form-control']);
+$form = new Form(name: 'myForm');
 
-$form->addField(name: 'user',options: [
-        'label' => 'Benutzername'
-]);
-
-echo $form->render();
+$form
+    ->addField(name: 'user',options: [
+            'label' => 'Benutzername',
+            'class' => 'input',
+            'required' => 'required'
+    ])
+    ->addField(name: 'email',options: [
+            'label' => 'E-Mail-Adresse',
+            'class' => 'input',
+            'required' => 'required'
+    ])
+    ->addField('submit',SubmitButtonType::class,[
+            'label' => 'Absenden',
+            'class' => 'button is-primary'
+    ])
+;
 
 ?>
-<h1>Formular</h1>
-<form method="post">
-    <label>
-        Benutzername
-        <input name="user" type="text" required>
-    </label>
-    <button type="submit">
-        Absenden
-    </button>
-</form>
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<?php if ( $form->isPost() ): ?>
-    <h2>Formulardaten</h2>
-    <p>Benutzername: <b><?=$form->getFieldData('user')?></b></p>
-<?php endif ?>
+        <title>Informatik AG!</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+    <body>
+    <section class="section">
+        <div class="container mb-5">
+            <h1 class="title">Formular</h1>
+            <?=$form->render()?>
+        </div>
+        <div class="container mb-3">
+            <?php if ( $form->isPost() ): ?>
+                <h2 class="subtitle">Formulardaten</h2>
+                <ul>
+                    <?php foreach ($form->getChildren() as $child): ?>
+                        <li>
+                            <?=$child->getName()?>: <b><?=$child->getData()?></b>
+                        </li>
+                    <?php endforeach;?>
+                </ul>
+            <?php endif ?>
+        </div>
+    </section>
+    </body>
+
+</html>
+
 

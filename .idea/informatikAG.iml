@@ -16,5 +16,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="highlight.js" level="application" />
     <orderEntry type="library" name="mathjax" level="application" />
+    <orderEntry type="library" name="bulma" level="application" />
   </component>
 </module>

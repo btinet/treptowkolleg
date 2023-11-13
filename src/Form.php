@@ -34,7 +34,7 @@ class Form extends AbstractType
 
     public function addField(string $name, string $type = TextFieldType::class, array $options = []): Form
     {
-        $this->children[$name] = new $type($name,$options);
+        $this->children[$name] = new $type($name, $this, $options);
         return $this;
     }
 

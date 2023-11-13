@@ -6,13 +6,32 @@ abstract class AbstractType
 {
 
     protected string $name;
+    protected string $label;
     protected array $options = [];
+    protected ?AbstractType $parent;
     protected array $children = [];
 
-    public function __construct(string $name, array $options = [])
+    public function __construct(string $name, array $options = [], AbstractType $parent = null)
     {
         $this->name = $name;
         $this->options = $options;
+        $this->parent = $parent;
+
+        if($label = $this->hasOption('label')){
+            $this->label = $label;
+        } else {
+            $this->label = '';
+        }
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getLabel(): ?string
+    {
+        return $this->label;
     }
 
     protected function placeOptions(): string
@@ -33,7 +52,12 @@ abstract class AbstractType
         return $children;
     }
 
-    protected function hasOption(string $key, bool $remove = false): ?string
+    public function getChildren(): array
+    {
+        return $this->children;
+    }
+
+    public function hasOption(string $key, bool $remove = false): ?string
     {
         $option = null;
         if(array_key_exists($key,$this->options)) {
@@ -53,10 +77,17 @@ abstract class AbstractType
     protected function placeId(bool $label = false): string
     {
         if($label) {
-            return 'for="#'.$this->name.'"';
+            return 'for="'.$this->name.'"';
         }
         return 'id="'.$this->name.'"';
     }
 
     abstract function render(): string;
+
+    public function getData()
+    {
+        echo 'okeh!';
+        return null;
+    }
+
 }
