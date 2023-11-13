@@ -2,16 +2,15 @@
 
 namespace App;
 
-class Form
+class Form extends AbstractType
 {
 
     private array $data;
-    private array $fields = [];
-    private array $options = [];
 
-    public function __construct(array $options = [], $isPost = true)
+    public function __construct(string $name, array $options = [], $isPost = true)
     {
-        $this->options = $options;
+        parent::__construct($name, $options);
+
         if($isPost) {
             $this->addOption('method','post');
             $this->data = $_POST;
@@ -35,35 +34,23 @@ class Form
 
     public function addField(string $name, string $type = TextFieldType::class, array $options = []): Form
     {
-        $this->fields[$name] = new $type($name,$options);
+        $this->children[$name] = new $type($name,$options);
         return $this;
     }
 
     public function getFieldData(string $fieldName): ?string
     {
-        if(array_key_exists($fieldName,$this->fields)) {
+        if(array_key_exists($fieldName,$this->children)) {
             return htmlspecialchars($this->data[$fieldName] ?? null);
         }
         return null;
     }
 
-    public function renderForm(): string
+    public function render(): string
     {
-        $formOptions = '';
-        foreach ($this->options as $attribute => $value) {
-            $formOptions .= $attribute . '="'.$value.'" ';
-        }
 
-        $formFields = '';
-        foreach ($this->fields as $field) {
-            /** @var $field AbstractType */
-            $formFields .= $field->render();
-        }
 
-        $html = '<form ';
-        $html .= "$formOptions";
-        $html .= '>' . PHP_EOL;
-        $html .= $formFields;
+        $html = "<form {$this->placeName()} {$this->placeOptions()}>{$this->placeChildren()}";
         $html .= '</form>';
         return $html;
     }

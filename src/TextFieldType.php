@@ -2,7 +2,6 @@
 
 namespace App;
 
-use JetBrains\PhpStorm\Pure;
 
 class TextFieldType extends AbstractType
 {
@@ -14,6 +13,13 @@ class TextFieldType extends AbstractType
 
     function render(): string
     {
-        return '<input type="text" name="'.$this->name.'">' . PHP_EOL;
+        $html = '';
+        if($label = $this->hasOption('label',true)) {
+            $html .= '<label '.$this->placeId(true).'>'.$label.'</label>';
+        }
+
+        $html .= '<input '.$this->placeId().' type="text" '.$this->placeName().' '.$this->placeOptions().'>' . PHP_EOL;
+        return $html;
     }
+
 }

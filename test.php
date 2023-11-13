@@ -1,6 +1,6 @@
 <?php
 
-use App\{CPU, Customer, Form, PayPalAccount, Sort, StoreProduct as MyProduct};
+use App\{CPU, Customer, Form, PayPalAccount, Sort, StoreProduct as MyProduct, TextFieldType};
 
 // require 'vendor/autoload.php';
 require 'autoload.php';
@@ -36,9 +36,13 @@ ${$name} = "Die Variable $name wurde jetzt deklariert.";
 echo $myVar;
 
 
-$form = new Form(['name' => 'myForm','class' => 'form-control']);
-$form->addField('user');
-echo $form->renderForm();
+$form = new Form(name: 'myForm', options: ['class' => 'form-control']);
+
+$form->addField(name: 'user',options: [
+        'label' => 'Benutzername'
+]);
+
+echo $form->render();
 
 ?>
 <h1>Formular</h1>
