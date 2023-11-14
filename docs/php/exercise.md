@@ -129,9 +129,9 @@ function printText($a, $b, $c) {
         else
             $string .= "habe ";
     if($b == 3 and $c == 99)
-        $string .= "keinen ";
-    if($a == 1 and $b == 2)
         $string .= "viel ";
+    if($a == 1 and $b == 2)
+        $string .= "keinen ";
     if(!($a < 5 and $b > 2))
         $string .= "Spaß! ";
 }
