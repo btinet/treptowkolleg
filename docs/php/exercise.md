@@ -94,6 +94,9 @@ function calculate($a, $b, $c) {
     echo "D = $d";
     echo "E = $e";
 }
+
+# Funktion ausführen:
+calculate(7,3,4);
 ````
 
 |a|b|c|d|e
