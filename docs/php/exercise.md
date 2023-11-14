@@ -64,6 +64,11 @@ Wir werden die ``Form``-Klasse dann für unsere ersten richtigen Formularabfrage
 
 ## Übung 2
 
+Algorithmen lassen sich übersichtlich in Flussdiagrammen (Ablaufdiagramme) darstellen.
+Im Folgenden ist eine zweiseitige Kontrollstruktur (``if-else``) dargestellt:
+
+![Flowchart](/docs/img/flowchart_01.png)
+
 ### Aufgaben
 
 1. Zeichne zur besseren Übersicht einen Ablaufplan des Programms.
