@@ -78,8 +78,6 @@ Im Folgenden ist eine zweiseitige Kontrollstruktur (``if-else``) dargestellt:
 ````php
 <?php
 
-int $a,$b,$c;
-
 function calculate($a, $b, $c) {
     $d = 0;
     $e = 0;    
