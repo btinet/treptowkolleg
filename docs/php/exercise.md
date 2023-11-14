@@ -91,7 +91,7 @@ function calculate($a, $b, $c) {
     } else {
         $e = $a + $b + $c;
     }
-    echo "D = $d";
+    echo "D = $d" . PHP_EOL;
     echo "E = $e";
 }
 
