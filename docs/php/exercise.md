@@ -61,3 +61,44 @@ oder euer gemeinsames Wissen. Im schlimmsten Fall erarbeiten wir die Lösung in 
 Stunde zusammen.
 
 Wir werden die ``Form``-Klasse dann für unsere ersten richtigen Formularabfragen nutzen.
+
+## Übung 2
+
+### Aufgaben
+
+1. Zeichne zur besseren Übersicht einen Ablaufplan des Programms.
+2. Markiere die zueinander gehörenden Klammerpaare jeweils farbig.
+3. Bestimme die Werte, die für die variablen ``$d`` und ``$e`` ausgegeben werden.
+
+````php
+<?php
+
+int $a,$b,$c;
+
+function calculate($a, $b, $c) {
+    $d = 0;
+    $e = 0;    
+    if($a < $b) {
+        $d = $a + $b;
+    }
+
+    if($a > $c) {        
+        if($b > $c) {
+            $d = $a * $b;
+        } else {
+            $d = $a * $c;
+        }        
+    } else {
+        $e = $a + $b + $c;
+    }
+    echo "D = $d";
+    echo "E = $e";
+}
+````
+
+|a|b|c|d|e
+| -------- | ------- | ------- | ------- | ------- |
+|$7$|$3$|$4$|||
+|$-3$|$11$|$46$|||
+|$9$|$-5$|$5$|||
+|$12$|$4$|$2$|||
