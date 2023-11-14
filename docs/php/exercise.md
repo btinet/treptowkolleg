@@ -105,3 +105,36 @@ calculate(7,3,4);
 |$-3$|$11$|$46$| | |
 |$9$|$-5$|$5$| | |
 |$12$|$4$|$2$| | |
+
+## Übung 3
+
+Ermittle die Ausgabe folgenden Programms.
+
+````php
+<?php
+$a = 5;
+$b = 3;
+$c = 99;
+
+function printText($a, $b, $c) {
+    $string = '';
+    if($a == $b or $b > 2)
+        $string .= "Ich ";
+    if($a < 5 and $b > 2)
+        $string .= "Du ";
+    if($a == 5 and $b == 2)
+        $string .= "hatten ";
+    if($c != 6 and $b > 10)
+        $string .= "hast ";
+        else
+            $string .= "habe ";
+    if($b == 3 and $c == 99)
+        $string .= "keinen ";
+    if($a == 1 and $b == 2)
+        $string .= "viel ";
+    if(!($a < 5 and $b > 2))
+        $string .= "Spaß! ";
+}
+
+printText($a,$b,$c);
+````
