@@ -109,6 +109,10 @@ calculate(7,3,4);
 |$9$|$-5$|$5$| | |
 |$12$|$4$|$2$| | |
 
+### Ablaufdiagramm Musterlösung
+
+![Musterlösung](/docs/img/ue2_php_control.png)
+
 ## Übung 3
 
 Ermittle die Ausgabe folgenden Programms.
