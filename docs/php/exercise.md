@@ -111,7 +111,7 @@ calculate(7,3,4);
 
 ### Ablaufdiagramm Musterlösung
 
-![Musterlösung](/docs/img/ue2_php_control.png)
+![Musterloesung](/docs/img/ue2_php_control.png)
 
 ## Übung 3
 
