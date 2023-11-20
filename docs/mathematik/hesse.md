@@ -1,5 +1,9 @@
 # Hesse'sche Normalenform
 
+## Ebene in Normalenform:
+
+$E\colon\; \vec{n} \circ \left[\vec{x} - \vec{a}\right] = \begin{pmatrix} 2 \\ 1 \\ -2 \end{pmatrix} \circ \left[\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} - \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\right] = 0$
+
 Gegeben sei die Ebene $E$ in Hessescher Normalform mit:
 
 $
@@ -11,3 +15,11 @@ Berechne den Abstand $|d|$ des Punktes $P(2|1|2)$ von der Ebene.
 $
 d = |\frac{1}{3} \cdot [2 \cdot 2 - 1 - 2 \cdot 2 - 5]| = |\frac{1}{3} \cdot (-6)| = |-2| = 2
 $
+
+Der Abstand des Punktes $P$ von der Ebene $E$ beträgt $2$ Längeneinheiten.
+
+## Interpretation des Ergebnisses
+
+- $d>0$: $P$ liegt auf der Ebene $E$
+- $d=0$: $P$ und der Ursprung $O$ liegen auf verschiedenen Seiten der Ebene $E$
+- $d<0$: $P$ und der Ursprung $O$ liegen auf der gleichen Seite der Ebene $E$
