@@ -1,6 +1,6 @@
 # Hesse'sche Normalenform
 
-## Ebene in Normalenform:
+## Beispiel 1:
 
 $E\colon\; \vec{n} \circ \left[\vec{x} - \vec{a}\right] = \begin{pmatrix} 2 \\\ 1 \\\ -2 \end{pmatrix} \circ \left[\begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end{pmatrix} - \begin{pmatrix} 0 \\\ 1 \\\ 1 \end{pmatrix}\right] = 0$
 
@@ -9,6 +9,12 @@ $E\colon\; \vec{n} \circ \left[\vec{x} - \vec{a}\right] = \begin{pmatrix} 2 \\\ 
 $\vec{n}_0 = \frac{\vec{n}}{|\vec{n}|}$
 
 $|\vec{n}| = \sqrt{2^2 + 1^2 + (-2)^2} = \sqrt{9} = 3$
+
+### Ebene in Hessescher Normalenform aufstellen
+
+$E\colon\; \frac{\vec{n}}{|\vec{n}|} \circ \left[\vec{x} - \vec{a}\right] = \frac{1}{3} \cdot \begin{pmatrix} 2 \\\ 1 \\\ -2 \end{pmatrix} \circ \left[\begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end{pmatrix} - \begin{pmatrix} 0 \\\ 1 \\\ 1 \end{pmatrix}\right] = 0$
+
+## Beispiel 2
 
 Gegeben sei die Ebene $E$ in Hessescher Normalform mit:
 
@@ -24,7 +30,7 @@ $
 
 Der Abstand des Punktes $P$ von der Ebene $E$ beträgt $2$ Längeneinheiten.
 
-## Interpretation des Ergebnisses
+### Interpretation des Ergebnisses
 
 - $d>0$: $P$ liegt auf der Ebene $E$
 - $d=0$: $P$ und der Ursprung $O$ liegen auf verschiedenen Seiten der Ebene $E$
