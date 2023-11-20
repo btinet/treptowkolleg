@@ -1,5 +1,9 @@
 # Hesse'sche Normalenform
 
 $
-\begin{pmatrix}1 & 2 & -3 & 3 \\ \end{pmatrix}
+\begin{pmatrix}
+1 \\
+-3 \\
+2
+\end{pmatrix}
 $
