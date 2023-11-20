@@ -16,7 +16,7 @@ $E\colon\; \frac{\vec{n}}{|\vec{n}|} \circ \left[\vec{x} - \vec{a}\right] = \fra
 
 ## Beispiel 2
 
-Gegeben sei die Ebene $E$ in Hessescher Normalform mit:
+Gegeben sei die Ebene $E$ in Koordinatenform mit:
 
 $
 E\colon\; \frac{1}{3} \cdot [2x_1 - x_2 - 2x_3 - 5] = 0
