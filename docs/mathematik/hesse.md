@@ -22,7 +22,15 @@ $
 E\colon\; \frac{1}{3} \cdot [2x_1 - x_2 - 2x_3 - 5] = 0
 $
 
-Berechne den Abstand $|d|$ des Punktes $P(2|1|2)$ von der Ebene.
+### Berechne den Abstand $|d|$ des Punktes $P(2|1|2)$ von der Ebene.
+
+#### Normierter Normalenvektor
+
+$\vec{n} = \begin{pmatrix} 2 \\\ -1 \\\ -2 \end{pmatrix}$
+
+$|\vec{n}| = \sqrt{2^2 + (-1)^2 + (-2)^2} = \sqrt{9} = 3$
+
+$E\colon\; \frac{1}{3} \cdot [2x_1 - x_2 - 2x_3 - 5] = 0$
 
 $
 d = |\frac{1}{3} \cdot [2 \cdot 2 - 1 - 2 \cdot 2 - 5]| = |\frac{1}{3} \cdot (-6)| = |-2| = 2
