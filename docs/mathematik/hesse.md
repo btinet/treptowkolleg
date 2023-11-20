@@ -4,6 +4,12 @@
 
 $E\colon\; \vec{n} \circ \left[\vec{x} - \vec{a}\right] = \begin{pmatrix} 2 \\\ 1 \\\ -2 \end{pmatrix} \circ \left[\begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end{pmatrix} - \begin{pmatrix} 0 \\\ 1 \\\ 1 \end{pmatrix}\right] = 0$
 
+### Normierter Normalenvektor
+
+$\vec{n}_0 = \frac{\vec{n}}{|\vec{n}|}$
+
+$|\vec{n}| = \sqrt{2^2 + 1^2 + (-2)^2} = \sqrt{9} = 3$
+
 Gegeben sei die Ebene $E$ in Hessescher Normalform mit:
 
 $
