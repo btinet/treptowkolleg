@@ -57,6 +57,7 @@ function getName(string $file): string
         '_index' => 'Einleitung',
         'projection' => 'Projektion',
         'selection' => 'Selektion',
+        'hesse' => 'Hesse',
         'orm' => 'ORM',
         'erm' => 'ERM',
         'associations' => 'Beziehungen',

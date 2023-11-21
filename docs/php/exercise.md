@@ -64,6 +64,11 @@ Wir werden die ``Form``-Klasse dann für unsere ersten richtigen Formularabfrage
 
 ## Übung 2
 
+Algorithmen lassen sich übersichtlich in Flussdiagrammen (Ablaufdiagramme) darstellen.
+Im Folgenden ist eine zweiseitige Kontrollstruktur (``if-else``) dargestellt:
+
+![Flowchart](/docs/img/flowchart_01.png)
+
 ### Aufgaben
 
 1. Zeichne zur besseren Übersicht einen Ablaufplan des Programms.
@@ -72,8 +77,6 @@ Wir werden die ``Form``-Klasse dann für unsere ersten richtigen Formularabfrage
 
 ````php
 <?php
-
-int $a,$b,$c;
 
 function calculate($a, $b, $c) {
     $d = 0;
@@ -106,6 +109,10 @@ calculate(7,3,4);
 |$9$|$-5$|$5$|$45$|$0$|
 |$12$|$4$|$2$|$48$|$0$|
 
+### Ablaufdiagramm Musterlösung
+
+![Musterloesung](/docs/img/ue2_php_control.png)
+
 ## Übung 3
 
 Ermittle die Ausgabe folgenden Programms.
@@ -129,9 +136,9 @@ function printText($a, $b, $c) {
         else
             $string .= "habe ";
     if($b == 3 and $c == 99)
-        $string .= "keinen ";
-    if($a == 1 and $b == 2)
         $string .= "viel ";
+    if($a == 1 and $b == 2)
+        $string .= "keinen ";
     if(!($a < 5 and $b > 2))
         $string .= "Spaß! ";
 }
