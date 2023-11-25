@@ -17,7 +17,7 @@ werden diese Strukturen auch als Algorithmen bezeichnet.
 |$a$ `>` $b$|a größer b|
 |$a$ ``>=`` $b$|a größer gleich b|
 |$a$ ``and`` $b$|a und b|
-|~~$a$ ``xand`` $b$~~|~~weder a noch b~~|
+|~~$a$ ``xand`` $b$~~|~~weder a noch b~~ *gibt es nicht in PHP*|
 |$a$ ``or`` $b$|a oder b|
 |$a$ ``xor`` $b$|entweder a oder b (exklusives oder)|
 |``!`` $a$|nicht a|
