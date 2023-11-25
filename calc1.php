@@ -1,8 +1,6 @@
 <?php
-$a = 5;
-$b = 3;
-$c = 99;
 
+// Funktion deklarieren
 function printText($a, $b, $c) {
     $string = '';
     if($a == $b or $b > 2)
@@ -24,4 +22,18 @@ function printText($a, $b, $c) {
     echo $string . PHP_EOL;
 }
 
-printText($a,$b,$c);
+// Optionen für Kommandozeilenprogramm definieren
+$shortOptions  = "a:";
+$shortOptions .= "b:";
+$shortOptions .= "c:";
+
+// Optionen abfragen
+$options = getopt($shortOptions, []);
+
+// Eingabe der Optionen prüfen
+if(!array_key_exists("a",$options)) exit("Option a ist erforderlich!");
+if(!array_key_exists("b",$options)) exit("Option b ist erforderlich!");
+if(!array_key_exists("c",$options)) exit("Option c ist erforderlich!");
+
+// Funktion ausführen
+printText($options['a'],$options['b'],$options['c']);
