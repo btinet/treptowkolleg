@@ -145,3 +145,56 @@ function printText($a, $b, $c) {
 
 printText($a,$b,$c);
 ````
+
+## Übung 4
+
+Für eine Website soll ein geschützter Bereich für registrierte Nutzer realisiert werden.
+Dazu wird die PHP-eigene globale Konstante ``$_SESSION`` genutzt. Hier können Werte abgelegt
+werden, die während der aktuellen Browser-Sitzung erhalten bleiben.
+
+- Analysiere den folgenden Quellcode und erstelle ein Ablaufdiagramm.
+
+````php
+<?php
+
+class AuthenticationController extends AbstractController
+{
+
+    public function login(): string
+    {
+        if($this->session->get('login')) $this->response->redirectToRoute(302,'app_index');
+
+        $tryLoginLastError = null;
+
+        if($this->request->isFormSubmitted() and $this->request->isPostRequest()) {
+            $encryptionService = new EncryptionService();
+
+            $loginData = [
+                'username' => $encryptionService->encryptString($this->request->getFieldAsString('username')),
+                'password' => $this->request->getFieldAsString('password')
+            ];
+
+            if($loginData['username'] and $loginData['password']) {
+                if (0 === ($tryLoginLastError = UserService::tryLogin($this->repository, $loginData))) {
+                    $user = $this->repository->findOneBy(['username' => $loginData['username']]);
+                    if ($user) {
+                        $this->session->set('user', $user->getId());
+                        $this->session->set('login', true);
+                        $this->setFlash(200);
+                    }
+
+                    $this->response->redirectToRoute(302, 'app_index');
+                }
+            }
+            $this->setFlash($tryLoginLastError,'danger');
+            $this->response->redirectToRoute(302, 'authentication_login');
+        }
+
+        return $this->render('authentication/login.html',[
+            'lastError' => $tryLoginLastError
+        ]);
+
+    }
+
+}
+````
