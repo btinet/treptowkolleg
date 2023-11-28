@@ -60,6 +60,7 @@ function getName(string $file): string
         'hesse' => 'Hesse',
         'orm' => 'ORM',
         'erm' => 'ERM',
+        'enum' => 'Enums',
         'associations' => 'Beziehungen',
         'vars' => 'Variablen & Konstanten',
         'magic_methods' => 'Magische Methoden',
