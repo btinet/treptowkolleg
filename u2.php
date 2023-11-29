@@ -1,7 +1,12 @@
 <?php
 
+
+use App\Curli;
+
+require 'vendor/autoload.php';
+
 // Funktion deklarieren
-function calculate($a,$b, $c) {
+function calculate($a, $b, $c) {
 
     $d = 0;
     $e = 0;
@@ -32,4 +37,13 @@ $y = 4;
 $z = 2;
 
 // Funktion mit Variablen $x, $y und $z als Parameter für $a, $b und $c ausführen.
-calculate($x,$y,$z);
+//calculate($x,$y,$z);
+
+$post = [
+    'username' => 'konfuzius',
+    'passwort' => 'TK551'
+];
+
+$curl = new Curli('https://vertretungsplan.treptow-kolleg.de/login.php');
+
+echo $curl->getResponse($post);
